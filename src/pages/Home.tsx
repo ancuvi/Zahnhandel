@@ -6,15 +6,46 @@ import Section from '../components/UI/Section'
 import Seo from '../components/SEO/Seo'
 
 const Home = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "DentalLaboratory",
+    "name": "ZAHNTECHNIK Frankenberg GmbH",
+    "description": "Ihr Dentallabor in Frankenberg. Ästhetische Frontzahnkeramik, Prothetik und individuelle Lösungen.",
+    "url": window.location.origin,
+    "telephone": "+493720675542",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gewerbering 17",
+      "addressLocality": "Frankenberg",
+      "postalCode": "09669",
+      "addressCountry": "DE"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "07:00",
+        "closes": "17:00"
+      }
+    ]
+  }
+
   return (
     <div>
       <Seo
         title="ZAHNTECHNIK Frankenberg GmbH | Börner & Schrambke"
         description="Ihr Dentallabor in Frankenberg. Ästhetische Frontzahnkeramik, Prothetik und individuelle Lösungen. Telefon: 037206 / 75542."
+        jsonLd={jsonLd}
       />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+      <section className="relative overflow-hidden min-h-[80vh] lg:min-h-[90vh] flex items-center py-16 lg:py-20">
         {/* Background Image with Parallax effect */}
         <div 
           className="absolute inset-0 z-0 hidden lg:block"
@@ -44,9 +75,9 @@ const Home = () => {
         {/* Decorative Blob */}
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary-500 rounded-full blur-[128px] opacity-20 z-0"></div>
         
-        <div className="mx-auto max-w-7xl relative z-10 px-6 w-full py-20 flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div className="max-w-3xl space-y-8 animate-fade-in flex-1">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-4 py-2 text-sm font-semibold text-white border border-white/20 shadow-sm">
+        <div className="mx-auto max-w-7xl relative z-10 px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+          <div className="max-w-3xl space-y-6 lg:space-y-8 animate-fade-in flex-1">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-3 py-1.5 lg:px-4 lg:py-2 text-xs lg:text-sm font-semibold text-white border border-white/20 shadow-sm">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
@@ -54,12 +85,12 @@ const Home = () => {
               Meisterlabor in Frankenberg
             </div>
             
-            <h1 className="text-5xl font-bold font-serif text-white md:text-6xl lg:text-7xl leading-tight drop-shadow-sm">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-white leading-tight drop-shadow-sm">
               Willkommen bei <br/>
               <span className="text-secondary-400">ZAHNTECHNIK Frankenberg</span>
             </h1>
             
-            <p className="text-xl text-stone-200 leading-relaxed font-medium max-w-2xl drop-shadow-sm">
+            <p className="text-lg sm:text-xl text-stone-200 leading-relaxed font-medium max-w-2xl drop-shadow-sm">
               Ihr kompetenter Partner für hochwertigen Zahnersatz. Wir verbinden handwerkliche Präzision mit modernster Technologie für Ihr strahlendstes Lächeln.
             </p>
             
