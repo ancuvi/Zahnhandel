@@ -9,42 +9,42 @@ const Services = () => {
     {
       title: 'Ästhetik & Keramik',
       description: 'Natürlichkeit ist unser Maßstab. Mit individueller Frontzahnkeramik und Schichttechnik schaffen wir lebendige Ergebnisse.',
-      image: '/images/Frontzahnkeramik.jpeg',
+      image: '/images/Frontzahnkeramik.webp',
       icon: <Diamond className="w-6 h-6" />,
       details: ['Individuelle Frontzahnkeramik', 'Veneers, Inlays, Onlays', 'Keramik gepresst & geschichtet']
     },
     {
       title: 'Kronen & Brücken',
       description: 'Präzise Passform und Langlebigkeit. Ob Zirkon, Vollkeramik oder Metallkeramik – wir finden die optimale Lösung.',
-      image: '/images/Kronen-und-Brücken.jpeg',
+      image: '/images/Kronen-und-Brücken.webp',
       icon: <Layers className="w-6 h-6" />,
       details: ['Zirkonkeramik & CAD/CAM', 'Perlmutkrone', 'Edelmetall & Titan']
     },
     {
       title: 'Kombitechnik',
       description: 'Funktionalität trifft Komfort. Hochwertige Teleskoparbeiten und Geschiebe für sicheren Halt und Ästhetik.',
-      image: '/images/Kombiarbeit.jpeg',
+      image: '/images/Kombiarbeit.webp',
       icon: <Activity className="w-6 h-6" />,
       details: ['Teleskoptechnik', 'Geschiebe & Riegel', 'Modellguss']
     },
     {
       title: 'Implantattechnik',
       description: 'Festsitzender Zahnersatz auf Implantaten. Wir versorgen alle gängigen Implantatsysteme mit höchster Präzision.',
-      image: '/images/Implantattechnik.jpeg',
+      image: '/images/Implantattechnik.webp',
       icon: <Smartphone className="w-6 h-6" />, 
       details: ['Suprakonstruktionen', 'Individuelle Abutments', 'Stegkonstruktionen']
     },
     {
       title: 'Totalprothetik',
       description: 'Lebensqualität zurückgewinnen. Prothesen nach der TiF-Methode für optimalen Sitz und natürliche Optik.',
-      image: '/images/Totalprotese.jpeg',
+      image: '/images/Totalprotese.webp',
       icon: <ShieldCheck className="w-6 h-6" />,
       details: ['TiF-Methode', 'Totalprothesen', 'Reparaturen']
     },
     {
       title: 'Spezialtechniken',
       description: 'Innovation für besondere Anforderungen. Modernste Verfahren für perfekte Passung und Biokompatibilität.',
-      image: '/images/Galvanotechnik.jpeg',
+      image: '/images/Galvanotechnik.webp',
       icon: <Microscope className="w-6 h-6" />,
       details: ['Galvanotechnik', 'Lasertechnik', 'Schienen & Diagnostik']
     }
@@ -62,7 +62,7 @@ const Services = () => {
         {/* Background Image/Overlay */}
          <div className="absolute inset-0 z-0 opacity-30" 
              style={{ 
-               backgroundImage: "url('/images/Kronen-und-Brücken.jpeg')", 
+               backgroundImage: "url('/images/Kronen-und-Brücken.webp')", 
                backgroundSize: 'cover', 
                backgroundPosition: 'center' 
              }} 
@@ -151,7 +151,7 @@ const Services = () => {
               </div>
               <div className="relative">
                   <div className="rounded-2xl overflow-hidden shadow-2xl rotate-1">
-                       <img src="/images/unser-angebot-2.jpg" alt="Behandlungsraum" className="w-full h-auto" />
+                       <img src="/images/unser-angebot-2.webp" alt="Behandlungsraum" className="w-full h-auto" />
                   </div>
                   {/* Banner */}
                    <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs border-l-4 border-primary-500 hidden md:block">

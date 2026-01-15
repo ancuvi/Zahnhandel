@@ -77,7 +77,7 @@ const MainLayout = () => {
         <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
           <div className="grid gap-12 lg:grid-cols-4 lg:gap-8">
             <div className="lg:col-span-1 space-y-4">
-              <Link to="/" className="inline-block bg-white p-2 rounded-lg mb-2">
+              <Link to="/" className="inline-block mb-4">
                  <img 
                   src="/images/Logo_Zahntechnig - bearbeitet.png" 
                   alt="ZAHNTECHNIK Frankenberg GmbH" 

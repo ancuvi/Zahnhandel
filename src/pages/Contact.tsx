@@ -15,7 +15,7 @@ const Contact = () => {
       <div className="relative bg-stone-900 text-white py-24 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40" 
              style={{ 
-               backgroundImage: "url('/images/Willkommen-2.jpg')", 
+               backgroundImage: "url('/images/Willkommen-2.webp')", 
                backgroundSize: 'cover', 
                backgroundPosition: 'center' 
              }} 

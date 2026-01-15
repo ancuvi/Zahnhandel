@@ -19,72 +19,68 @@ const Home = () => {
         <div 
           className="absolute inset-0 z-0 hidden lg:block"
           style={{
-            backgroundImage: "url('/images/Zahntechnik-wilkommen.jpeg')",
+            backgroundImage: "url('/images/Zahntechnik-wilkommen.webp')",
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundAttachment: 'fixed',
           }}
-        >
-          <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px]"></div>
-        </div>
+        />
         
         {/* Mobile Background */}
         <div 
           className="absolute inset-0 z-0 lg:hidden"
           style={{
-            backgroundImage: "url('/images/Zahntechnik-wilkommen.jpeg')",
+            backgroundImage: "url('/images/Zahntechnik-wilkommen.webp')",
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
           }}
-        >
-          <div className="absolute inset-0 bg-white/90"></div>
-        </div>
+        />
         
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:w-3/4"></div>
+        {/* Gradient Overlay - Darker for more drama */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-stone-900 via-stone-900/80 to-transparent lg:w-3/4"></div>
         
         {/* Decorative Blob */}
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-secondary-100 rounded-full blur-3xl opacity-50 z-0"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary-500 rounded-full blur-[128px] opacity-20 z-0"></div>
         
         <div className="mx-auto max-w-7xl relative z-10 px-6 w-full py-20 flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="max-w-3xl space-y-8 animate-fade-in flex-1">
-            <div className="inline-flex items-center gap-2 rounded-full bg-secondary-50 px-4 py-2 text-sm font-semibold text-secondary-700 shadow-sm border border-secondary-100">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-4 py-2 text-sm font-semibold text-white border border-white/20 shadow-sm">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
               Meisterlabor in Frankenberg
             </div>
             
-            <h1 className="text-5xl font-bold font-serif text-stone-900 md:text-6xl lg:text-7xl leading-tight">
+            <h1 className="text-5xl font-bold font-serif text-white md:text-6xl lg:text-7xl leading-tight drop-shadow-sm">
               Willkommen bei <br/>
-              <span className="text-primary-600">ZAHNTECHNIK Frankenberg</span>
+              <span className="text-secondary-400">ZAHNTECHNIK Frankenberg</span>
             </h1>
             
-            <p className="text-xl text-stone-600 leading-relaxed font-medium max-w-2xl">
+            <p className="text-xl text-stone-200 leading-relaxed font-medium max-w-2xl drop-shadow-sm">
               Ihr kompetenter Partner für hochwertigen Zahnersatz. Wir verbinden handwerkliche Präzision mit modernster Technologie für Ihr strahlendstes Lächeln.
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button as={Link} to="/contact" variant="secondary" className="shadow-lg shadow-secondary-200/50">
+              <Button as={Link} to="/contact" variant="secondary" className="shadow-lg shadow-secondary-500/20 hover:scale-105 transition-transform">
                 Kontakt aufnehmen
               </Button>
-              <Button as={Link} to="/services" variant="outline" className="bg-white/50 backdrop-blur-sm hover:bg-white border-primary-200">
+              <Button as={Link} to="/services" variant="outline" className="text-white border-white/30 hover:bg-white/10 hover:border-white hover:text-white backdrop-blur-sm">
                 Unser Angebot
               </Button>
             </div>
             
-            <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm text-stone-700 border-t border-stone-200/60 mt-8">
+            <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm text-stone-300 border-t border-white/10 mt-8">
                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-full bg-white/80 backdrop-blur-sm shadow-sm text-secondary-600 ring-1 ring-stone-100">
+                  <div className="p-2 rounded-full bg-white/10 backdrop-blur-sm shadow-sm text-secondary-400 ring-1 ring-white/20">
                     <Clock size={18} />
                   </div>
                   <span className="font-medium">Mo-Do 7-19 Uhr, Fr 7-17 Uhr</span>
                </div>
                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-full bg-white/80 backdrop-blur-sm shadow-sm text-secondary-600 ring-1 ring-stone-100">
+                  <div className="p-2 rounded-full bg-white/10 backdrop-blur-sm shadow-sm text-secondary-400 ring-1 ring-white/20">
                     <MapPin size={18} />
                   </div>
                   <span className="font-medium">Gewerbering 17, Frankenberg</span>
@@ -99,7 +95,7 @@ const Home = () => {
          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="order-2 lg:order-1 relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-1 transition-transform hover:rotate-0 duration-500">
-                    <img src="/images/Unser-Team.jpeg" alt="Unser Team" className="w-full h-auto object-cover" />
+                    <img src="/images/Unser-Team.webp" alt="Unser Team" className="w-full h-auto object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 p-6 text-white">
                         <p className="font-serif font-bold text-xl">Unser Team</p>
@@ -198,19 +194,19 @@ const Home = () => {
       <Section title="Unsere Arbeiten" eyebrow="Galerie" background="stone">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-                <img src="/images/Frontzahnkeramik.jpeg" alt="Frontzahnkeramik" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="/images/Frontzahnkeramik.webp" alt="Frontzahnkeramik" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <p className="text-white font-bold text-lg">Frontzahnkeramik</p>
                 </div>
             </div>
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-                <img src="/images/Kombiarbeit.jpeg" alt="Kombiarbeit" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="/images/Kombiarbeit.webp" alt="Kombiarbeit" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <p className="text-white font-bold text-lg">Kombitechnik</p>
                 </div>
             </div>
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-                <img src="/images/Implantattechnik.jpeg" alt="Implantattechnik" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="/images/Implantattechnik.webp" alt="Implantattechnik" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <p className="text-white font-bold text-lg">Implantattechnik</p>
                 </div>
@@ -228,7 +224,7 @@ const Home = () => {
          <div 
             className="absolute inset-0 z-0"
             style={{
-                backgroundImage: "url('/images/Willkommen-2.jpg')",
+                backgroundImage: "url('/images/Willkommen-2.webp')",
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundAttachment: 'fixed',

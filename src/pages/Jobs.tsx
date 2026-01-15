@@ -56,7 +56,7 @@ const Jobs = () => {
       <div className="relative bg-stone-900 text-white py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20" 
              style={{ 
-               backgroundImage: "url('/images/Unser-Team.jpeg')", 
+               backgroundImage: "url('/images/Unser-Team.webp')", 
                backgroundSize: 'cover', 
                backgroundPosition: 'center' 
              }} 
