@@ -1,0 +1,259 @@
+import { Link } from 'react-router-dom'
+import { Activity, Star, Clock, MapPin, ArrowRight, CheckCircle2 } from 'lucide-react'
+import Button from '../components/UI/Button'
+import Card from '../components/UI/Card'
+import Section from '../components/UI/Section'
+import Seo from '../components/SEO/Seo'
+
+const Home = () => {
+  return (
+    <div>
+      <Seo
+        title="ZAHNTECHNIK Frankenberg GmbH | Börner & Schrambke"
+        description="Ihr Dentallabor in Frankenberg. Ästhetische Frontzahnkeramik, Prothetik und individuelle Lösungen. Telefon: 037206 / 75542."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+        {/* Background Image with Parallax effect */}
+        <div 
+          className="absolute inset-0 z-0 hidden lg:block"
+          style={{
+            backgroundImage: "url('/images/Zahntechnik-wilkommen.jpeg')",
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundAttachment: 'fixed',
+          }}
+        >
+          <div className="absolute inset-0 bg-white/30 backdrop-blur-[2px]"></div>
+        </div>
+        
+        {/* Mobile Background */}
+        <div 
+          className="absolute inset-0 z-0 lg:hidden"
+          style={{
+            backgroundImage: "url('/images/Zahntechnik-wilkommen.jpeg')",
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
+          <div className="absolute inset-0 bg-white/90"></div>
+        </div>
+        
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-white via-white/80 to-transparent lg:w-3/4"></div>
+        
+        {/* Decorative Blob */}
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-secondary-100 rounded-full blur-3xl opacity-50 z-0"></div>
+        
+        <div className="mx-auto max-w-7xl relative z-10 px-6 w-full py-20 flex flex-col lg:flex-row items-center justify-between gap-12">
+          <div className="max-w-3xl space-y-8 animate-fade-in flex-1">
+            <div className="inline-flex items-center gap-2 rounded-full bg-secondary-50 px-4 py-2 text-sm font-semibold text-secondary-700 shadow-sm border border-secondary-100">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary-500"></span>
+              </span>
+              Meisterlabor in Frankenberg
+            </div>
+            
+            <h1 className="text-5xl font-bold font-serif text-stone-900 md:text-6xl lg:text-7xl leading-tight">
+              Willkommen bei <br/>
+              <span className="text-primary-600">ZAHNTECHNIK Frankenberg</span>
+            </h1>
+            
+            <p className="text-xl text-stone-600 leading-relaxed font-medium max-w-2xl">
+              Ihr kompetenter Partner für hochwertigen Zahnersatz. Wir verbinden handwerkliche Präzision mit modernster Technologie für Ihr strahlendstes Lächeln.
+            </p>
+            
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button as={Link} to="/contact" variant="secondary" className="shadow-lg shadow-secondary-200/50">
+                Kontakt aufnehmen
+              </Button>
+              <Button as={Link} to="/services" variant="outline" className="bg-white/50 backdrop-blur-sm hover:bg-white border-primary-200">
+                Unser Angebot
+              </Button>
+            </div>
+            
+            <div className="pt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm text-stone-700 border-t border-stone-200/60 mt-8">
+               <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-full bg-white/80 backdrop-blur-sm shadow-sm text-secondary-600 ring-1 ring-stone-100">
+                    <Clock size={18} />
+                  </div>
+                  <span className="font-medium">Mo-Do 7-19 Uhr, Fr 7-17 Uhr</span>
+               </div>
+               <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-full bg-white/80 backdrop-blur-sm shadow-sm text-secondary-600 ring-1 ring-stone-100">
+                    <MapPin size={18} />
+                  </div>
+                  <span className="font-medium">Gewerbering 17, Frankenberg</span>
+               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Intro Section with Image */}
+      <Section background="stone" className="relative">
+         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="order-2 lg:order-1 relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-1 transition-transform hover:rotate-0 duration-500">
+                    <img src="/images/Unser-Team.jpeg" alt="Unser Team" className="w-full h-auto object-cover" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 p-6 text-white">
+                        <p className="font-serif font-bold text-xl">Unser Team</p>
+                        <p className="text-sm opacity-90">Für Sie im Einsatz</p>
+                    </div>
+                </div>
+                {/* Decorative Elements */}
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary-100 rounded-full -z-10 blur-xl"></div>
+                <div className="absolute -top-6 -left-6 w-32 h-32 bg-secondary-100 rounded-full -z-10 blur-xl"></div>
+            </div>
+            <div className="order-1 lg:order-2 space-y-6">
+                <h2 className="text-3xl font-serif font-bold text-stone-900">Über uns</h2>
+                <div className="bg-primary-50 p-6 rounded-xl border-l-4 border-primary-500 shadow-sm">
+                    <p className="font-bold text-primary-800 italic text-lg">
+                    "Geht nicht, will nicht, kann nicht – gibt es hier nicht! <br/>
+                    Wir finden immer eine Lösung......."
+                    </p>
+                </div>
+                <p className="text-lg text-stone-700 leading-relaxed">
+                    Ich möchte Ihnen auf diesem Wege einen kleinen Einblick in unser Dentallabor geben.
+                    Als Zahnärztin und Zahnarzt, aber auch als Patient finden Sie auf unserer Homepage umfangreiche Informationen zu unseren Produkten und Dienstleistungen.
+                </p>
+                <Link to="/about" className="inline-flex items-center gap-2 text-secondary-600 font-semibold hover:text-secondary-700 transition-colors group">
+                   Mehr über uns erfahren <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+            </div>
+         </div>
+      </Section>
+
+      {/* Services Section */}
+      <Section
+        title="Unser Angebot"
+        eyebrow="Leistungen"
+        intro="Im Detail bieten wir Ihnen folgende Leistungen an:"
+        headingLevel={2}
+        background="white"
+        className="relative"
+      >
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#2f8678 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
+        
+        <div className="grid gap-8 md:grid-cols-2 lg:gap-12 relative z-10">
+          <Card
+            title="Ästhetik & Keramik"
+            description="Höchste Ansprüche an natürliche Ästhetik."
+            icon={<Star size={24} />}
+            className="border-t-4 border-t-secondary-400"
+          >
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="mt-1 h-5 w-5 text-primary-500 shrink-0" />
+                <span>Ästhetische, individuelle Frontzahnkeramik</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="mt-1 h-5 w-5 text-primary-500 shrink-0" />
+                <span>Keramik gepresst und individuell geschichtet</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="mt-1 h-5 w-5 text-primary-500 shrink-0" />
+                <span>Individuelle Zahnfarbenbestimmung</span>
+              </li>
+            </ul>
+            <Link to="/services" className="inline-flex items-center gap-2 text-secondary-600 font-semibold hover:text-secondary-700 transition-colors group-hover:translate-x-1 duration-300">
+               Mehr erfahren <ArrowRight size={16} />
+            </Link>
+          </Card>
+          
+          <Card
+            title="Service & Beratung"
+            description="Wir sind für Sie da – persönlich und kompetent."
+            icon={<Activity size={24} />}
+            className="border-t-4 border-t-primary-500"
+          >
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="mt-1 h-5 w-5 text-primary-500 shrink-0" />
+                <span>Individuelle Beratung & prothetische Planung</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="mt-1 h-5 w-5 text-primary-500 shrink-0" />
+                <span>Flexibler Reparaturservice</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="mt-1 h-5 w-5 text-primary-500 shrink-0" />
+                <span>Schnelle Hilfe bei Problemen</span>
+              </li>
+            </ul>
+             <Link to="/services" className="inline-flex items-center gap-2 text-secondary-600 font-semibold hover:text-secondary-700 transition-colors group-hover:translate-x-1 duration-300">
+               Mehr erfahren <ArrowRight size={16} />
+            </Link>
+          </Card>
+        </div>
+      </Section>
+
+      {/* Showcase / Gallery Section */}
+      <Section title="Unsere Arbeiten" eyebrow="Galerie" background="stone">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
+                <img src="/images/Frontzahnkeramik.jpeg" alt="Frontzahnkeramik" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <p className="text-white font-bold text-lg">Frontzahnkeramik</p>
+                </div>
+            </div>
+            <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
+                <img src="/images/Kombiarbeit.jpeg" alt="Kombiarbeit" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <p className="text-white font-bold text-lg">Kombitechnik</p>
+                </div>
+            </div>
+            <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
+                <img src="/images/Implantattechnik.jpeg" alt="Implantattechnik" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <p className="text-white font-bold text-lg">Implantattechnik</p>
+                </div>
+            </div>
+        </div>
+        <div className="mt-12 text-center">
+            <Link to="/services" className="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white px-8 py-3 text-sm font-semibold text-stone-700 shadow-sm hover:bg-stone-50 hover:text-primary-600 transition-all">
+                Alle Leistungen ansehen
+            </Link>
+        </div>
+      </Section>
+
+      {/* Slogan Banner with Background */}
+      <section className="relative py-24 overflow-hidden">
+         <div 
+            className="absolute inset-0 z-0"
+            style={{
+                backgroundImage: "url('/images/Willkommen-2.jpg')",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundAttachment: 'fixed',
+            }}
+         >
+            <div className="absolute inset-0 bg-primary-900/80 mix-blend-multiply"></div>
+            <div className="absolute inset-0 bg-black/30"></div>
+         </div>
+         
+         <div className="mx-auto max-w-4xl relative z-10 px-6 text-center space-y-8">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-white uppercase tracking-widest rotate-[-2deg] drop-shadow-lg">
+               "SOVIEL ZAHN MUSS SEIN!"
+            </h2>
+            <p className="text-lg text-primary-100 leading-relaxed max-w-2xl mx-auto font-medium">
+               Bei speziellen Fragen kontaktieren Sie uns einfach unter der Telefonnummer <strong>037206 / 75542</strong> oder senden uns eine E-Mail. Gern sind wir für Sie da.
+            </p>
+            <div className="pt-4">
+               <Button as={Link} to="/contact" variant="secondary" className="shadow-xl shadow-black/20 border-2 border-transparent hover:border-white/20">
+                  Jetzt Kontakt aufnehmen
+               </Button>
+            </div>
+         </div>
+      </section>
+    </div>
+  )
+}
+
+export default Home
