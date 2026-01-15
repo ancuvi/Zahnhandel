@@ -53,7 +53,8 @@ const Jobs = () => {
       />
 
       {/* Hero Section */}
-      <div className="relative bg-stone-900 text-white py-24 lg:py-32 overflow-hidden">
+      <div className="relative bg-stone-900 text-white py-16 md:py-24 lg:py-32 overflow-hidden">
+        {/* Background Image/Overlay */}
         <div className="absolute inset-0 z-0 opacity-20" 
              style={{ 
                backgroundImage: "url('/images/Unser-Team.webp')", 
@@ -65,7 +66,7 @@ const Jobs = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl space-y-6">
-             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-4 py-1.5 text-sm font-medium text-white border border-white/20">
+             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-3 py-1.5 md:px-4 text-xs md:text-sm font-medium text-white border border-white/20">
                <Briefcase size={16} />
                <span>Karriere bei uns</span>
             </div>
@@ -101,7 +102,7 @@ const Jobs = () => {
       <Section title="Aktuelle Stellenangebote" background="white">
          <div className="max-w-4xl mx-auto space-y-6">
             {jobs.map((job, idx) => (
-               <div key={idx} className="group bg-white border border-stone-200 rounded-2xl p-8 hover:shadow-lg hover:border-primary-200 transition-all duration-300 relative overflow-hidden">
+               <div key={idx} className="group bg-white border border-stone-200 rounded-2xl p-6 md:p-8 hover:shadow-lg hover:border-primary-200 transition-all duration-300 relative overflow-hidden">
                   <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                       <Briefcase size={100} />
                   </div>

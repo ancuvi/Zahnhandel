@@ -72,9 +72,6 @@ const Home = () => {
         {/* Gradient Overlay - Darker for more drama */}
         <div className="absolute inset-0 z-0 bg-gradient-to-r from-stone-900 via-stone-900/80 to-transparent lg:w-3/4"></div>
         
-        {/* Decorative Blob */}
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-primary-500 rounded-full blur-[128px] opacity-20 z-0"></div>
-        
         <div className="mx-auto max-w-7xl relative z-10 px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           <div className="max-w-3xl space-y-6 lg:space-y-8 animate-fade-in flex-1">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md px-3 py-1.5 lg:px-4 lg:py-2 text-xs lg:text-sm font-semibold text-white border border-white/20 shadow-sm">

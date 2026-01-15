@@ -12,7 +12,7 @@ const Contact = () => {
       />
 
       {/* Hero Section */}
-      <div className="relative bg-stone-900 text-white py-24 overflow-hidden">
+      <div className="relative bg-stone-900 text-white py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40" 
              style={{ 
                backgroundImage: "url('/images/Willkommen-2.webp')", 
@@ -24,7 +24,7 @@ const Contact = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl space-y-6">
-             <div className="inline-flex items-center gap-2 rounded-full bg-secondary-900/50 px-4 py-1.5 text-sm font-medium text-secondary-200 border border-secondary-800">
+             <div className="inline-flex items-center gap-2 rounded-full bg-secondary-900/50 px-3 py-1.5 md:px-4 text-xs md:text-sm font-medium text-secondary-200 border border-secondary-800">
                <Send size={16} />
                <span>Wir sind für Sie da</span>
             </div>
@@ -38,7 +38,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <Section className="relative -mt-10 pt-0 pb-20 z-20">
+      <Section className="relative -mt-6 md:-mt-10 pt-0 pb-16 md:pb-20 z-20">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           
           {/* Contact Info Cards (Left Side) */}
@@ -127,7 +127,7 @@ const Contact = () => {
         </div>
         
         {/* Map Full Width */}
-        <div className="mt-12 h-96 rounded-2xl overflow-hidden shadow-lg border border-stone-200">
+        <div className="mt-8 md:mt-12 h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-stone-200">
             <iframe 
                 width="100%" 
                 height="100%" 
