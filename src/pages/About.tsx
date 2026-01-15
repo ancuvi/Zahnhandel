@@ -14,11 +14,11 @@ const About = () => {
       />
 
       {/* Hero Section */}
-      <div className="relative bg-stone-900 text-white py-24 overflow-hidden">
+      <div className="relative bg-stone-900 text-white py-16 md:py-24 overflow-hidden">
         {/* Background Image/Overlay */}
         <div className="absolute inset-0 z-0 opacity-20" 
              style={{ 
-               backgroundImage: "url('/images/Zahntechnik-wilkommen.webp')", 
+               backgroundImage: `url('${import.meta.env.BASE_URL}images/Zahntechnik-wilkommen.webp')`, 
                backgroundSize: 'cover', 
                backgroundPosition: 'center' 
              }} 
@@ -55,7 +55,7 @@ const About = () => {
                   <div className="w-20 h-1.5 bg-primary-500 rounded-full"></div>
                </div>
                
-               <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-stone-300 before:to-transparent">
+               <div className="space-y-8 relative">
                   
                   {/* Timeline Item 1 */}
                   <div className="relative flex items-start gap-6 group">
@@ -104,7 +104,7 @@ const About = () => {
             
             <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-all duration-500">
-                   <img src="/images/Geschäftsführung.webp" alt="Geschäftsführung" className="w-full h-auto" />
+                   <img src={`${import.meta.env.BASE_URL}images/Geschäftsführung.webp`} alt="Geschäftsführung" className="w-full h-auto" />
                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
                       <p className="text-white font-medium">Unsere Geschäftsführung</p>
                       <p className="text-white/80 text-sm">ZTM Sven Börner (GF) / ZTM Udo Gerschler (ehem. GF) / ZTM Markus Schrambke (GF)</p>
@@ -145,7 +145,7 @@ const About = () => {
            </div>
            
            <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-5xl mx-auto">
-              <img src="/images/Unser-Team.webp" alt="Team der Zahntechnik Frankenberg" className="w-full h-auto" />
+              <img src={`${import.meta.env.BASE_URL}images/Unser-Team.webp`} alt="Team der Zahntechnik Frankenberg" className="w-full h-auto" />
               <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
                  <div>
                     <h3 className="text-xl font-bold text-stone-900">Das Team der Zahntechnik Frankenberg</h3>
