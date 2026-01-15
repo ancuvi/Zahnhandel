@@ -8,7 +8,7 @@ type SectionProps = {
   className?: string
   headingLevel?: 1 | 2 | 3 | 4
   centered?: boolean
-  background?: 'default' | 'stone' | 'white'
+  background?: 'default' | 'stone' | 'white' | 'primary'
 }
 
 const Section = ({
@@ -27,6 +27,7 @@ const Section = ({
     default: 'bg-transparent',
     stone: 'bg-stone-50',
     white: 'bg-white',
+    primary: 'bg-primary-900',
   }[background]
 
   return (

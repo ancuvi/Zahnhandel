@@ -47,7 +47,7 @@ const About = () => {
       </div>
 
       {/* History Section - "Wie alles begann" */}
-      <Section className="relative">
+      <Section className="relative py-12 lg:py-16">
          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
                <div>
@@ -117,7 +117,7 @@ const About = () => {
       </Section>
 
       {/* Team Stats Section */}
-      <Section className="bg-primary-900 text-white">
+      <Section background="primary" className="text-white py-12 lg:py-16">
          <div className="grid md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
             <div className="p-4">
                <div className="text-5xl font-bold mb-2">10</div>
@@ -135,9 +135,9 @@ const About = () => {
       </Section>
 
       {/* Team Image Section */}
-      <Section background="stone" className="relative overflow-hidden">
+      <Section background="stone" className="relative overflow-hidden py-12 lg:py-16">
         <div className="container mx-auto">
-           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+           <div className="text-center max-w-3xl mx-auto mb-12 space-y-4">
               <h2 className="text-3xl font-serif font-bold text-stone-900">Unser Team</h2>
               <p className="text-stone-600 text-lg">
                  Kompetenz, Leidenschaft und jahrelange Erfahrung. Unser Team besteht aus hochqualifizierten Fachkräften, die jeden Tag ihr Bestes geben.
