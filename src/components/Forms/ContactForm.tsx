@@ -1,4 +1,5 @@
 import { useId, useState } from 'react'
+import { Send, User, Mail, MessageSquare, Tag, FileText } from 'lucide-react'
 
 type FormState = {
   name: string
@@ -20,6 +21,7 @@ const ContactForm = () => {
     message: '',
   })
   const [errors, setErrors] = useState<FormErrors>({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const validate = (): boolean => {
     const newErrors: FormErrors = {}
@@ -51,12 +53,17 @@ const ContactForm = () => {
       event.preventDefault()
       return
     }
-    // Wenn valid, erfolgt der Standard-Submit an Netlify (POST an /danke)
+    setIsSubmitting(true)
+    // Wenn valid, erfolgt der Standard-Submit an Netlify
   }
+
+  const inputClasses = "w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 pl-11 text-sm text-stone-900 placeholder:text-stone-400 shadow-sm outline-none transition-all duration-200 focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10"
+  const labelClasses = "block text-sm font-medium text-stone-700 mb-1.5"
+  const iconClasses = "absolute left-3.5 top-3.5 h-5 w-5 text-stone-400"
 
   return (
     <form
-      className="space-y-6 rounded-2xl border border-stone-200 bg-white p-6 shadow-sm"
+      className="space-y-6"
       name="kontakt"
       method="POST"
       data-netlify="true"
@@ -72,115 +79,141 @@ const ContactForm = () => {
         </label>
       </p>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        <label className="space-y-1 text-sm text-stone-700" htmlFor={`${idPrefix}-name`}>
-          <span>Name *</span>
-          <input
-            id={`${idPrefix}-name`}
-            name="name"
-            value={form.name}
-            onChange={handleChange('name')}
-            className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm shadow-sm outline-none transition focus:border-primary-400 focus:ring-2 focus:ring-primary-100"
-            placeholder="Vor- und Nachname"
-            aria-invalid={!!errors.name}
-            aria-describedby={errors.name ? `${idPrefix}-name-error` : undefined}
-          />
+      <div className="grid gap-6 md:grid-cols-2">
+        <div>
+          <label className={labelClasses} htmlFor={`${idPrefix}-name`}>
+            Name *
+          </label>
+          <div className="relative">
+            <User className={iconClasses} />
+            <input
+              id={`${idPrefix}-name`}
+              name="name"
+              value={form.name}
+              onChange={handleChange('name')}
+              className={inputClasses}
+              placeholder="Ihr Vor- und Nachname"
+              aria-invalid={!!errors.name}
+            />
+          </div>
           {errors.name && (
-            <p id={`${idPrefix}-name-error`} className="text-xs text-red-600">
+            <p className="mt-1 text-xs text-red-600 animate-slide-up">
               {errors.name}
             </p>
           )}
-        </label>
-        <label className="space-y-1 text-sm text-stone-700" htmlFor={`${idPrefix}-email`}>
-          <span>E-Mail *</span>
-          <input
-            id={`${idPrefix}-email`}
-            name="email"
-            type="email"
-            value={form.email}
-            onChange={handleChange('email')}
-            className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm shadow-sm outline-none transition focus:border-primary-400 focus:ring-2 focus:ring-primary-100"
-            placeholder="Ihre E-Mail-Adresse"
-            aria-invalid={!!errors.email}
-            aria-describedby={errors.email ? `${idPrefix}-email-error` : undefined}
-          />
+        </div>
+
+        <div>
+          <label className={labelClasses} htmlFor={`${idPrefix}-email`}>
+            E-Mail *
+          </label>
+          <div className="relative">
+             <Mail className={iconClasses} />
+            <input
+              id={`${idPrefix}-email`}
+              name="email"
+              type="email"
+              value={form.email}
+              onChange={handleChange('email')}
+              className={inputClasses}
+              placeholder="ihre@email.de"
+              aria-invalid={!!errors.email}
+            />
+          </div>
           {errors.email && (
-            <p id={`${idPrefix}-email-error`} className="text-xs text-red-600">
+            <p className="mt-1 text-xs text-red-600 animate-slide-up">
               {errors.email}
             </p>
           )}
-        </label>
+        </div>
       </div>
 
-      <label className="space-y-1 text-sm text-stone-700" htmlFor={`${idPrefix}-subject`}>
-        <span>Betreff *</span>
-        <input
-          id={`${idPrefix}-subject`}
-          name="subject"
-          value={form.subject}
-          onChange={handleChange('subject')}
-          className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm shadow-sm outline-none transition focus:border-primary-400 focus:ring-2 focus:ring-primary-100"
-          placeholder="Worum geht es?"
-          aria-invalid={!!errors.subject}
-          aria-describedby={errors.subject ? `${idPrefix}-subject-error` : undefined}
-        />
+      <div>
+        <label className={labelClasses} htmlFor={`${idPrefix}-reason`}>
+          Anliegen
+        </label>
+        <div className="relative">
+           <Tag className={iconClasses} />
+            <select
+              id={`${idPrefix}-reason`}
+              name="reason"
+              value={form.reason}
+              onChange={handleChange('reason')}
+              className={`${inputClasses} appearance-none cursor-pointer`}
+            >
+              <option value="" disabled>Bitte wählen Sie ein Thema</option>
+              <option value="anfrage">Allgemeine Anfrage</option>
+              <option value="kostenvoranschlag">Kostenvoranschlag</option>
+              <option value="termin">Terminwunsch</option>
+              <option value="bewerbung">Bewerbung</option>
+              <option value="sonstiges">Sonstiges</option>
+            </select>
+             <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-stone-500">
+                <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </div>
+        </div>
+      </div>
+
+      <div>
+        <label className={labelClasses} htmlFor={`${idPrefix}-subject`}>
+          Betreff *
+        </label>
+         <div className="relative">
+            <FileText className={iconClasses} />
+            <input
+              id={`${idPrefix}-subject`}
+              name="subject"
+              value={form.subject}
+              onChange={handleChange('subject')}
+              className={inputClasses}
+              placeholder="Kurze Zusammenfassung"
+              aria-invalid={!!errors.subject}
+            />
+        </div>
         {errors.subject && (
-          <p id={`${idPrefix}-subject-error`} className="text-xs text-red-600">
+          <p className="mt-1 text-xs text-red-600 animate-slide-up">
             {errors.subject}
           </p>
         )}
-      </label>
+      </div>
 
-      <label className="space-y-1 text-sm text-stone-700" htmlFor={`${idPrefix}-reason`}>
-        <span>Anliegen (optional)</span>
-        <select
-          id={`${idPrefix}-reason`}
-          name="reason"
-          value={form.reason}
-          onChange={handleChange('reason')}
-          className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm shadow-sm outline-none transition focus:border-primary-400 focus:ring-2 focus:ring-primary-100"
-        >
-          <option value="" disabled>
-            Bitte auswählen
-          </option>
-          <option value="anfrage">Allgemeine Anfrage</option>
-          <option value="kostenvoranschlag">Kostenvoranschlag</option>
-          <option value="termin">Terminwunsch</option>
-          <option value="bewerbung">Bewerbung</option>
-          <option value="sonstiges">Sonstiges</option>
-        </select>
-      </label>
-
-      <label className="space-y-1 text-sm text-stone-700" htmlFor={`${idPrefix}-message`}>
-        <span>Nachricht *</span>
-        <textarea
-          id={`${idPrefix}-message`}
-          name="message"
-          value={form.message}
-          onChange={handleChange('message')}
-          rows={5}
-          className="w-full rounded-lg border border-stone-200 px-3 py-2 text-sm shadow-sm outline-none transition focus:border-primary-400 focus:ring-2 focus:ring-primary-100"
-          placeholder="Wie können wir Ihnen helfen?"
-          aria-invalid={!!errors.message}
-          aria-describedby={errors.message ? `${idPrefix}-message-error` : undefined}
-        />
+      <div>
+        <label className={labelClasses} htmlFor={`${idPrefix}-message`}>
+          Nachricht *
+        </label>
+         <div className="relative">
+            <MessageSquare className={`${iconClasses} top-4`} />
+            <textarea
+              id={`${idPrefix}-message`}
+              name="message"
+              value={form.message}
+              onChange={handleChange('message')}
+              rows={5}
+              className={`${inputClasses} py-3.5`}
+              placeholder="Wie können wir Ihnen helfen?"
+              aria-invalid={!!errors.message}
+            />
+        </div>
         {errors.message && (
-          <p id={`${idPrefix}-message-error`} className="text-xs text-red-600">
+          <p className="mt-1 text-xs text-red-600 animate-slide-up">
             {errors.message}
           </p>
         )}
-      </label>
-
-      <div className="rounded-lg bg-stone-50 p-3 text-xs text-stone-600">
-        Ihre Anfrage wird sicher übermittelt. Wir melden uns in der Regel innerhalb von 1–2 Werktagen bei Ihnen.
       </div>
 
-      <button
-        type="submit"
-        className="w-full rounded-full bg-secondary-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-secondary-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-500 active:bg-secondary-700"
-      >
-        Nachricht senden
-      </button>
+      <div className="flex items-center justify-between gap-4 pt-2">
+         <p className="text-xs text-stone-500 max-w-xs">
+           Mit dem Absenden erklären Sie sich mit der Verarbeitung Ihrer Daten einverstanden.
+         </p>
+         <button
+            type="submit"
+            disabled={isSubmitting}
+            className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-secondary-500 to-secondary-600 px-8 py-3 text-sm font-bold text-white shadow-lg shadow-secondary-500/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-secondary-500/40 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2 disabled:opacity-70"
+          >
+            <span>{isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}</span>
+            {!isSubmitting && <Send size={18} className="transition-transform group-hover:translate-x-1" />}
+          </button>
+      </div>
     </form>
   )
 }

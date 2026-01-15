@@ -44,17 +44,11 @@ const MainLayout = () => {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
           <Link to="/" className="group flex items-center gap-3">
-            <div className={`flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full transition-colors ${scrolled ? 'bg-primary-50 text-primary-600' : 'bg-white/80 text-primary-600 shadow-sm'}`}>
-              <Hexagon size={24} strokeWidth={1.5} />
-            </div>
-            <div className="flex flex-col">
-              <span className={`text-lg md:text-xl font-serif font-bold tracking-tight transition-colors ${scrolled ? 'text-stone-900' : 'text-stone-900'}`}>
-                ZAHNTECHNIK Frankenberg
-              </span>
-              <span className="text-[10px] md:text-xs font-medium uppercase tracking-wider text-stone-500">
-                Börner & Schrambke
-              </span>
-            </div>
+            <img 
+              src="/images/Logo_Zahntechnig - bearbeitet.png" 
+              alt="ZAHNTECHNIK Frankenberg GmbH" 
+              className="h-12 md:h-16 w-auto object-contain"
+            />
           </Link>
           <Navbar links={navLinks} activePath={pathname} />
           <div className="flex items-center gap-4">
@@ -83,10 +77,13 @@ const MainLayout = () => {
         <div className="mx-auto max-w-7xl px-6 py-16 lg:py-20">
           <div className="grid gap-12 lg:grid-cols-4 lg:gap-8">
             <div className="lg:col-span-1 space-y-4">
-              <div className="flex items-center gap-2 text-white">
-                <Hexagon size={24} />
-                <span className="text-xl font-serif font-bold">ZAHNTECHNIK Frankenberg</span>
-              </div>
+              <Link to="/" className="inline-block bg-white p-2 rounded-lg mb-2">
+                 <img 
+                  src="/images/Logo_Zahntechnig - bearbeitet.png" 
+                  alt="ZAHNTECHNIK Frankenberg GmbH" 
+                  className="h-12 w-auto object-contain"
+                />
+              </Link>
               <p className="text-sm leading-relaxed text-stone-400">
                 SOVIEL ZAHN MUSS SEIN! Ihr kompetenter Partner für hochwertigen Zahnersatz und individuelle Lösungen in Frankenberg.
               </p>

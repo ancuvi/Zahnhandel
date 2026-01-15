@@ -1,64 +1,53 @@
+import { Link } from 'react-router-dom'
+import { CheckCircle2, Diamond, Layers, Activity, Smartphone, Microscope, ShieldCheck } from 'lucide-react'
 import Section from '../components/UI/Section'
 import Seo from '../components/SEO/Seo'
-import { CheckCircle2 } from 'lucide-react'
+import Button from '../components/UI/Button'
 
 const Services = () => {
   const offerings = [
     {
-      title: 'Ästhetische, individuelle Frontzahnkeramik',
-      description: 'Wir fertigen ästhetische und individuelle Frontzahnkeramik an, die sich durch Form und Farbe perfekt in Ihr natürliches Lächeln einfügt.',
+      title: 'Ästhetik & Keramik',
+      description: 'Natürlichkeit ist unser Maßstab. Mit individueller Frontzahnkeramik und Schichttechnik schaffen wir lebendige Ergebnisse.',
       image: '/images/Frontzahnkeramik.jpeg',
+      icon: <Diamond className="w-6 h-6" />,
+      details: ['Individuelle Frontzahnkeramik', 'Veneers, Inlays, Onlays', 'Keramik gepresst & geschichtet']
     },
     {
-      title: 'Keramik gepresst und individuell geschichtet',
-      description: 'Unsere Keramik wird präzise gepresst und anschließend individuell geschichtet, um höchste Ansprüche an Ästhetik und Langlebigkeit zu erfüllen.',
-      image: '/images/Keramik_gepresst.jpeg',
-    },
-    {
-      title: 'Veneers, Kronen, Brücken, Inlays, Onlays',
-      description: 'Unser Leistungsspektrum umfasst die präzise Herstellung von Veneers, Kronen, Brücken sowie Inlays und Onlays für eine hochwertige Versorgung.',
+      title: 'Kronen & Brücken',
+      description: 'Präzise Passform und Langlebigkeit. Ob Zirkon, Vollkeramik oder Metallkeramik – wir finden die optimale Lösung.',
       image: '/images/Kronen-und-Brücken.jpeg',
+      icon: <Layers className="w-6 h-6" />,
+      details: ['Zirkonkeramik & CAD/CAM', 'Perlmutkrone', 'Edelmetall & Titan']
     },
     {
-      title: 'Zirkonkeramik & CAD/CAM',
-      description: 'Wir nutzen modernste Zirkonkeramik und die präzise CAD/CAM-Technologie von Wieland Zeno für passgenauen und ästhetischen Zahnersatz.',
-      image: '/images/zirkon.jpeg',
-    },
-    {
-      title: 'Perlmutkrone',
-      description: 'Die Perlmutkrone (Vollzirkon- oder Stahlersatzkrone) bietet eine hochwertige Alternative mit natürlicher Ästhetik und hoher Stabilität.',
-      image: '/images/Perlmutkrone.jpeg',
-    },
-    {
-      title: 'Edelmetalltechnik & Titan',
-      description: 'Wir verarbeiten Titan sowohl gefräst als auch gegossen und bieten meisterhafte Edelmetalltechnik für anspruchsvolle prothetische Lösungen.',
-      image: '/images/Edelmetalltechnik.jpeg',
-    },
-    {
-      title: 'Kombi-Arbeiten & Teleskope',
-      description: 'Wir fertigen edelmetallfreie Restaurationen (NEM Primär- und Sekundärteleskope) sowie komplexe Kombi-Arbeiten mit Teleskopen, Riegeln und Geschieben.',
+      title: 'Kombitechnik',
+      description: 'Funktionalität trifft Komfort. Hochwertige Teleskoparbeiten und Geschiebe für sicheren Halt und Ästhetik.',
       image: '/images/Kombiarbeit.jpeg',
-    },
-    {
-      title: 'Totalprothetik',
-      description: 'Unsere Totalprothetik erfolgt nach der TiF-Methode (Totalprothetik in Funktion) und anderen gängigen Aufstellvarianten für optimalen Halt und Komfort.',
-      image: '/images/Totalprotese.jpeg',
-    },
-    {
-      title: 'Galvanotechnik',
-      description: 'Mit modernster Galvanotechnik erstellen wir passgenaue Sekundärteile aus Feingold für eine optimale Biokompatibilität und Ästhetik.',
-      image: '/images/Galvanotechnik.jpeg',
-    },
-    {
-      title: 'Modellguss & Lasertechnik',
-      description: 'Präzise Lasertechnik und hochwertige Modellgusstechnik gehören zu unseren Standards für stabile und langlebige Konstruktionen.',
-      image: '/images/Modellguss.jpeg',
+      icon: <Activity className="w-6 h-6" />,
+      details: ['Teleskoptechnik', 'Geschiebe & Riegel', 'Modellguss']
     },
     {
       title: 'Implantattechnik',
-      description: 'Wir sind spezialisiert auf individuelle Implantattechnik für festsitzenden und herausnehmbaren Zahnersatz auf allen gängigen Systemen.',
+      description: 'Festsitzender Zahnersatz auf Implantaten. Wir versorgen alle gängigen Implantatsysteme mit höchster Präzision.',
       image: '/images/Implantattechnik.jpeg',
+      icon: <Smartphone className="w-6 h-6" />, 
+      details: ['Suprakonstruktionen', 'Individuelle Abutments', 'Stegkonstruktionen']
     },
+    {
+      title: 'Totalprothetik',
+      description: 'Lebensqualität zurückgewinnen. Prothesen nach der TiF-Methode für optimalen Sitz und natürliche Optik.',
+      image: '/images/Totalprotese.jpeg',
+      icon: <ShieldCheck className="w-6 h-6" />,
+      details: ['TiF-Methode', 'Totalprothesen', 'Reparaturen']
+    },
+    {
+      title: 'Spezialtechniken',
+      description: 'Innovation für besondere Anforderungen. Modernste Verfahren für perfekte Passung und Biokompatibilität.',
+      image: '/images/Galvanotechnik.jpeg',
+      icon: <Microscope className="w-6 h-6" />,
+      details: ['Galvanotechnik', 'Lasertechnik', 'Schienen & Diagnostik']
+    }
   ]
 
   return (
@@ -68,77 +57,125 @@ const Services = () => {
         description="Unser Angebot: Frontzahnkeramik, Zirkon, Kombitechnik, Implantattechnik und mehr. Entdecken Sie unser Leistungsspektrum."
       />
       
-      {/* Intro */}
-      <Section
-        eyebrow="Unser Angebot"
-        title="Zahntechnische Leistungen"
-        intro="Im Detail bieten wir Ihnen folgende Leistungen an:"
-        className="bg-stone-50"
-      >
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
-          {offerings.map((item, index) => (
-            <div key={index} className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-stone-100">
-              <div className="h-64 overflow-hidden bg-stone-100">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                  loading="lazy"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-xl font-serif font-bold text-stone-900 mb-3">{item.title}</h3>
-                <p className="text-stone-600 leading-relaxed text-sm flex-1">
-                  {item.description}
-                </p>
-              </div>
+      {/* Hero */}
+      <div className="relative bg-stone-900 text-white py-24 overflow-hidden">
+        {/* Background Image/Overlay */}
+         <div className="absolute inset-0 z-0 opacity-30" 
+             style={{ 
+               backgroundImage: "url('/images/Kronen-und-Brücken.jpeg')", 
+               backgroundSize: 'cover', 
+               backgroundPosition: 'center' 
+             }} 
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-stone-900 via-stone-900/80 to-transparent z-0"></div>
+        
+         <div className="container mx-auto px-6 relative z-10">
+          <div className="max-w-3xl space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-secondary-900/50 px-4 py-1.5 text-sm font-medium text-secondary-200 border border-secondary-800">
+               <Diamond size={16} />
+               <span>Meisterhafte Präzision</span>
             </div>
-          ))}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
+              Unser <span className="text-secondary-400">Leistungsspektrum</span>
+            </h1>
+            <p className="text-lg text-stone-300 leading-relaxed max-w-2xl">
+              Von klassischer Handwerkskunst bis zu modernster digitaler Fertigung. 
+              Wir bieten Ihnen die gesamte Bandbreite zeitgemäßer Zahntechnik.
+            </p>
+          </div>
         </div>
+      </div>
+
+      {/* Main Grid */}
+      <Section title="Exzellenz in jedem Bereich" intro="Wir verbinden Ästhetik mit Funktion für Ihr schönstes Lächeln." background="stone">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {offerings.map((offer, idx) => (
+                  <div key={idx} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100 flex flex-col">
+                      <div className="relative h-48 overflow-hidden">
+                          <img src={offer.image} alt={offer.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                          <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-lg text-secondary-600 shadow-sm">
+                              {offer.icon}
+                          </div>
+                      </div>
+                      <div className="p-6 flex-1 flex flex-col">
+                          <h3 className="text-xl font-bold font-serif text-stone-900 mb-2 group-hover:text-secondary-600 transition-colors">{offer.title}</h3>
+                          <p className="text-stone-600 text-sm leading-relaxed mb-6 flex-1">{offer.description}</p>
+                          
+                          <div className="space-y-2 border-t border-stone-100 pt-4 mt-auto">
+                              {offer.details.map((detail, i) => (
+                                  <div key={i} className="flex items-center gap-2 text-sm text-stone-500">
+                                      <CheckCircle2 size={14} className="text-primary-500 shrink-0" />
+                                      <span>{detail}</span>
+                                  </div>
+                              ))}
+                          </div>
+                      </div>
+                  </div>
+              ))}
+          </div>
       </Section>
 
-      {/* Additional Services List */}
+      {/* Feature List / Additional Services */}
       <Section background="white">
-        <div className="max-w-4xl mx-auto">
-             <h2 className="text-3xl font-serif font-bold text-stone-900 mb-8 text-center">Weitere Leistungen & Service</h2>
-             <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-primary-50 p-6 rounded-xl border border-primary-100">
-                    <ul className="space-y-4">
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
-                            <span className="text-stone-700">Funktionsdiagnostik (Gelenkbahnaufzeichnung mit Hilfe von Cadiax)</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
-                            <span className="text-stone-700">Miniplast-, Relaxation- und Bleaching-Schienen</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
-                            <span className="text-stone-700">Flexibler Reparatur-Service</span>
-                        </li>
-                    </ul>
-                </div>
-                <div className="bg-stone-50 p-6 rounded-xl border border-stone-200">
-                    <ul className="space-y-4">
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="h-5 w-5 text-stone-500 mt-1 flex-shrink-0" />
-                            <span className="text-stone-700">Individuelle Beratung & prothetische Planung</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="h-5 w-5 text-stone-500 mt-1 flex-shrink-0" />
-                            <span className="text-stone-700">Individuelle Zahnfarbenbestimmung (digital)</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <CheckCircle2 className="h-5 w-5 text-stone-500 mt-1 flex-shrink-0" />
-                            <span className="text-stone-700">Schnelle Hilfe bei Problemen</span>
-                        </li>
-                    </ul>
-                </div>
-             </div>
-        </div>
+           <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6">Mehr als nur Zahnersatz</h2>
+                  <p className="text-stone-600 text-lg mb-8 leading-relaxed">
+                      Unser Service endet nicht bei der Fertigung. Wir unterstützen Zahnärzte und Patienten mit umfassenden Dienstleistungen für ein optimales Ergebnis.
+                  </p>
+                  
+                  <div className="space-y-6">
+                      <div className="flex gap-4">
+                          <div className="bg-primary-50 p-3 rounded-full h-fit text-primary-600"><ShieldCheck /></div>
+                          <div>
+                              <h4 className="font-bold text-stone-900 mb-1">Qualitätssicherung</h4>
+                              <p className="text-stone-600 text-sm">Strenge Kontrollen durch unsere Meister sichern gleichbleibend hohe Qualität.</p>
+                          </div>
+                      </div>
+                      <div className="flex gap-4">
+                          <div className="bg-secondary-50 p-3 rounded-full h-fit text-secondary-600"><Activity /></div>
+                          <div>
+                              <h4 className="font-bold text-stone-900 mb-1">Funktionsdiagnostik</h4>
+                              <p className="text-stone-600 text-sm">Gelenkbahnaufzeichnung mit Cadiax für präzise funktionelle Ergebnisse.</p>
+                          </div>
+                      </div>
+                      <div className="flex gap-4">
+                          <div className="bg-stone-100 p-3 rounded-full h-fit text-stone-600"><Smartphone /></div>
+                          <div>
+                              <h4 className="font-bold text-stone-900 mb-1">Digitale Farbestimmung</h4>
+                              <p className="text-stone-600 text-sm">Exakte Bestimmung der Zahnfarbe für perfekte ästhetische Integration.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div className="relative">
+                  <div className="rounded-2xl overflow-hidden shadow-2xl rotate-1">
+                       <img src="/images/unser-angebot-2.jpg" alt="Behandlungsraum" className="w-full h-auto" />
+                  </div>
+                  {/* Banner */}
+                   <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs border-l-4 border-primary-500 hidden md:block">
+                      <p className="font-serif font-bold text-lg text-stone-900">Individuelle Beratung</p>
+                      <p className="text-sm text-stone-600 mt-1">Wir nehmen uns Zeit für die Planung Ihrer perfekten Lösung.</p>
+                  </div>
+              </div>
+           </div>
       </Section>
+      
+      {/* CTA */}
+      <section className="bg-primary-900 py-20 text-white overflow-hidden relative">
+          <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
+          <div className="container mx-auto px-6 text-center relative z-10">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Interesse geweckt?</h2>
+              <p className="text-primary-100 text-lg max-w-2xl mx-auto mb-8">
+                  Lassen Sie uns gemeinsam die beste Lösung für Ihre Patienten finden. Kontaktieren Sie uns für ein unverbindliches Angebot.
+              </p>
+              <Button as={Link} to="/contact" variant="secondary" className="shadow-lg shadow-primary-900/50">
+                  Kontakt aufnehmen
+              </Button>
+          </div>
+      </section>
     </div>
   )
 }
-
 export default Services
