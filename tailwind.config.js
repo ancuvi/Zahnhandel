@@ -49,8 +49,8 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Lato', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['Figtree', 'sans-serif'],
+        serif: ['Figtree', 'sans-serif'],
       },
       container: {
         center: true,
