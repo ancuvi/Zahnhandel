@@ -83,3 +83,11 @@ a {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+/* Custom Hero Gradient */
+.hero-gradient {
+  @apply absolute inset-0 z-0 bg-gradient-to-r
+         from-primary-900
+         via-primary-900/85
+         to-transparent;
+}

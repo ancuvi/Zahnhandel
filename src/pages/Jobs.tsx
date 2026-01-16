@@ -62,7 +62,7 @@ const Jobs = () => {
                backgroundPosition: 'center' 
              }} 
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-900 via-primary-900/90 to-primary-900/20 z-0"></div>
+        <div className="hero-gradient"></div>
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl space-y-6">

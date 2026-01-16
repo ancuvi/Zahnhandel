@@ -20,7 +20,7 @@ const Contact = () => {
                backgroundPosition: 'center' 
              }} 
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-900 via-stone-900/80 to-transparent z-0"></div>
+        <div className="hero-gradient"></div>
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl space-y-6">

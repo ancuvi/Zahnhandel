@@ -70,7 +70,7 @@ const Home = () => {
         />
         
         {/* Gradient Overlay - Darker for more drama */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-stone-900 via-stone-900/80 to-transparent lg:w-3/4"></div>
+        <div className="hero-gradient"></div>
         
         <div className="mx-auto max-w-7xl relative z-10 px-6 w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           <div className="max-w-3xl space-y-6 lg:space-y-8 animate-fade-in flex-1">

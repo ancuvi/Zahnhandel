@@ -23,7 +23,7 @@ const About = () => {
                backgroundPosition: 'center' 
              }} 
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-900 via-stone-900/90 to-transparent z-0"></div>
+        <div className="hero-gradient"></div>
         
         {/* Decorative elements */}
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary-900 rounded-full blur-[100px] opacity-30 z-0 translate-x-1/2 -translate-y-1/2"></div>
@@ -36,7 +36,7 @@ const About = () => {
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-white">
               Tradition und Innovation <br />
-              <span className="text-primary-400">in Frankenberg</span>
+              <span className="text-secondary-400">in Frankenberg</span>
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed max-w-2xl">
               Seit über 30 Jahren stehen wir für qualitativ hochwertige Zahntechnik. 
@@ -104,7 +104,7 @@ const About = () => {
             
             <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-all duration-500">
-                   <img src="/images/Geschäftsführung.webp" alt="Geschäftsführung" className="w-full h-auto" />
+                   <img src="/images/Geschaeftsfuehrung.webp" alt="Geschäftsführung" className="w-full h-auto" />
                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
                       <p className="text-white font-medium">Unsere Geschäftsführung</p>
                       <p className="text-white/80 text-sm">ZTM Sven Börner (GF) / ZTM Udo Gerschler (ehem. GF) / ZTM Markus Schrambke (GF)</p>

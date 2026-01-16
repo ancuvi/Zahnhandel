@@ -16,7 +16,7 @@ const Services = () => {
     {
       title: 'Kronen & Brücken',
       description: 'Präzise Passform und Langlebigkeit. Ob Zirkon, Vollkeramik oder Metallkeramik – wir finden die optimale Lösung.',
-      image: '/images/Kronen-und-Brücken.webp',
+      image: '/images/Kronen-und-Bruecken.webp',
       icon: <Layers className="w-6 h-6" />,
       details: ['Zirkonkeramik & CAD/CAM', 'Perlmutkrone', 'Edelmetall & Titan']
     },
@@ -62,12 +62,12 @@ const Services = () => {
         {/* Background Image/Overlay */}
          <div className="absolute inset-0 z-0 opacity-30" 
              style={{ 
-               backgroundImage: "url('/images/Kronen-und-Brücken.webp')", 
+               backgroundImage: "url('/images/zirkon.webp')", 
                backgroundSize: 'cover', 
                backgroundPosition: 'center' 
              }} 
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-900 via-stone-900/80 to-transparent z-0"></div>
+        <div className="hero-gradient"></div>
         
          <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl space-y-6">
