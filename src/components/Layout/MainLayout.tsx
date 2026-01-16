@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useOutlet } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Hexagon, Phone, Mail, MapPin, Clock } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import MobileNav from '../Navigation/MobileNav'
 import Navbar from '../Navigation/Navbar'
 
