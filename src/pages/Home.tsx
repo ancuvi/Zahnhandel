@@ -92,7 +92,7 @@ const Home = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button as={Link} to="/contact" variant="ghost" className="bg-white text-stone-900 shadow-lg hover:scale-105 transition-transform hover:bg-stone-100">
+              <Button as={Link} to="/contact" variant="ghost" className="bg-white text-black border-none rounded-full !px-[3em] !py-[1.3em] !text-[12px] uppercase tracking-[2.5px] font-medium shadow-[0px_8px_15px_rgba(0,0,0,0.1)] transition-all duration-300 ease-out hover:bg-secondary-500 hover:text-white hover:shadow-[0px_15px_20px_rgba(236,72,153,0.4)] hover:-translate-y-[7px] active:-translate-y-[1px] outline-none">
                 Kontakt aufnehmen
               </Button>
               <Button as={Link} to="/services" variant="outline" className="text-white border-white/30 hover:bg-white/10 hover:border-white hover:text-white backdrop-blur-sm">
