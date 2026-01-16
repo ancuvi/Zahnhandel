@@ -76,7 +76,8 @@ const Services = () => {
                <span>Meisterhafte Präzision</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
-              Unser <span className="text-secondary-400">Leistungsspektrum</span>
+              <span className="text-white">Unser</span>{" "}
+              <span className="text-secondary-400">Leistungsspektrum</span>
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed max-w-2xl">
               Von klassischer Handwerkskunst bis zu modernster digitaler Fertigung. 

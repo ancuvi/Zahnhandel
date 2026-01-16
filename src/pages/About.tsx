@@ -30,11 +30,11 @@ const About = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary-900/50 px-4 py-1.5 text-sm font-medium text-primary-200 border border-primary-800">
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white border border-white/20">
                <Users size={16} />
                <span>Das Team</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-white">
               Tradition und Innovation <br />
               <span className="text-primary-400">in Frankenberg</span>
             </h1>

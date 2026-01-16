@@ -92,7 +92,7 @@ const Home = () => {
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button as={Link} to="/contact" variant="secondary" className="shadow-lg shadow-secondary-500/20 hover:scale-105 transition-transform">
+              <Button as={Link} to="/contact" variant="ghost" className="bg-white text-stone-900 shadow-lg hover:scale-105 transition-transform hover:bg-stone-100">
                 Kontakt aufnehmen
               </Button>
               <Button as={Link} to="/services" variant="outline" className="text-white border-white/30 hover:bg-white/10 hover:border-white hover:text-white backdrop-blur-sm">
@@ -151,6 +151,35 @@ const Home = () => {
                 </Link>
             </div>
          </div>
+      </Section>
+
+      {/* Video Section - Einblick */}
+      <Section 
+        background="white" 
+        centered 
+        title="Einblick in unser Labor" 
+        intro="Schauen Sie uns über die Schulter. Wir verbinden digitale Präzision mit handwerklicher Perfektion."
+        eyebrow="Video"
+      >
+        <div className="relative mx-auto max-w-5xl mt-8">
+            {/* Abstract Background Blur */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-primary-400/30 to-secondary-400/30 blur-3xl -z-10 rounded-full opacity-60"></div>
+            
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 bg-stone-900 aspect-video group cursor-pointer">
+                <iframe 
+                    className="absolute inset-0 w-full h-full"
+                    src="https://www.youtube-nocookie.com/embed/gaFEKlTf8yU?si=example&controls=1&rel=0" 
+                    title="Zahntechnik Frankenberg Imagefilm" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowFullScreen
+                ></iframe>
+            </div>
+            
+            {/* Caption or Decoration */}
+            <div className="absolute -bottom-10 -right-10 hidden lg:block -z-10">
+                <div className="w-40 h-40 bg-primary-500 opacity-10 rounded-full blur-2xl"></div>
+            </div>
+        </div>
       </Section>
 
       {/* Services Section */}
@@ -270,7 +299,7 @@ const Home = () => {
                Bei speziellen Fragen kontaktieren Sie uns einfach unter der Telefonnummer <strong>037206 / 75542</strong> oder senden uns eine E-Mail. Gern sind wir für Sie da.
             </p>
             <div className="pt-4">
-               <Button as={Link} to="/contact" variant="secondary" className="shadow-xl shadow-black/20 border-2 border-transparent hover:border-white/20">
+               <Button as={Link} to="/contact" variant="ghost" className="bg-white text-stone-900 shadow-xl shadow-black/20 hover:bg-stone-100 border-2 border-transparent">
                   Jetzt Kontakt aufnehmen
                </Button>
             </div>

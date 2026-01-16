@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Link, Outlet, useLocation } from 'react-router-dom'
+import { Link, useLocation, useOutlet } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Hexagon, Phone, Mail, MapPin, Clock } from 'lucide-react'
 import MobileNav from '../Navigation/MobileNav'
 import Navbar from '../Navigation/Navbar'
@@ -16,6 +17,7 @@ const navLinks: NavLink[] = [
 
 const MainLayout = () => {
   const { pathname } = useLocation()
+  const element = useOutlet()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -27,11 +29,6 @@ const MainLayout = () => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  // Scroll to top on route change
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
 
   return (
     <div className="flex min-h-screen flex-col bg-stone-50 text-stone-800 font-sans">
@@ -70,7 +67,18 @@ const MainLayout = () => {
       </header>
 
       <main className="flex-1">
-        <Outlet />
+        <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+          <motion.div
+            key={pathname}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="h-full"
+          >
+            {element}
+          </motion.div>
+        </AnimatePresence>
       </main>
 
       <footer className="bg-stone-900 text-stone-300">

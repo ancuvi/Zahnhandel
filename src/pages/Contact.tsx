@@ -29,7 +29,9 @@ const Contact = () => {
                <span>Wir sind für Sie da</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight">
-              Nehmen Sie <span className="text-secondary-400">Kontakt</span> auf
+              <span className="text-white">Nehmen Sie</span>{" "}
+              <span className="text-secondary-400">Kontakt </span>
+              <span className="text-white">auf</span>{" "}
             </h1>
             <p className="text-lg text-stone-300 leading-relaxed max-w-2xl">
               Ob Fragen zu unseren Leistungen, Terminvereinbarungen oder allgemeine Anliegen – wir helfen Ihnen gerne weiter.
