@@ -9,6 +9,7 @@ type SectionProps = {
   headingLevel?: 1 | 2 | 3 | 4
   centered?: boolean
   background?: 'default' | 'stone' | 'white' | 'primary'
+  backgroundPattern?: ReactNode
 }
 
 const Section = ({
@@ -20,6 +21,7 @@ const Section = ({
   headingLevel = 2,
   centered = false,
   background = 'default',
+  backgroundPattern,
 }: SectionProps) => {
   const HeadingTag = `h${headingLevel}` as const
   
@@ -32,6 +34,7 @@ const Section = ({
 
   return (
     <section className={`px-6 py-20 lg:py-28 relative overflow-hidden ${bgClass} ${className}`}>
+      {backgroundPattern}
       <div className={`mx-auto max-w-7xl relative z-10 ${centered ? 'text-center' : ''}`}>
         {(eyebrow || title || intro) && (
           <div className={`mb-16 space-y-4 max-w-3xl ${centered ? 'mx-auto' : ''}`}>
