@@ -51,8 +51,8 @@ const Contact = () => {
                      <MapPin size={24} />
                  </div>
                  <div>
-                     <h3 className="font-bold text-lg text-stone-900 mb-2">Anschrift</h3>
-                     <address className="not-italic text-stone-600 leading-relaxed">
+                     <h3 className="font-bold text-lg text-primary-900 mb-2">Anschrift</h3>
+                     <address className="not-italic text-primary-700 leading-relaxed">
                          B&S Zahntechnik Frankenberg GmbH<br/>
                          Gewerbering 17<br/>
                          09669 Frankenberg
@@ -66,8 +66,8 @@ const Contact = () => {
                      <Phone size={24} />
                  </div>
                  <div className="w-full">
-                     <h3 className="font-bold text-lg text-stone-900 mb-2">Telefon & Fax</h3>
-                     <div className="space-y-2 text-stone-600">
+                     <h3 className="font-bold text-lg text-primary-900 mb-2">Telefon & Fax</h3>
+                     <div className="space-y-2 text-primary-700">
                         <div className="flex justify-between border-b border-stone-100 pb-2">
                            <span>Telefon:</span>
                            <a href="tel:03720675542" className="font-medium hover:text-primary-600">037206 / 75542</a>
@@ -86,8 +86,8 @@ const Contact = () => {
                      <Mail size={24} />
                  </div>
                  <div className="w-full">
-                     <h3 className="font-bold text-lg text-stone-900 mb-2">E-Mail</h3>
-                     <a href="mailto:info@zahnhandel.de" className="text-stone-600 font-medium hover:text-primary-600 break-all">
+                     <h3 className="font-bold text-lg text-primary-900 mb-2">E-Mail</h3>
+                     <a href="mailto:info@zahnhandel.de" className="text-primary-700 font-medium hover:text-primary-600 break-all">
                          info@zahnhandel.de
                      </a>
                  </div>
@@ -118,8 +118,8 @@ const Contact = () => {
           {/* Contact Form (Right Side) */}
           <div className="lg:col-span-7">
               <div className="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-stone-100 h-full">
-                  <h2 className="text-2xl font-serif font-bold text-stone-900 mb-2">Schreiben Sie uns</h2>
-                  <p className="text-stone-600 mb-8">
+                  <h2 className="text-2xl font-serif font-bold text-primary-900 mb-2">Schreiben Sie uns</h2>
+                  <p className="text-primary-700 mb-8">
                       Füllen Sie das Formular aus und wir melden uns schnellstmöglich bei Ihnen.
                   </p>
                   <ContactForm />

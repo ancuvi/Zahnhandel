@@ -44,12 +44,12 @@ const Section = ({
               </p>
             )}
             {title && (
-              <HeadingTag className="animate-slide-up text-3xl font-bold text-stone-900 sm:text-4xl md:text-5xl font-serif">
+              <HeadingTag className="animate-slide-up text-3xl font-bold text-primary-900 sm:text-4xl md:text-5xl font-serif">
                 {title}
               </HeadingTag>
             )}
             {intro && (
-              <p className="animate-slide-up mt-6 text-lg text-stone-600 leading-relaxed" style={{ animationDelay: '0.1s' }}>
+              <p className="animate-slide-up mt-6 text-lg text-primary-700 leading-relaxed" style={{ animationDelay: '0.1s' }}>
                 {intro}
               </p>
             )}

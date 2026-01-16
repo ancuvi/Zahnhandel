@@ -17,15 +17,15 @@ const Praxis = () => {
       >
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="space-y-6">
-            <p className="text-lg text-stone-600 leading-relaxed">
+            <p className="text-lg text-primary-700 leading-relaxed">
                In meiner Praxis finden Sie einen reduzierten, warmen Rahmen, der Ihnen das Ankommen erleichtert. Sie erwartet ein großzügiger Behandlungsraum mit viel Tageslicht, ausreichend Platz für Bewegungsanalysen und Übungen sowie ein Wartebereich ohne Hektik.
             </p>
-            <p className="text-lg text-stone-600 leading-relaxed">
+            <p className="text-lg text-primary-700 leading-relaxed">
                Mir ist wichtig, dass Sie sich wohlfühlen. Deshalb lege ich großen Wert auf Diskretion, Sauberkeit und eine Umgebung, die Ruhe ausstrahlt. Durch meine Bestellpraxis begegnen Sie in der Regel keinen anderen Patienten.
             </p>
             
             <div className="pt-6">
-               <h3 className="text-xl font-serif font-bold text-stone-900 mb-4">Ihr Besuch bei mir</h3>
+               <h3 className="text-xl font-serif font-bold text-primary-900 mb-4">Ihr Besuch bei mir</h3>
                <ul className="space-y-4">
                   <li className="flex gap-4">
                      <div className="flex-shrink-0 mt-1">
@@ -34,8 +34,8 @@ const Praxis = () => {
                         </div>
                      </div>
                      <div>
-                        <h4 className="font-bold text-stone-800">Ankommen</h4>
-                        <p className="text-stone-600 text-sm mt-1">Bitte kommen Sie ca. 5 Minuten vor Ihrem Termin, damit Sie in Ruhe ankommen können.</p>
+                        <h4 className="font-bold text-primary-800">Ankommen</h4>
+                        <p className="text-primary-700 text-sm mt-1">Bitte kommen Sie ca. 5 Minuten vor Ihrem Termin, damit Sie in Ruhe ankommen können.</p>
                      </div>
                   </li>
                   <li className="flex gap-4">
@@ -45,8 +45,8 @@ const Praxis = () => {
                         </div>
                      </div>
                      <div>
-                        <h4 className="font-bold text-stone-800">Gespräch & Behandlung</h4>
-                        <p className="text-stone-600 text-sm mt-1">Wir klären Ihr Anliegen in Ruhe, untersuchen gründlich und behandeln gezielt.</p>
+                        <h4 className="font-bold text-primary-800">Gespräch & Behandlung</h4>
+                        <p className="text-primary-700 text-sm mt-1">Wir klären Ihr Anliegen in Ruhe, untersuchen gründlich und behandeln gezielt.</p>
                      </div>
                   </li>
                   <li className="flex gap-4">
@@ -56,8 +56,8 @@ const Praxis = () => {
                         </div>
                      </div>
                      <div>
-                        <h4 className="font-bold text-stone-800">Nachklang & Übungen</h4>
-                        <p className="text-stone-600 text-sm mt-1">Wir besprechen das weitere Vorgehen und ich zeige Ihnen ggf. erste Übungen für zuhause.</p>
+                        <h4 className="font-bold text-primary-800">Nachklang & Übungen</h4>
+                        <p className="text-primary-700 text-sm mt-1">Wir besprechen das weitere Vorgehen und ich zeige Ihnen ggf. erste Übungen für zuhause.</p>
                      </div>
                   </li>
                </ul>
@@ -99,12 +99,12 @@ const Praxis = () => {
                   <MapPin size={24} />
                   <h3 className="text-xl font-bold font-serif">Anfahrt</h3>
                </div>
-               <p className="text-stone-600 mb-4">
+               <p className="text-primary-700 mb-4">
                   Praxis Nicole Feiereis<br/>
                   (Genaue Adresse bei Terminbestätigung)<br/>
                   12345 Musterstadt
                </p>
-               <p className="text-sm text-stone-500">
+               <p className="text-sm text-primary-600">
                   Die Praxis liegt zentral in Musterstadt und ist gut mit öffentlichen Verkehrsmitteln zu erreichen. Parkmöglichkeiten finden Sie in den umliegenden Straßen.
                </p>
             </div>
@@ -114,10 +114,10 @@ const Praxis = () => {
                   <Clock size={24} />
                   <h3 className="text-xl font-bold font-serif">Barrierefreiheit & Zugang</h3>
                </div>
-               <p className="text-stone-600 mb-4">
+               <p className="text-primary-700 mb-4">
                   Der Zugang zur Praxis ist ebenerdig bzw. über einen Aufzug erreichbar.
                </p>
-               <p className="text-sm text-stone-500">
+               <p className="text-sm text-primary-600">
                   Sollten Sie spezielle Unterstützung benötigen, sprechen Sie mich bitte vorab an, damit wir Ihren Besuch so angenehm wie möglich gestalten können.
                </p>
             </div>

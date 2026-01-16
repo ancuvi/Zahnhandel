@@ -43,7 +43,7 @@ const MobileNav = ({ links, activePath, open, onToggle, onClose }: MobileNavProp
                     className={`group flex items-center justify-between rounded-lg px-4 py-4 text-base font-medium transition-colors ${
                       isActive 
                         ? 'bg-primary-50 text-primary-800' 
-                        : 'text-stone-600 hover:bg-stone-50 hover:text-primary-700'
+                        : 'text-primary-700 hover:bg-stone-50 hover:text-primary-700'
                     }`}
                   >
                     {link.label}

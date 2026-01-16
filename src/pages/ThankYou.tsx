@@ -33,7 +33,7 @@ const ThankYou = () => {
             </svg>
           </div>
 
-          <div className="prose prose-stone text-stone-600 mx-auto">
+          <div className="prose prose-stone text-primary-700 mx-auto">
             <p className="text-lg leading-relaxed">
               Ich habe Ihre Nachricht erhalten und werde mich schnellstmöglich bei Ihnen melden. 
               In der Regel antworte ich innerhalb von <strong>1–2 Werktagen</strong>.

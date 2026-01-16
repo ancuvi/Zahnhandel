@@ -135,14 +135,14 @@ const Home = () => {
                 <div className="absolute -top-6 -left-6 w-32 h-32 bg-secondary-100 rounded-full -z-10 blur-xl"></div>
             </div>
             <div className="order-1 lg:order-2 space-y-6">
-                <h2 className="text-3xl font-serif font-bold text-stone-900">Über uns</h2>
+                <h2 className="text-3xl font-serif font-bold text-primary-900">Über uns</h2>
                 <div className="bg-primary-50 p-6 rounded-xl border-l-4 border-primary-500 shadow-sm">
                     <p className="font-bold text-primary-800 italic text-lg">
                     "Geht nicht, will nicht, kann nicht – gibt es hier nicht! <br/>
                     Wir finden immer eine Lösung......."
                     </p>
                 </div>
-                <p className="text-lg text-stone-700 leading-relaxed">
+                <p className="text-lg text-primary-700 leading-relaxed">
                     Ich möchte Ihnen auf diesem Wege einen kleinen Einblick in unser Dentallabor geben.
                     Als Zahnärztin und Zahnarzt, aber auch als Patient finden Sie auf unserer Homepage umfangreiche Informationen zu unseren Produkten und Dienstleistungen.
                 </p>
@@ -270,7 +270,7 @@ const Home = () => {
             </div>
         </div>
         <div className="mt-12 text-center">
-            <Link to="/services" className="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white px-8 py-3 text-sm font-semibold text-stone-700 shadow-sm hover:bg-stone-50 hover:text-primary-600 transition-all">
+            <Link to="/services" className="inline-flex items-center gap-2 rounded-full border border-stone-300 bg-white px-8 py-3 text-sm font-semibold text-primary-700 shadow-sm hover:bg-stone-50 hover:text-primary-600 transition-all">
                 Alle Leistungen ansehen
             </Link>
         </div>
@@ -299,7 +299,7 @@ const Home = () => {
                Bei speziellen Fragen kontaktieren Sie uns einfach unter der Telefonnummer <strong>037206 / 75542</strong> oder senden uns eine E-Mail. Gern sind wir für Sie da.
             </p>
             <div className="pt-4">
-               <Button as={Link} to="/contact" variant="ghost" className="bg-white text-stone-900 shadow-xl shadow-black/20 hover:bg-stone-100 border-2 border-transparent">
+               <Button as={Link} to="/contact" variant="ghost" className="bg-white text-primary-900 shadow-xl shadow-black/20 hover:bg-stone-100 border-2 border-transparent">
                   Jetzt Kontakt aufnehmen
                </Button>
             </div>

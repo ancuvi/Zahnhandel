@@ -31,7 +31,7 @@ const MainLayout = () => {
   }, [])
 
   return (
-    <div className="flex min-h-screen flex-col bg-stone-50 text-stone-800 font-sans">
+    <div className="flex min-h-screen flex-col bg-stone-50 text-primary-800 font-sans">
       <header 
         className={`sticky top-0 z-50 transition-all duration-300 border-b ${
           scrolled || mobileOpen
@@ -128,7 +128,7 @@ const MainLayout = () => {
                     <p className="text-stone-400">07:00 – 19:00 Uhr</p>
                     <p className="text-white mt-2">Freitag</p>
                     <p className="text-stone-400">07:00 – 17:00 Uhr</p>
-                    <p className="text-stone-500 text-xs mt-1">(und nach Vereinbarung)</p>
+                    <p className="text-primary-600 text-xs mt-1">(und nach Vereinbarung)</p>
                   </div>
                 </li>
               </ul>
@@ -147,7 +147,7 @@ const MainLayout = () => {
             </div>
           </div>
           
-          <div className="mt-16 border-t border-stone-800 pt-8 text-center text-xs text-stone-500">
+          <div className="mt-16 border-t border-stone-800 pt-8 text-center text-xs text-primary-600">
             <p>&copy; 2026 Markus Schrambke. All Rights Reserved.</p>
           </div>
         </div>

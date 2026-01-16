@@ -100,12 +100,12 @@ const Services = () => {
                           </div>
                       </div>
                       <div className="p-6 flex-1 flex flex-col">
-                          <h3 className="text-xl font-bold font-serif text-stone-900 mb-2 group-hover:text-secondary-600 transition-colors">{offer.title}</h3>
-                          <p className="text-stone-600 text-sm leading-relaxed mb-6 flex-1">{offer.description}</p>
+                          <h3 className="text-xl font-bold font-serif text-primary-900 mb-2 group-hover:text-secondary-600 transition-colors">{offer.title}</h3>
+                          <p className="text-primary-700 text-sm leading-relaxed mb-6 flex-1">{offer.description}</p>
                           
                           <div className="space-y-2 border-t border-stone-100 pt-4 mt-auto">
                               {offer.details.map((detail, i) => (
-                                  <div key={i} className="flex items-center gap-2 text-sm text-stone-500">
+                                  <div key={i} className="flex items-center gap-2 text-sm text-primary-600">
                                       <CheckCircle2 size={14} className="text-primary-500 shrink-0" />
                                       <span>{detail}</span>
                                   </div>
@@ -121,8 +121,8 @@ const Services = () => {
       <Section background="white">
            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6">Mehr als nur Zahnersatz</h2>
-                  <p className="text-stone-600 text-lg mb-8 leading-relaxed">
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-900 mb-6">Mehr als nur Zahnersatz</h2>
+                  <p className="text-primary-700 text-lg mb-8 leading-relaxed">
                       Unser Service endet nicht bei der Fertigung. Wir unterstützen Zahnärzte und Patienten mit umfassenden Dienstleistungen für ein optimales Ergebnis.
                   </p>
                   
@@ -130,22 +130,22 @@ const Services = () => {
                       <div className="flex gap-4">
                           <div className="bg-primary-50 p-3 rounded-full h-fit text-primary-600"><ShieldCheck /></div>
                           <div>
-                              <h4 className="font-bold text-stone-900 mb-1">Qualitätssicherung</h4>
-                              <p className="text-stone-600 text-sm">Strenge Kontrollen durch unsere Meister sichern gleichbleibend hohe Qualität.</p>
+                              <h4 className="font-bold text-primary-900 mb-1">Qualitätssicherung</h4>
+                              <p className="text-primary-700 text-sm">Strenge Kontrollen durch unsere Meister sichern gleichbleibend hohe Qualität.</p>
                           </div>
                       </div>
                       <div className="flex gap-4">
                           <div className="bg-secondary-50 p-3 rounded-full h-fit text-secondary-600"><Activity /></div>
                           <div>
-                              <h4 className="font-bold text-stone-900 mb-1">Funktionsdiagnostik</h4>
-                              <p className="text-stone-600 text-sm">Gelenkbahnaufzeichnung mit Cadiax für präzise funktionelle Ergebnisse.</p>
+                              <h4 className="font-bold text-primary-900 mb-1">Funktionsdiagnostik</h4>
+                              <p className="text-primary-700 text-sm">Gelenkbahnaufzeichnung mit Cadiax für präzise funktionelle Ergebnisse.</p>
                           </div>
                       </div>
                       <div className="flex gap-4">
-                          <div className="bg-stone-100 p-3 rounded-full h-fit text-stone-600"><Smartphone /></div>
+                          <div className="bg-stone-100 p-3 rounded-full h-fit text-primary-700"><Smartphone /></div>
                           <div>
-                              <h4 className="font-bold text-stone-900 mb-1">Digitale Farbestimmung</h4>
-                              <p className="text-stone-600 text-sm">Exakte Bestimmung der Zahnfarbe für perfekte ästhetische Integration.</p>
+                              <h4 className="font-bold text-primary-900 mb-1">Digitale Farbestimmung</h4>
+                              <p className="text-primary-700 text-sm">Exakte Bestimmung der Zahnfarbe für perfekte ästhetische Integration.</p>
                           </div>
                       </div>
                   </div>
@@ -156,8 +156,8 @@ const Services = () => {
                   </div>
                   {/* Banner */}
                    <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs border-l-4 border-primary-500 hidden md:block">
-                      <p className="font-serif font-bold text-lg text-stone-900">Individuelle Beratung</p>
-                      <p className="text-sm text-stone-600 mt-1">Wir nehmen uns Zeit für die Planung Ihrer perfekten Lösung.</p>
+                      <p className="font-serif font-bold text-lg text-primary-900">Individuelle Beratung</p>
+                      <p className="text-sm text-primary-700 mt-1">Wir nehmen uns Zeit für die Planung Ihrer perfekten Lösung.</p>
                   </div>
               </div>
            </div>

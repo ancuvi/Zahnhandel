@@ -91,7 +91,7 @@ const Jobs = () => {
          <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, idx) => (
                <Card key={idx} title={benefit.title} icon={benefit.icon} className="bg-white">
-                  <p className="text-stone-600">{benefit.description}</p>
+                  <p className="text-primary-700">{benefit.description}</p>
                </Card>
             ))}
          </div>
@@ -113,10 +113,10 @@ const Jobs = () => {
                               {job.type}
                           </div>
                           <div>
-                              <h3 className="text-2xl font-bold font-serif text-stone-900">{job.title}</h3>
+                              <h3 className="text-2xl font-bold font-serif text-primary-900">{job.title}</h3>
                               <p className="text-lg text-primary-600 font-medium">{job.subtitle}</p>
                           </div>
-                          <p className="text-stone-600 leading-relaxed max-w-2xl">
+                          <p className="text-primary-700 leading-relaxed max-w-2xl">
                               {job.description}
                           </p>
                       </div>
@@ -147,22 +147,22 @@ const Jobs = () => {
       {/* Contact Info Footer for Jobs */}
       <Section background="stone" className="text-center">
           <div className="max-w-2xl mx-auto">
-              <h2 className="text-2xl font-serif font-bold text-stone-900 mb-8">Ihr Weg zu uns</h2>
+              <h2 className="text-2xl font-serif font-bold text-primary-900 mb-8">Ihr Weg zu uns</h2>
               <div className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 space-y-6">
-                  <p className="text-stone-600">
+                  <p className="text-primary-700">
                       Senden Sie Ihre aussagekräftigen Bewerbungsunterlagen bitte per E-Mail oder Post an:
                   </p>
                   <div className="space-y-4">
-                      <div className="flex items-center justify-center gap-3 text-stone-800 font-medium">
+                      <div className="flex items-center justify-center gap-3 text-primary-800 font-medium">
                           <div className="w-10 h-10 bg-primary-50 rounded-full flex items-center justify-center text-primary-600">
                              <MapPin size={20} />
                           </div>
                           <div className="text-left">
                               <div className="font-bold">Zahntechnik Frankenberg GmbH</div>
-                              <div className="text-sm font-normal text-stone-500">Gewerbering 17, 09669 Frankenberg</div>
+                              <div className="text-sm font-normal text-primary-600">Gewerbering 17, 09669 Frankenberg</div>
                           </div>
                       </div>
-                       <div className="flex items-center justify-center gap-3 text-stone-800 font-medium">
+                       <div className="flex items-center justify-center gap-3 text-primary-800 font-medium">
                           <div className="w-10 h-10 bg-primary-50 rounded-full flex items-center justify-center text-primary-600">
                              <Mail size={20} />
                           </div>

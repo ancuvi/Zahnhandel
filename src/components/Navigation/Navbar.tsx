@@ -18,7 +18,7 @@ const Navbar = ({ links, activePath }: NavbarProps) => {
             className={`relative text-sm font-medium transition-colors duration-200 py-2 ${
               isActive 
                 ? 'text-primary-700 font-semibold' 
-                : 'text-stone-600 hover:text-primary-600'
+                : 'text-primary-700 hover:text-primary-600'
             }`}
           >
             {link.label}

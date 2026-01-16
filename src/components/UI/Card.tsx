@@ -18,11 +18,11 @@ const Card = ({ title, description, icon, children, className = '' }: CardProps)
           </div>
         )}
         <div className="space-y-3 w-full">
-          <h3 className="text-xl font-bold text-stone-800 font-serif group-hover:text-primary-800 transition-colors">{title}</h3>
-          {description && <p className="text-base text-stone-600 leading-relaxed">{description}</p>}
+          <h3 className="text-xl font-bold text-primary-800 font-serif group-hover:text-primary-800 transition-colors">{title}</h3>
+          {description && <p className="text-base text-primary-700 leading-relaxed">{description}</p>}
         </div>
       </div>
-      {children && <div className="mt-6 text-base text-stone-600 leading-relaxed border-t border-stone-100 pt-4">{children}</div>}
+      {children && <div className="mt-6 text-base text-primary-700 leading-relaxed border-t border-stone-100 pt-4">{children}</div>}
     </div>
   )
 }

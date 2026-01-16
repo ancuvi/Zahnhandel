@@ -57,8 +57,8 @@ const ContactForm = () => {
     // Wenn valid, erfolgt der Standard-Submit an Netlify
   }
 
-  const inputClasses = "w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 pl-11 text-sm text-stone-900 placeholder:text-stone-400 shadow-sm outline-none transition-all duration-200 focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10"
-  const labelClasses = "block text-sm font-medium text-stone-700 mb-1.5"
+  const inputClasses = "w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 pl-11 text-sm text-primary-900 placeholder:text-stone-400 shadow-sm outline-none transition-all duration-200 focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10"
+  const labelClasses = "block text-sm font-medium text-primary-700 mb-1.5"
   const iconClasses = "absolute left-3.5 top-3.5 h-5 w-5 text-stone-400"
 
   return (
@@ -148,7 +148,7 @@ const ContactForm = () => {
               <option value="bewerbung">Bewerbung</option>
               <option value="sonstiges">Sonstiges</option>
             </select>
-             <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-stone-500">
+             <div className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-primary-600">
                 <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
             </div>
         </div>
@@ -202,7 +202,7 @@ const ContactForm = () => {
       </div>
 
       <div className="flex items-center justify-between gap-4 pt-2">
-         <p className="text-xs text-stone-500 max-w-xs">
+         <p className="text-xs text-primary-600 max-w-xs">
            Mit dem Absenden erklären Sie sich mit der Verarbeitung Ihrer Daten einverstanden.
          </p>
          <button
