@@ -53,6 +53,24 @@ const Impressum = () => {
                 </p>
               </div>
             </div>
+
+            <div>
+              <h2 className="text-xl font-bold font-serif text-primary-900 mb-4">Zuständige Kammer & Berufsbezeichnung</h2>
+              <div className="prose prose-stone text-primary-700">
+                <p>
+                  <strong>Zuständige Kammer:</strong><br />
+                  Handwerkskammer Chemnitz, Limbacher Straße 195, 09116 Chemnitz
+                </p>
+                <p className="mt-4">
+                  <strong>Berufsbezeichnung:</strong><br />
+                  Zahntechnikermeister (verliehen in der Bundesrepublik Deutschland)
+                </p>
+                <p className="mt-4">
+                   <strong>Berufsrechtliche Regelungen:</strong><br />
+                   Handwerksordnung (HwO)
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 

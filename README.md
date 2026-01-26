@@ -1,58 +1,91 @@
-# Praxis-Website – Projektübersicht
+# Website Zahntechnik Frankenberg
 
-Vite + React + TypeScript + Tailwind + React Router + (vorbereitet) Framer Motion. Ziel: moderne Website für eine Praxis (Heilpraktikerin & Physiotherapeutin).
+Moderne Unternehmenswebsite für die **B&S Zahntechnik Frankenberg GmbH**.
+Entwickelt mit Vite, React, TypeScript und Tailwind CSS.
 
-## Setup & Commands
-- Install: `npm install`
-- Dev-Server: `npm run dev`
-- Build: `npm run build`
-- Preview Build: `npm run preview`
-- Lint (Basis): `npm run lint`
+## 🛠 Tech Stack
 
-## Struktur (wichtigste Ordner/Dateien)
-- `src/main.tsx` – Einstieg, rendert `<App />`.
-- `src/App.tsx` – bindet den Router (`RouterProvider`).
-- `src/router/index.tsx` – Route-Definitionen; nutzt `MainLayout` als Shell.
-- `src/components/Layout/MainLayout.tsx` – globales Layout mit Header, Desktop-/Mobile-Navigation, Footer.
-- `src/components/Navigation/{Navbar,MobileNav}.tsx` – Navigation (Desktop/Mobil).
-- `src/components/UI/{Button,Section,Card}.tsx` – Basis-UI-Bausteine.
-- `src/components/Forms/ContactForm.tsx` – Kontaktformular (controlled, Client-Validation, TODO-Hook für API/E-Mail).
-- `src/components/SEO/Seo.tsx` – setzt Title, Meta-Description, OG-Platzhalter.
-- `src/pages/*.tsx` – Seiten (Home, About, Services, Praxis, Prices, FAQ, Contact, ThankYou, Datenschutz).
-- `public/images/…` – statische Assets (Hero/Praxis-Bilder).
-- `tailwind.config.js` / `postcss.config.js` – Tailwind/PostCSS-Konfiguration.
-- `src/index.css` – Tailwind-Direktiven + Basis-Reset/Typo.
+- **Framework:** [Vite](https://vitejs.dev/) + [React](https://react.dev/)
+- **Sprache:** TypeScript
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Routing:** [React Router Dom](https://reactrouter.com/)
+- **Animation:** Framer Motion (vorbereitet)
+- **Icons:** Lucide React
 
-## Routing (React Router)
-- Shell: `MainLayout` (Header/Footer) mit `<Outlet />`.
-- Pfade: `/` (Home), `/about`, `/services`, `/praxis`, `/prices`, `/faq`, `/contact`, `/thank-you`, `/datenschutz`.
+## 🚀 Setup & Entwicklung
 
-## Wichtige UX/SEO-Notizen
-- SEO: `Seo`-Komponente auf Home (Title/Description + OG-Platzhalter). Weitere Seiten können bei Bedarf eigene `Seo`-Instanzen bekommen.
-- Kontaktformular: Client-Validation (Pflichtfelder, E-Mail-Check), Status/Success-Meldung, klarer TODO-Kommentar für spätere API-/E-Mail-Integration.
-- Navigation: `aria-label` für Mobile-Menü, semantische Elemente (`header`, `main`, `section`, `footer`, `nav`).
-- Mobile: Hero-Hintergrundbild nur auf Desktop, Praxis-Bilder mit festen Mindesthöhen damit sie auch mobil sichtbar sind.
+1.  **Installation:**
+    ```bash
+    npm install
+    ```
 
-## Stil & Komponenten
-- Tailwind Utilities mit ein paar Grundfarben (`primary`-ähnlich per Klassenwahl), weiche Schatten, abgerundete Karten/Buttons.
-- Buttons: Varianten `primary`, `secondary`, `ghost` (Props: `as`, `variant`, `className`).
-- Sections: Titel/Eyebrow/Intro optional, `headingLevel` wählbar.
-- Cards: kompakte Info-Karten, optionales Icon.
+2.  **Entwicklungsserver starten:**
+    ```bash
+    npm run dev
+    ```
+    Die Seite ist dann unter `http://localhost:5173` erreichbar.
 
-## Inhalte/Platzhalter
-- Texte auf Deutsch, thematisch passend für Praxis (keine Heilversprechen).
-- Rechtliches: Im Footer als TODO (Impressum/Datenschutz), Seite `Datenschutz` ist als eigene Route angelegt.
-- Praxis-Seite: echte Bilder (Behandlungsraum, Wartezimmer, Eingangsbereich) aus `public/images`.
+3.  **Production Build:**
+    ```bash
+    npm run build
+    ```
+    Erstellt die optimierten Dateien im `dist/` Ordner.
 
-## Erweiterungen (später)
-- Framer Motion ist installiert, aber noch nicht genutzt (Animations-Hook für spätere Übergaben).
-- Eigene Farbpalette/Typografie kann in `tailwind.config.js` erweitert werden.
-- Echte OG-Bilder/SEO je Seite ergänzen; Impressum finalisieren; API-/Mailservice ans Formular hängen.
+## 📂 Projektstruktur
 
-## Änderungen pushen (GitHub)
-1. Status prüfen: `git status`
-2. Änderungen vormerken: `git add .` (oder gezielt Dateien)
-3. Commit: `git commit -m "Kurze Nachricht zur Änderung"`
-4. Push auf Hauptbranch: `git push origin main` (ggf. Branchnamen anpassen)
-5. Vor nächstem Push aktuell holen: `git pull --rebase origin main` (oder eigener Branch)
-6. Bei Konflikten: Konflikte lösen, `git add …`, danach `git rebase --continue` oder neuer Commit, dann erneut pushen.
+```
+src/
+├── assets/
+│   └── fonts/      # Lokale Schriftarten (Figtree) - DSGVO-konform
+├── components/
+│   ├── Forms/      # Kontaktformular (ContactForm.tsx)
+│   ├── Layout/     # MainLayout (Header, Footer, Navigation)
+│   ├── Navigation/ # Navbar & MobileNav
+│   ├── SEO/        # Seo-Komponente für Meta-Tags
+│   └── UI/         # Wiederverwendbare UI-Elemente (Button, Section, Card)
+├── pages/          # Seiten-Komponenten (Home, About, Jobs, ...)
+├── router/         # Routing-Konfiguration (index.tsx)
+└── main.tsx        # Entry Point
+public/
+├── images/         # Statische Bilder
+├── sitemap.xml     # Sitemap für Suchmaschinen
+└── robots.txt      # Crawler-Konfiguration
+```
+
+## ✨ Features & Besonderheiten
+
+### 1. DSGVO & Datenschutz (Compliance)
+- **Lokale Schriftarten:** Die Schriftart "Figtree" wird lokal geladen (`src/assets/fonts`), um Verbindungen zu Google Servern zu vermeiden.
+- **YouTube:** Videos sind über `youtube-nocookie.com` eingebunden und nutzen `loading="lazy"` für bessere Performance und Datenschutz.
+- **Google Maps:** Einbindung via iFrame (Privacy-friendly Embed ohne API-Key).
+- **Rechtstexte:** Impressum enthält alle Pflichtangaben für Handwerker (Zuständige Kammer, Berufsbezeichnung).
+
+### 2. SEO (Suchmaschinenoptimierung)
+- **Meta-Daten:** Jede Seite nutzt die `<Seo />` Komponente für individuelle Titel und Descriptions.
+- **Schema.org JSON-LD:**
+    - **Startseite (`Home.tsx`):** Auszeichnung als `MedicalBusiness` (Lokales Unternehmen) mit Öffnungszeiten und Geo-Koordinaten.
+    - **Jobs (`Jobs.tsx`):** Automatische Generierung von `JobPosting` Daten für Google Jobs (basiert auf der Job-Liste im Code).
+- **Technisches SEO:** `sitemap.xml` und `robots.txt` im `public/` Ordner vorhanden.
+
+### 3. Kontaktformular & Lead-Gen
+- Das Formular (`ContactForm.tsx`) ist für **Netlify Forms** vorbereitet (`data-netlify="true"`).
+- **Workflow:** Nach erfolgreichem Absenden wird der Nutzer automatisch auf die `/danke` Seite weitergeleitet.
+
+## 📝 Anpassungen für Entwickler
+
+### Inhalte ändern
+- **Texte & Bilder:** Direkt in den jeweiligen Komponenten unter `src/pages/` bearbeiten.
+- **Navigation:** Links werden in `src/components/Layout/MainLayout.tsx` im Array `navLinks` definiert.
+- **Stellenangebote:** Neue Jobs einfach in das `jobs` Array in `src/pages/Jobs.tsx` eintragen – das JSON-LD Schema aktualisiert sich automatisch.
+
+### Design & Farben
+Die Farben sind in `tailwind.config.js` definiert:
+- `primary`: Türkis/Grüntöne (Hauptfarbe)
+- `secondary`: Pink/Magenta (Akzentfarbe)
+- `stone`: Grautöne für Hintergründe
+
+### Hosting
+Das Projekt ist eine statische Seite (SPA) und kann problemlos auf Plattformen wie Netlify, Vercel oder einem klassischen Webserver (Apache/Nginx) gehostet werden. Der `dist/` Ordner enthält alles Notwendige.
+
+---
+*Stand: Januar 2026*
