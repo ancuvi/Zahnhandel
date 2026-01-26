@@ -170,6 +170,7 @@ const Home = () => {
                     className="absolute inset-0 w-full h-full"
                     src="https://www.youtube-nocookie.com/embed/gaFEKlTf8yU?si=example&controls=1&rel=0" 
                     title="Zahntechnik Frankenberg Imagefilm" 
+                    loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                     allowFullScreen
                 ></iframe>
