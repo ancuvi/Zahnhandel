@@ -137,7 +137,7 @@ const Contact = () => {
                 scrolling="no" 
                 marginHeight={0} 
                 marginWidth={0} 
-                src="https://maps.google.com/maps?q=B%26S%20Zahntechnik%20Frankenberg%20GmbH&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Gewerbering+17,+09669+Frankenberg&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 style={{border: 0}}
                 title="Google Maps B&S Zahntechnik Frankenberg GmbH"
                 className="grayscale hover:grayscale-0 transition-all duration-500"
