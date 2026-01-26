@@ -45,12 +45,39 @@ const Jobs = () => {
     },
   ]
 
+  const jobSchema = jobs.map(job => ({
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    "headline": `${job.title} - ${job.subtitle}`,
+    "description": job.description,
+    "employmentType": job.title.includes('Auszubildende') ? 'APPRENTICE' : 'FULL_TIME',
+    "datePosted": "2024-01-01",
+    "hiringOrganization": {
+      "@type": "Organization",
+      "name": "B&S Zahntechnik Frankenberg GmbH",
+      "sameAs": "https://www.zahnhandel.de"
+    },
+    "jobLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gewerbering 17",
+        "addressLocality": "Frankenberg/Sa.",
+        "postalCode": "09669",
+        "addressCountry": "DE"
+      }
+    }
+  }))
+
   return (
     <div>
       <Seo
         title="Karriere & Jobs | ZAHNTECHNIK Frankenberg GmbH"
         description="Starten Sie Ihre Karriere bei uns. Aktuelle Stellenangebote für Zahntechniker und Auszubildende in Frankenberg."
       />
+      <script type="application/ld+json">
+        {JSON.stringify(jobSchema)}
+      </script>
 
       {/* Hero Section */}
       <div className="relative bg-stone-900 text-white py-16 md:py-24 lg:py-32 overflow-hidden">
