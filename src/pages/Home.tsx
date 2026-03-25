@@ -123,11 +123,11 @@ const Home = () => {
          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="order-2 lg:order-1 relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-1 transition-transform hover:rotate-0 duration-500">
-                    <img src="/images/neue-Bilder/unser-team-praxis-aussen.png" alt="Unser Team – Außenansicht" className="w-full h-auto object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <img src="/images/neue-Bilder/unser-team-praxis-aussen.png" alt="Unser Team – Außenansicht" className="w-full h-auto object-cover transform scale-[1.15]" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 p-6 text-white">
-                        <p className="font-serif font-bold text-xl">Unser Team</p>
-                        <p className="text-sm opacity-90">Für Sie im Einsatz</p>
+                        <p className="font-serif font-bold text-xl !text-white" style={{ color: '#ffffff' }}>Unser Team</p>
+                        <p className="text-sm font-medium !text-white" style={{ color: '#ffffff' }}>Für Sie im Einsatz</p>
                     </div>
                 </div>
                 {/* Decorative Elements */}

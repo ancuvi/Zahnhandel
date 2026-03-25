@@ -84,7 +84,7 @@ const Jobs = () => {
         {/* Background Image/Overlay */}
         <div className="absolute inset-0 z-0 opacity-20" 
              style={{ 
-               backgroundImage: "url('/images/Unser-Team.webp')", 
+               backgroundImage: "url('/images/neue-Bilder/zahnhandel-buero-verwaltung-innenansicht.jpg')", 
                backgroundSize: 'cover', 
                backgroundPosition: 'center' 
              }} 

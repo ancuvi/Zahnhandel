@@ -104,7 +104,7 @@ const About = () => {
             
             <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-all duration-500">
-                   <img src="/images/neue-Bilder/geschäftsführung-teamleiter-portrait.png" alt="Geschäftsführung" className="w-full h-auto" />
+                   <img src="/images/neue-Bilder/geschäftsführung-teamleiter-portrait.png" alt="Geschäftsführung" className="w-full h-auto transform scale-[1.12]" />
                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
                       <p className="text-white font-medium">Unsere Geschäftsführung</p>
                       <p className="text-white/80 text-sm">ZTM Sven Börner (GF) / ZTM Udo Gerschler (ehem. GF) / ZTM Markus Schrambke (GF)</p>

@@ -264,7 +264,7 @@ const Services = () => {
               </div>
               <div className="relative">
                   <div className="rounded-2xl overflow-hidden shadow-2xl rotate-1">
-                       <img src="/images/neue-Bilder/ansprechpartner-beratung.png" alt="Beratungsgespräch" className="w-full h-auto" />
+                       <img src="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice.jpg" alt="Zahntechnik Frankenberg Empfang & Beratung" className="w-full h-auto" />
                   </div>
                   {/* Banner */}
                    <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg max-w-sm border-l-4 border-primary-500 hidden md:block">
