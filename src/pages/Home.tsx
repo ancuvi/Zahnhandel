@@ -123,9 +123,14 @@ const Home = () => {
          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="order-2 lg:order-1 relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-1 transition-transform hover:rotate-0 duration-500">
-                    <img src="/images/neue-Bilder/unser-team-praxis-aussen.png" alt="Unser Team – Außenansicht" className="w-full h-auto object-cover transform scale-[1.15]" />
+                    <img 
+                      src="/images/neue-Bilder/unser-team-praxis-aussen.png" 
+                      alt="Team der Zahntechnik Frankenberg vor dem Laborgebäude – Außenansicht" 
+                      className="w-full h-auto object-cover transform scale-[1.15]" 
+                      loading="lazy"
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 p-6 text-white">
+                    <div className="absolute bottom-0 left-0 p-6 text-white text-shadow-lg">
                         <p className="font-serif font-bold text-xl !text-white" style={{ color: '#ffffff' }}>Unser Team</p>
                         <p className="text-sm font-medium !text-white" style={{ color: '#ffffff' }}>Für Sie im Einsatz</p>
                     </div>
@@ -252,19 +257,34 @@ const Home = () => {
       <Section title="Unsere Arbeiten" eyebrow="Galerie" background="stone">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-                <img src="/images/neue-Bilder/dentallabor-geraete-cad-cam-fraesmaschine-zahnhandel.jpg" alt="CAD/CAM Fräsmaschine" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img 
+                  src="/images/neue-Bilder/dentallabor-geraete-cad-cam-fraesmaschine-zahnhandel.jpg" 
+                  alt="Moderne CAD/CAM Fräsmaschine für hochpräzisen Zahnersatz" 
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                  loading="lazy"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <p className="text-white font-bold text-lg">CAD/CAM Technologie</p>
                 </div>
             </div>
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-                <img src="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice.jpg" alt="Empfang & Beratung" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img 
+                  src="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice.jpg" 
+                  alt="Ansprechpartner im Empfangsbereich der Zahntechnik Frankenberg" 
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                  loading="lazy"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <p className="text-white font-bold text-lg">Service & Beratung</p>
                 </div>
             </div>
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-                <img src="/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel.jpg" alt="Dentallabor" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img 
+                  src="/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel.jpg" 
+                  alt="Blick in unser modernes Dentallabor mit ergonomischen Arbeitsplätzen" 
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                  loading="lazy"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <p className="text-white font-bold text-lg">Unser Dentallabor</p>
                 </div>

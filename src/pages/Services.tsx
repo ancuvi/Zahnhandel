@@ -145,8 +145,9 @@ const Services = () => {
              <div className="relative rounded-3xl overflow-hidden shadow-2xl transform lg:rotate-2 transition-transform hover:rotate-0 duration-700">
                 <img 
                   src="/images/neue-Bilder/artikulator-zahntechnik-kiefergelenk-simulation.png" 
-                  alt="Digitaler Intraoralscan Simulation" 
+                  alt="Digitaler Intraoralscan am Computer-Monitor – Präzision im digitalen Workflow" 
                   className="w-full h-auto object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-900/20 to-transparent"></div>
              </div>
@@ -164,8 +165,9 @@ const Services = () => {
              <div className="relative rounded-3xl overflow-hidden shadow-2xl transform lg:-rotate-2 transition-transform hover:rotate-0 duration-700">
                 <img 
                   src="/images/neue-Bilder/rapidshape-3d-druck-nachbearbeitung-zahnhandel.jpg" 
-                  alt="3D Druck Nachbearbeitung" 
+                  alt="Nachbearbeitung von 3D-gedruckten dentalen Objekten mit höchster Genauigkeit" 
                   className="w-full h-auto object-cover"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tl from-primary-900/20 to-transparent"></div>
              </div>
@@ -264,7 +266,12 @@ const Services = () => {
               </div>
               <div className="relative">
                   <div className="rounded-2xl overflow-hidden shadow-2xl rotate-1">
-                       <img src="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice.jpg" alt="Zahntechnik Frankenberg Empfang & Beratung" className="w-full h-auto" />
+                       <img 
+                         src="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice.jpg" 
+                         alt="Beratungsbereich und Empfang der Zahntechnik Frankenberg" 
+                         className="w-full h-auto" 
+                         loading="lazy"
+                        />
                   </div>
                   {/* Banner */}
                    <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg max-w-sm border-l-4 border-primary-500 hidden md:block">
