@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="ZAHNTECHNIK Frankenberg GmbH - Ihr Meisterlabor für hochwertigen Zahnersatz."
-    />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ZAHNTECHNIK Frankenberg GmbH</title>
-    <script type="application/ld+json">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="ZAHNTECHNIK Frankenberg GmbH - Ihr Meisterlabor für hochwertigen Zahnersatz." />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZAHNTECHNIK Frankenberg GmbH</title>
+  <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "MedicalBusiness",
@@ -45,25 +43,27 @@
         "priceRange": "$$"
       }
     </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+</head>
 
-    <!-- Statisches Formular für Netlify (Vite/React Workaround) -->
-    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <select name="reason">
-        <option value="anfrage"></option>
-        <option value="kostenvoranschlag"></option>
-        <option value="termin"></option>
-        <option value="bewerbung"></option>
-        <option value="sonstiges"></option>
-      </select>
-      <input type="text" name="subject" />
-      <textarea name="message"></textarea>
-      <input name="bot-field" />
-    </form>
-  </body>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+
+  <!-- Statisches Formular für Netlify  Vite/React Workaround ) -->
+  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <select name="reason">
+      <option value="anfrage"></option>
+      <option value="kostenvoranschlag"></option>
+      <option value="termin"></option>
+      <option value="bewerbung"></option>
+      <option value="sonstiges"></option>
+    </select>
+    <input type="text" name="subject" />
+    <textarea name="message"></textarea>
+    <input name="bot-field" />
+  </form>
+</body>
+
 </html>
