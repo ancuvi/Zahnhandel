@@ -18,7 +18,7 @@ const About = () => {
         {/* Background Image/Overlay */}
         <div className="absolute inset-0 z-0 opacity-40" 
              style={{ 
-               backgroundImage: "url('/images/neue-Bilder/teamfoto-mitarbeiter-blau.png')", 
+               backgroundImage: "url('/images/neue-Bilder/artikulator-zahnersatz-gipsmodell-zahnhandel.jpg')", 
                backgroundSize: 'cover', 
                backgroundPosition: 'center top' 
              }} 

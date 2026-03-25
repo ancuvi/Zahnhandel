@@ -252,9 +252,9 @@ const Home = () => {
       <Section title="Unsere Arbeiten" eyebrow="Galerie" background="stone">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-                <img src="/images/neue-Bilder/vollkeramikbruecke-metallfrei-zahnersatz.png" alt="Vollkeramikbrücke" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="/images/neue-Bilder/dentallabor-geraete-cad-cam-fraesmaschine-zahnhandel.jpg" alt="CAD/CAM Fräsmaschine" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p className="text-white font-bold text-lg">Vollkeramik & Ästhetik</p>
+                    <p className="text-white font-bold text-lg">CAD/CAM Technologie</p>
                 </div>
             </div>
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
