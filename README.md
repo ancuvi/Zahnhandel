@@ -10,9 +10,7 @@ Entwickelt mit Vite, React, TypeScript und Tailwind CSS.
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Routing:** [React Router Dom](https://reactrouter.com/)
 - **Icons:** [Lucide React](https://lucide.dev/)
-- **Validierung:** [Zod](https://zod.dev/) (Server-Side)
-- **Sanitization:** [sanitize-html](https://www.npmjs.com/package/sanitize-html)
-- **Bot-Schutz:** Honeypot & Netlify Functions
+- **Bot-Schutz:** Honeypot & Netlify Anti-Spam
 
 ## 🚀 Setup & Entwicklung
 
@@ -52,8 +50,6 @@ public/
 ├── images/         # Statische Bilder (inkl. neue-Bilder Subfolder)
 ├── sitemap.xml     # Sitemap für Suchmaschinen
 └── robots.txt      # Crawler-Konfiguration
-netlify/
-└── functions/      # Serverless Functions (z.B. submit-contact.ts)
 ```
 
 ## ✨ Features & Besonderheiten
@@ -71,11 +67,10 @@ netlify/
     - **Jobs (`Jobs.tsx`):** Automatische Generierung von `JobPosting` Daten für Google Jobs.
 - **Technisches SEO:** `sitemap.xml` und `robots.txt` im `public/` Ordner vorhanden.
 
-### 3. Kontaktformular (Security-First)
-- Das Formular (`ContactForm.tsx`) nutzt eine **Netlify Function** (`submit-contact.ts`) als Backend.
-- **Validierung:** Serverseitige Prüfung aller Felder via Zod (Längen, Typen, E-Mail-Format).
-- **Sicherheit:** Automatischer XSS-Schutz durch Sanitization aller Eingaben und Honeypot-Check.
-- **Feedback:** AJAX-basiertes Nutzer-Feedback (Erfolg/Fehler) direkt im Formular.
+### 3. Kontaktformular (Netlify Forms integration)
+- Das Formular (`ContactForm.tsx`) nutzt die native **Netlify Forms** Schnittstelle.
+- **AJAX-Submission:** Daten werden via `fetch` (URL-encoded) übermittelt, um ein modernes Feedback ohne Seiten-Reload zu ermöglichen.
+- **Sicherheit:** Integrierter `netlify-honeypot` ("bot-field") zum Schutz vor automatisiertem Spam.
 
 ## 📝 Anpassungen für Entwickler
 
