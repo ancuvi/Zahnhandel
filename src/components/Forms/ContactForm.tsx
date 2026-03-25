@@ -22,14 +22,17 @@ const ContactForm = () => {
   })
   const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [statusMessage, setStatusMessage] = useState('')
 
   const validate = (): boolean => {
     const newErrors: FormErrors = {}
     if (!form.name.trim()) newErrors.name = 'Bitte Namen angeben.'
+    if (form.name.length < 2) newErrors.name = 'Der Name ist zu kurz.'
     if (!form.email.trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email))
       newErrors.email = 'Bitte gültige E-Mail angeben.'
     if (!form.subject.trim()) newErrors.subject = 'Bitte Betreff angeben.'
-    if (!form.message.trim()) newErrors.message = 'Bitte Nachricht ausfüllen.'
+    if (form.message.trim().length < 10) newErrors.message = 'Die Nachricht ist zu kurz (min. 10 Zeichen).'
     
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -46,15 +49,41 @@ const ContactForm = () => {
     }
   }
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    setSubmitStatus('idle')
+    setStatusMessage('')
+
     const isValid = validate()
     
-    if (!isValid) {
-      event.preventDefault()
-      return
-    }
+    if (!isValid) return
+
     setIsSubmitting(true)
-    // Wenn valid, erfolgt der Standard-Submit an Netlify
+
+    try {
+      const response = await fetch('/.netlify/functions/submit-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      })
+
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setStatusMessage(result.message || 'Ihre Nachricht wurde erfolgreich gesendet.')
+        // Formular zurücksetzen
+        setForm({ name: '', email: '', subject: '', reason: '', message: '' })
+      } else {
+        setSubmitStatus('error')
+        setStatusMessage(result.error || 'Fehler beim Senden. Bitte versuchen Sie es später erneut.')
+      }
+    } catch (err) {
+      setSubmitStatus('error')
+      setStatusMessage('Netzwerkfehler. Bitte prüfen Sie Ihre Verbindung.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const inputClasses = "w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 pl-11 text-sm text-primary-900 placeholder:text-stone-400 shadow-sm outline-none transition-all duration-200 focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10"
@@ -64,20 +93,34 @@ const ContactForm = () => {
   return (
     <form
       className="space-y-6"
-      name="kontakt"
-      method="POST"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      action="/danke"
       onSubmit={handleSubmit}
       noValidate
     >
-      <input type="hidden" name="form-name" value="kontakt" />
-      <p className="hidden">
+      {/* Bot-Schutz Honeypot */}
+      <p className="sr-only" aria-hidden="true">
         <label>
-          Bitte dieses Feld frei lassen: <input name="bot-field" />
+          Bitte dieses Feld frei lassen: 
+          <input 
+            name="bot-field" 
+            autoComplete="off" 
+            onChange={(e) => setForm(f => ({...f, 'bot-field': e.target.value} as any))} 
+          />
         </label>
       </p>
+
+      {submitStatus === 'success' && (
+        <div className="bg-green-50 border border-green-200 text-green-800 p-4 rounded-xl flex items-center gap-3 animate-fade-in mb-6">
+          <div className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center shrink-0">✓</div>
+          <p className="text-sm font-medium">{statusMessage}</p>
+        </div>
+      )}
+
+      {submitStatus === 'error' && (
+        <div className="bg-red-50 border border-red-200 text-red-800 p-4 rounded-xl flex items-center gap-3 animate-fade-in mb-6">
+          <div className="w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center shrink-0">!</div>
+          <p className="text-sm font-medium">{statusMessage}</p>
+        </div>
+      )}
 
       <div className="grid gap-6 md:grid-cols-2">
         <div>

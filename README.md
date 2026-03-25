@@ -9,8 +9,10 @@ Entwickelt mit Vite, React, TypeScript und Tailwind CSS.
 - **Sprache:** TypeScript
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Routing:** [React Router Dom](https://reactrouter.com/)
-- **Animation:** Framer Motion (vorbereitet)
-- **Icons:** Lucide React
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Validierung:** [Zod](https://zod.dev/) (Server-Side)
+- **Sanitization:** [sanitize-html](https://www.npmjs.com/package/sanitize-html)
+- **Bot-Schutz:** Honeypot & Netlify Functions
 
 ## 🚀 Setup & Entwicklung
 
@@ -47,9 +49,11 @@ src/
 ├── router/         # Routing-Konfiguration (index.tsx)
 └── main.tsx        # Entry Point
 public/
-├── images/         # Statische Bilder
+├── images/         # Statische Bilder (inkl. neue-Bilder Subfolder)
 ├── sitemap.xml     # Sitemap für Suchmaschinen
 └── robots.txt      # Crawler-Konfiguration
+netlify/
+└── functions/      # Serverless Functions (z.B. submit-contact.ts)
 ```
 
 ## ✨ Features & Besonderheiten
@@ -60,16 +64,18 @@ public/
 - **Google Maps:** Einbindung via iFrame (Privacy-friendly Embed ohne API-Key).
 - **Rechtstexte:** Impressum enthält alle Pflichtangaben für Handwerker (Zuständige Kammer, Berufsbezeichnung).
 
-### 2. SEO (Suchmaschinenoptimierung)
 - **Meta-Daten:** Jede Seite nutzt die `<Seo />` Komponente für individuelle Titel und Descriptions.
+- **Bild-Optimierung:** Alle Bilder nutzen beschreibende Alt-Tags und `loading="lazy"` für optimale Performance und Indexierung.
 - **Schema.org JSON-LD:**
     - **Startseite (`Home.tsx`):** Auszeichnung als `MedicalBusiness` (Lokales Unternehmen) mit Öffnungszeiten und Geo-Koordinaten.
-    - **Jobs (`Jobs.tsx`):** Automatische Generierung von `JobPosting` Daten für Google Jobs (basiert auf der Job-Liste im Code).
+    - **Jobs (`Jobs.tsx`):** Automatische Generierung von `JobPosting` Daten für Google Jobs.
 - **Technisches SEO:** `sitemap.xml` und `robots.txt` im `public/` Ordner vorhanden.
 
-### 3. Kontaktformular & Lead-Gen
-- Das Formular (`ContactForm.tsx`) ist für **Netlify Forms** vorbereitet (`data-netlify="true"`).
-- **Workflow:** Nach erfolgreichem Absenden wird der Nutzer automatisch auf die `/danke` Seite weitergeleitet.
+### 3. Kontaktformular (Security-First)
+- Das Formular (`ContactForm.tsx`) nutzt eine **Netlify Function** (`submit-contact.ts`) als Backend.
+- **Validierung:** Serverseitige Prüfung aller Felder via Zod (Längen, Typen, E-Mail-Format).
+- **Sicherheit:** Automatischer XSS-Schutz durch Sanitization aller Eingaben und Honeypot-Check.
+- **Feedback:** AJAX-basiertes Nutzer-Feedback (Erfolg/Fehler) direkt im Formular.
 
 ## 📝 Anpassungen für Entwickler
 
@@ -88,4 +94,4 @@ Die Farben sind in `tailwind.config.js` definiert:
 Das Projekt ist eine statische Seite (SPA) und kann problemlos auf Plattformen wie Netlify, Vercel oder einem klassischen Webserver (Apache/Nginx) gehostet werden. Der `dist/` Ordner enthält alles Notwendige.
 
 ---
-*Stand: Januar 2026*
+*Stand: März 2026*
