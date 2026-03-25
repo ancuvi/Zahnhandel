@@ -112,6 +112,91 @@ const Services = () => {
         </div>
       </div>
 
+      {/* Focus Section: Digitaler Scanservice */}
+      <Section background="white" className="overflow-hidden">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="order-2 lg:order-1 space-y-6 animate-fade-in">
+            <div className="inline-flex items-center gap-2 text-secondary-600 font-bold tracking-wider uppercase text-sm">
+              <Smartphone size={20} />
+              <span>Innovation</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-900 leading-tight">
+              Digitaler Scanservice
+            </h2>
+            <div className="space-y-4 text-primary-700 text-lg leading-relaxed">
+              <p>
+                Mit unserem <strong>DIGITALEN SCANSERVICE</strong> wird die Zahnabformung einfacher, schneller und deutlich angenehmer. 
+                Statt der klassischen Abdruckmasse erfasst ein moderner Intraoralscanner Ihre Zähne berührungslos und erstellt in wenigen Minuten ein präzises 3D-Modell.
+              </p>
+              <p>
+                Patientinnen und Patienten profitieren von maximalem Komfort ohne Würgereiz und können den Scan direkt auf dem Bildschirm mitverfolgen. 
+                Die digitalen Daten werden sofort an unser Labor übermittelt und ermöglichen passgenauen Zahnersatz mit hoher Präzision.
+              </p>
+              <div className="bg-secondary-50 p-6 rounded-2xl border-l-4 border-secondary-400 shadow-sm mt-8">
+                <h4 className="font-bold text-primary-900 mb-2">Vor-Ort-Service für Praxen</h4>
+                <p className="text-primary-800">
+                  Für Zahnarztpraxen ohne eigenen Scanner bieten wir einen flexiblen <strong>Vor-Ort-Scanservice</strong>: 
+                  Ein geschulter Scan-Spezialist kommt direkt in Ihre Praxis und führt die digitale Abformung professionell durch.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="order-1 lg:order-2 relative">
+             <div className="relative rounded-3xl overflow-hidden shadow-2xl transform lg:rotate-2 transition-transform hover:rotate-0 duration-700">
+                <img 
+                  src="/images/neue-Bilder/artikulator-zahntechnik-kiefergelenk-simulation.png" 
+                  alt="Digitaler Intraoralscan Simulation" 
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary-900/20 to-transparent"></div>
+             </div>
+             {/* Decorative Background Element */}
+             <div className="absolute -top-12 -right-12 w-64 h-64 bg-secondary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+             <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Focus Section: 3D Druck */}
+      <Section background="stone" className="overflow-hidden">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative">
+             <div className="relative rounded-3xl overflow-hidden shadow-2xl transform lg:-rotate-2 transition-transform hover:rotate-0 duration-700">
+                <img 
+                  src="/images/neue-Bilder/rapidshape-3d-druck-nachbearbeitung-zahnhandel.jpg" 
+                  alt="3D Druck Nachbearbeitung" 
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tl from-primary-900/20 to-transparent"></div>
+             </div>
+             {/* Decorative Background Element */}
+             <div className="absolute -top-12 -left-12 w-64 h-64 bg-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+          </div>
+          <div className="space-y-6 animate-fade-in">
+            <div className="inline-flex items-center gap-2 text-primary-600 font-bold tracking-wider uppercase text-sm">
+              <Microscope size={20} />
+              <span>Technologie</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-900 leading-tight">
+              3D Druck in der Zahntechnik
+            </h2>
+            <div className="space-y-4 text-primary-700 text-lg leading-relaxed">
+              <p>
+                Unsere moderne <strong>3D-Drucktechnologie</strong> ermöglicht es uns, präzise und effiziente zahntechnische Produkte herzustellen. 
+                Digitale Scandaten werden direkt in hochwertige Modelle und dentaltechnische Arbeiten umgesetzt.
+              </p>
+              <p>
+                Mit unseren modernen Drucksystemen fertigen wir Modelle, Zahnersatz, Schienen und Kronen mit höchster Genauigkeit an. 
+                Der digitale Workflow sorgt für schnelle Produktionszeiten, optimale Passgenauigkeit und eine zuverlässige Qualität.
+              </p>
+              <p className="font-serif italic text-primary-800 border-l-4 border-primary-500 pl-6 py-2">
+                So profitieren Zahnarztpraxen und Patienten von innovativer Technologie und moderner Zahntechnik auf höchstem Niveau aus unserem Hause...
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
       {/* Main Grid */}
       <Section title="Exzellenz in jedem Bereich" intro="Wir verbinden Ästhetik mit Funktion für Ihr schönstes Lächeln." background="stone">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -156,21 +241,23 @@ const Services = () => {
                           <div className="bg-primary-50 p-3 rounded-full h-fit text-primary-600"><CheckCircle2 /></div>
                           <div>
                               <h4 className="font-bold text-primary-900 mb-1">Individuelle Beratung</h4>
-                              <p className="text-primary-700 text-sm">Persönliche prothetische Planung für optimale Ergebnisse.</p>
+                              <p className="text-primary-700 text-sm">Persönliche Beratung und prothetische Planung für optimale Ergebnisse.</p>
                           </div>
                       </div>
                       <div className="flex gap-4">
                           <div className="bg-secondary-50 p-3 rounded-full h-fit text-secondary-600"><Clock /></div>
                           <div>
                               <h4 className="font-bold text-primary-900 mb-1">Flexibler Reparaturservice</h4>
-                              <p className="text-primary-700 text-sm">Modellgussreparaturen innerhalb von 24h ab Anruf geliefert.</p>
+                              <p className="text-primary-700 text-sm italic">
+                                Modellgussreparaturen (Klammerrep., oder geg. Basisteil mit bis zu 2 zu ersetzenden Zähnen) können innerhalb von 24h ab Anruf geliefert werden.
+                              </p>
                           </div>
                       </div>
                       <div className="flex gap-4">
                           <div className="bg-stone-100 p-3 rounded-full h-fit text-primary-700"><Users /></div>
                           <div>
-                              <h4 className="font-bold text-primary-900 mb-1">Meister-Support vor Ort</h4>
-                              <p className="text-primary-700 text-sm">Unterstützung komplexer Fälle durch unsere Zahntechnikermeister direkt in Ihrer Praxis.</p>
+                              <h4 className="font-bold text-primary-900 mb-1">Meister-Support & Hilfe</h4>
+                              <p className="text-primary-700 text-sm">Schnelle Hilfe bei Problemen und Unterstützung komplexer Fälle durch einen Zahntechnikermeister direkt in Ihrer Praxis.</p>
                           </div>
                       </div>
                   </div>

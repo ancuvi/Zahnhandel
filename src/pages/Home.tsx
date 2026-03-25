@@ -234,11 +234,11 @@ const Home = () => {
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="mt-1 h-5 w-5 text-primary-500 shrink-0" />
-                <span>Flexibler Reparaturservice</span>
+                <span>24h Reparaturservice (Modellguss & Klammern)</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="mt-1 h-5 w-5 text-primary-500 shrink-0" />
-                <span>Schnelle Hilfe bei Problemen</span>
+                <span>Meister-Support & schnelle Hilfe vor Ort</span>
               </li>
             </ul>
              <Link to="/services" className="inline-flex items-center gap-2 text-secondary-600 font-semibold hover:text-secondary-700 transition-colors group-hover:translate-x-1 duration-300">
