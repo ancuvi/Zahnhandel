@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { CheckCircle2, Diamond, Layers, Activity, Smartphone, Microscope, ShieldCheck } from 'lucide-react'
+import { CheckCircle2, Diamond, Layers, Activity, Smartphone, Microscope, ShieldCheck, Clock, Users } from 'lucide-react'
 import Section from '../components/UI/Section'
 import Seo from '../components/SEO/Seo'
 import Button from '../components/UI/Button'
@@ -9,45 +9,70 @@ const Services = () => {
     {
       title: 'Ästhetik & Keramik',
       description: 'Natürlichkeit ist unser Maßstab. Mit individueller Frontzahnkeramik und Schichttechnik schaffen wir lebendige Ergebnisse.',
-      image: '/images/Frontzahnkeramik.webp',
+      image: '/images/neue-Bilder/vollkeramikbruecke-metallfrei-zahnersatz.png',
       icon: <Diamond className="w-6 h-6" />,
       details: ['Individuelle Frontzahnkeramik', 'Veneers, Inlays, Onlays', 'Keramik gepresst & geschichtet']
     },
     {
       title: 'Kronen & Brücken',
       description: 'Präzise Passform und Langlebigkeit. Ob Zirkon, Vollkeramik oder Metallkeramik – wir finden die optimale Lösung.',
-      image: '/images/Kronen-und-Bruecken.webp',
+      image: '/images/neue-Bilder/zahnbruecke-teilverblendet-metallkeramik.png',
       icon: <Layers className="w-6 h-6" />,
       details: ['Zirkonkeramik & CAD/CAM', 'Perlmutkrone', 'Edelmetall & Titan']
     },
     {
+      title: 'Digitaler Scanservice',
+      description: 'Mit unserem DIGITALEN SCANSERVICE wird die Zahnabformung einfacher, schneller und angenehmer. Ein moderner Intraoralscanner erstellt in Minuten ein präzises 3D-Modell.',
+      image: '/images/neue-Bilder/artikulator-zahnersatz-gipsmodell-zahnhandel.jpg',
+      icon: <Smartphone className="w-6 h-6" />,
+      details: ['Maximaler Komfort ohne Würgereiz', 'Berührungslose Abformung', 'Flexibler Vor-Ort-Service']
+    },
+    {
+      title: '3D Druck & Innovation',
+      description: 'Unsere moderne 3D-Drucktechnologie ermöglicht präzise Modelle und dentale Arbeiten direkt aus digitalen Scandaten.',
+      image: '/images/neue-Bilder/rapidshape-3d-druck-nachbearbeitung-zahnhandel.jpg',
+      icon: <Microscope className="w-6 h-6" />,
+      details: ['Schnelle Fertigungszeiten', 'Präzises Gipsmodell-Druck', 'Innovativer digitaler Workflow']
+    },
+    {
       title: 'Kombitechnik',
       description: 'Funktionalität trifft Komfort. Hochwertige Teleskoparbeiten und Geschiebe für sicheren Halt und Ästhetik.',
-      image: '/images/Kombiarbeit.webp',
+      image: '/images/neue-Bilder/teleskopbruecke-zahnersatz-modell-technik.png',
       icon: <Activity className="w-6 h-6" />,
       details: ['Teleskoptechnik', 'Geschiebe & Riegel', 'Modellguss']
     },
     {
       title: 'Implantattechnik',
       description: 'Festsitzender Zahnersatz auf Implantaten. Wir versorgen alle gängigen Implantatsysteme mit höchster Präzision.',
-      image: '/images/Implantattechnik.webp',
-      icon: <Smartphone className="w-6 h-6" />, 
+      image: '/images/neue-Bilder/zahnimplantat-abutment-zirkon-krone.png',
+      icon: <ShieldCheck className="w-6 h-6" />, 
       details: ['Suprakonstruktionen', 'Individuelle Abutments', 'Stegkonstruktionen']
     },
     {
       title: 'Totalprothetik',
       description: 'Lebensqualität zurückgewinnen. Prothesen nach der TiF-Methode für optimalen Sitz und natürliche Optik.',
-      image: '/images/Totalprotese.webp',
-      icon: <ShieldCheck className="w-6 h-6" />,
+      image: '/images/neue-Bilder/totalprothese-oberkiefer-unterkiefer-set.png',
+      icon: <Diamond className="w-6 h-6" />,
       details: ['TiF-Methode', 'Totalprothesen', 'Reparaturen']
     },
     {
       title: 'Spezialtechniken',
       description: 'Innovation für besondere Anforderungen. Modernste Verfahren für perfekte Passung und Biokompatibilität.',
-      image: '/images/Galvanotechnik.webp',
-      icon: <Microscope className="w-6 h-6" />,
-      details: ['Galvanotechnik', 'Lasertechnik', 'Schienen & Diagnostik']
+      image: '/images/neue-Bilder/schnarchschiene-unterkieferprotrusionsschiene-schlafapnoe.png',
+      icon: <Layers className="w-6 h-6" />,
+      details: ['Lasertechnik', 'Schienen & Diagnostik', 'Schnarchschutz']
     }
+  ]
+
+  const galleryImages = [
+    { src: '/images/neue-Bilder/dentallabor-ausstattung-brennofen-zahnhandel.jpg', title: 'Keramikbrennofen' },
+    { src: '/images/neue-Bilder/picodent-fraesmaschine-cad-cam-zahnhandel.jpg', title: 'CAD/CAM Fräsmaschine' },
+    { src: '/images/neue-Bilder/fraeserstaender-rotierende-instrumente-technikertisch-zahnhandel.jpg', title: 'Präzisionswerkzeuge' },
+    { src: '/images/neue-Bilder/laborzeile-gipsraum-arbeitsvorbereitung-zahnhandel.jpg', title: 'Gipsraum-Vorbereitung' },
+    { src: '/images/neue-Bilder/poliereinheit-kavo-dentallabor-zahnhandel.jpg', title: 'Kavo Poliereinheit' },
+    { src: '/images/neue-Bilder/schmelztiegel-metallguss-legierung-zahnhandel.jpg', title: 'Metallguss-Technik' },
+    { src: '/images/neue-Bilder/lichthaertung-zahnersatz-verblendung-zahntechnik.jpg', title: 'Lichthärtung' },
+    { src: '/images/neue-Bilder/keramikofen-dekema-austromat-zahnhandel.jpg', title: 'Dekema Keramikofen' }
   ]
 
   return (
@@ -62,7 +87,7 @@ const Services = () => {
         {/* Background Image/Overlay */}
          <div className="absolute inset-0 z-0 opacity-30" 
              style={{ 
-               backgroundImage: "url('/images/zirkon.webp')", 
+               backgroundImage: "url('/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel.jpg')", 
                backgroundSize: 'cover', 
                backgroundPosition: 'center' 
              }} 
@@ -89,24 +114,24 @@ const Services = () => {
 
       {/* Main Grid */}
       <Section title="Exzellenz in jedem Bereich" intro="Wir verbinden Ästhetik mit Funktion für Ihr schönstes Lächeln." background="stone">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {offerings.map((offer, idx) => (
                   <div key={idx} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100 flex flex-col">
-                      <div className="relative h-48 overflow-hidden">
+                      <div className="relative h-44 overflow-hidden">
                           <img src={offer.image} alt={offer.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
-                          <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-lg text-secondary-600 shadow-sm">
+                          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+                          <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-1.5 rounded-lg text-secondary-600 shadow-sm">
                               {offer.icon}
                           </div>
                       </div>
-                      <div className="p-6 flex-1 flex flex-col">
-                          <h3 className="text-xl font-bold font-serif text-primary-900 mb-2 group-hover:text-secondary-600 transition-colors">{offer.title}</h3>
-                          <p className="text-primary-700 text-sm leading-relaxed mb-6 flex-1">{offer.description}</p>
+                      <div className="p-5 flex-1 flex flex-col">
+                          <h3 className="text-lg font-bold font-serif text-primary-900 mb-2 group-hover:text-secondary-600 transition-colors leading-tight">{offer.title}</h3>
+                          <p className="text-primary-700 text-xs leading-relaxed mb-4 flex-1">{offer.description}</p>
                           
-                          <div className="space-y-2 border-t border-stone-100 pt-4 mt-auto">
+                          <div className="space-y-1.5 border-t border-stone-100 pt-3 mt-auto">
                               {offer.details.map((detail, i) => (
-                                  <div key={i} className="flex items-center gap-2 text-sm text-primary-600">
-                                      <CheckCircle2 size={14} className="text-primary-500 shrink-0" />
+                                  <div key={i} className="flex items-center gap-2 text-[11px] font-medium text-primary-600">
+                                      <CheckCircle2 size={12} className="text-primary-500 shrink-0" />
                                       <span>{detail}</span>
                                   </div>
                               ))}
@@ -121,46 +146,60 @@ const Services = () => {
       <Section background="white">
            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-900 mb-6">Mehr als nur Zahnersatz</h2>
+                  <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-900 mb-6">Service & Beratung</h2>
                   <p className="text-primary-700 text-lg mb-8 leading-relaxed">
-                      Unser Service endet nicht bei der Fertigung. Wir unterstützen Zahnärzte und Patienten mit umfassenden Dienstleistungen für ein optimales Ergebnis.
+                      Unser Service endet nicht bei der Fertigung. Wir unterstützen Zahnärzte und Patienten mit umfassenden Dienstleistungen vor Ort.
                   </p>
                   
                   <div className="space-y-6">
                       <div className="flex gap-4">
-                          <div className="bg-primary-50 p-3 rounded-full h-fit text-primary-600"><ShieldCheck /></div>
+                          <div className="bg-primary-50 p-3 rounded-full h-fit text-primary-600"><CheckCircle2 /></div>
                           <div>
-                              <h4 className="font-bold text-primary-900 mb-1">Qualitätssicherung</h4>
-                              <p className="text-primary-700 text-sm">Strenge Kontrollen durch unsere Meister sichern gleichbleibend hohe Qualität.</p>
+                              <h4 className="font-bold text-primary-900 mb-1">Individuelle Beratung</h4>
+                              <p className="text-primary-700 text-sm">Persönliche prothetische Planung für optimale Ergebnisse.</p>
                           </div>
                       </div>
                       <div className="flex gap-4">
-                          <div className="bg-secondary-50 p-3 rounded-full h-fit text-secondary-600"><Activity /></div>
+                          <div className="bg-secondary-50 p-3 rounded-full h-fit text-secondary-600"><Clock /></div>
                           <div>
-                              <h4 className="font-bold text-primary-900 mb-1">Funktionsdiagnostik</h4>
-                              <p className="text-primary-700 text-sm">Gelenkbahnaufzeichnung mit Cadiax für präzise funktionelle Ergebnisse.</p>
+                              <h4 className="font-bold text-primary-900 mb-1">Flexibler Reparaturservice</h4>
+                              <p className="text-primary-700 text-sm">Modellgussreparaturen innerhalb von 24h ab Anruf geliefert.</p>
                           </div>
                       </div>
                       <div className="flex gap-4">
-                          <div className="bg-stone-100 p-3 rounded-full h-fit text-primary-700"><Smartphone /></div>
+                          <div className="bg-stone-100 p-3 rounded-full h-fit text-primary-700"><Users /></div>
                           <div>
-                              <h4 className="font-bold text-primary-900 mb-1">Digitale Farbestimmung</h4>
-                              <p className="text-primary-700 text-sm">Exakte Bestimmung der Zahnfarbe für perfekte ästhetische Integration.</p>
+                              <h4 className="font-bold text-primary-900 mb-1">Meister-Support vor Ort</h4>
+                              <p className="text-primary-700 text-sm">Unterstützung komplexer Fälle durch unsere Zahntechnikermeister direkt in Ihrer Praxis.</p>
                           </div>
                       </div>
                   </div>
               </div>
               <div className="relative">
                   <div className="rounded-2xl overflow-hidden shadow-2xl rotate-1">
-                       <img src="/images/unser-angebot-2.webp" alt="Behandlungsraum" className="w-full h-auto" />
+                       <img src="/images/neue-Bilder/ansprechpartner-beratung.png" alt="Beratungsgespräch" className="w-full h-auto" />
                   </div>
                   {/* Banner */}
-                   <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs border-l-4 border-primary-500 hidden md:block">
-                      <p className="font-serif font-bold text-lg text-primary-900">Individuelle Beratung</p>
-                      <p className="text-sm text-primary-700 mt-1">Wir nehmen uns Zeit für die Planung Ihrer perfekten Lösung.</p>
+                   <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg max-w-sm border-l-4 border-primary-500 hidden md:block">
+                      <p className="font-serif font-bold text-lg text-primary-900">Digitaler Scanservice</p>
+                      <p className="text-sm text-primary-700 mt-1">Ein geschulter Scan-Spezialist kommt direkt in Ihre Praxis für die digitale Abformung.</p>
                   </div>
               </div>
            </div>
+      </Section>
+
+      {/* Labor-Galerie */}
+      <Section title="Einblick in unser Labor" intro="Werfen Sie einen Blick auf unsere moderne Ausstattung und Arbeitsplätze." background="stone">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {galleryImages.map((img, i) => (
+                  <div key={i} className="group relative aspect-square overflow-hidden rounded-xl shadow-sm">
+                      <img src={img.src} alt={img.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                          <p className="text-white text-xs font-bold">{img.title}</p>
+                      </div>
+                  </div>
+              ))}
+          </div>
       </Section>
       
       {/* CTA */}

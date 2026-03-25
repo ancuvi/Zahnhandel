@@ -50,8 +50,8 @@ const Home = () => {
         <div 
           className="absolute inset-0 z-0 hidden lg:block"
           style={{
-            backgroundImage: "url('/images/Zahntechnik-wilkommen.webp')",
-            backgroundPosition: 'center',
+            backgroundImage: "url('/images/neue-Bilder/teamfoto-mitarbeiter-blau.png')",
+            backgroundPosition: 'center top',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundAttachment: 'fixed',
@@ -62,8 +62,8 @@ const Home = () => {
         <div 
           className="absolute inset-0 z-0 lg:hidden"
           style={{
-            backgroundImage: "url('/images/Zahntechnik-wilkommen.webp')",
-            backgroundPosition: 'center',
+            backgroundImage: "url('/images/neue-Bilder/teamfoto-mitarbeiter-blau.png')",
+            backgroundPosition: 'center top',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
           }}
@@ -123,7 +123,7 @@ const Home = () => {
          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="order-2 lg:order-1 relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-1 transition-transform hover:rotate-0 duration-500">
-                    <img src="/images/Unser-Team.webp" alt="Unser Team" className="w-full h-auto object-cover" />
+                    <img src="/images/neue-Bilder/unser-team-praxis-aussen.png" alt="Unser Team – Außenansicht" className="w-full h-auto object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 p-6 text-white">
                         <p className="font-serif font-bold text-xl">Unser Team</p>
@@ -252,21 +252,21 @@ const Home = () => {
       <Section title="Unsere Arbeiten" eyebrow="Galerie" background="stone">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-                <img src="/images/Frontzahnkeramik.webp" alt="Frontzahnkeramik" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="/images/neue-Bilder/vollkeramikbruecke-metallfrei-zahnersatz.png" alt="Vollkeramikbrücke" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p className="text-white font-bold text-lg">Frontzahnkeramik</p>
+                    <p className="text-white font-bold text-lg">Vollkeramik & Ästhetik</p>
                 </div>
             </div>
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-                <img src="/images/Kombiarbeit.webp" alt="Kombiarbeit" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice.jpg" alt="Empfang & Beratung" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p className="text-white font-bold text-lg">Kombitechnik</p>
+                    <p className="text-white font-bold text-lg">Service & Beratung</p>
                 </div>
             </div>
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-                <img src="/images/Implantattechnik.webp" alt="Implantattechnik" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                <img src="/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel.jpg" alt="Dentallabor" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p className="text-white font-bold text-lg">Implantattechnik</p>
+                    <p className="text-white font-bold text-lg">Unser Dentallabor</p>
                 </div>
             </div>
         </div>
@@ -282,7 +282,7 @@ const Home = () => {
          <div 
             className="absolute inset-0 z-0"
             style={{
-                backgroundImage: "url('/images/Willkommen-2.webp')",
+                backgroundImage: "url('/images/neue-Bilder/oberkiefer-totalversorgung-zirkulaere-bruecke.png')",
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundAttachment: 'fixed',
