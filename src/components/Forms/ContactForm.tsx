@@ -61,20 +61,15 @@ const ContactForm = () => {
     setIsSubmitting(true)
 
     try {
-      const body = new URLSearchParams();
-      body.append('form-name', 'contact');
-      Object.entries(form).forEach(([key, value]) => {
-        body.append(key, value);
-      });
-      // Bot-Feld explizit mitsenden (auch wenn leer)
-      if (!(form as any)['bot-field']) {
-        body.append('bot-field', '');
-      }
-
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: body.toString()
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "contact",
+          ...form,
+          // Bot-Feld explizit mitsenden (auch wenn leer)
+          "bot-field": (form as any)["bot-field"] || ""
+        } as any).toString()
       })
 
       if (response.ok) {
