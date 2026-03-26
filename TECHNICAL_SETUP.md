@@ -37,6 +37,7 @@ Das Kontaktformular wurde mit besonderem Fokus auf Datensicherheit und Spam-Prä
 Beim Design der Benutzeroberfläche wurde konsequent auf Datensparsamkeit geachtet.
 
 *   **Local Fonts:** Schriftarten (Google Fonts) werden nicht von externen Google-Servern geladen, sondern sind **lokal auf dem eigenen Server** eingebunden. Dadurch findet beim Seitenaufruf kein Datenaustausch mit Google CDN statt.
+*   **Favicons:** Auch alle Icons (Favoriten-Icons) sind **lokal auf dem Server** gehostet, um unnötige Anfragen an externe Ressourcen zu vermeiden.
 *   **Videos (YouTube Privacy):** YouTube-Einbindungen erfolgen im **erweiterten Datenschutzmodus** (`youtube-nocookie.com`). Cookies werden erst gesetzt, wenn der Nutzer das Video aktiv startet.
 *   **Kein Tracking:** Die Website verzichtet vollständig auf Analyse-Tools wie Google Analytics, Facebook-Pixel oder ähnliche Tracking-Verfahren.
 

@@ -149,19 +149,19 @@ const About = () => {
               </p>
            </div>
            
-           <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-5xl mx-auto">
+           <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-5xl mx-auto border border-stone-100">
                <img 
                  src="/images/neue-Bilder/teamfoto-mitarbeiter-blau.png" 
                  alt="Das gesamte Team der Zahntechnik Frankenberg GmbH in Arbeitskleidung" 
                  className="w-full h-auto" 
                  loading="lazy"
                />
-              <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-                 <div>
+              <div className="relative md:absolute md:bottom-0 md:left-0 md:right-0 bg-white md:bg-white/95 md:backdrop-blur-sm p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                 <div className="text-center md:text-left">
                     <h3 className="text-xl font-bold text-primary-900">Das Team der Zahntechnik Frankenberg</h3>
                     <p className="text-primary-700 mt-1">Gemeinsam für Ihr Lächeln im Einsatz.</p>
                  </div>
-                 <Button as={Link} to="/contact" variant="primary">Kontakt aufnehmen</Button>
+                 <Button as={Link} to="/contact" variant="primary" className="w-full md:w-auto">Kontakt aufnehmen</Button>
               </div>
            </div>
            
