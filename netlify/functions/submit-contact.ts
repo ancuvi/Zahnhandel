@@ -27,9 +27,9 @@ const handler: Handler = async (event) => {
     // 1. Bot-Schutz (Honeypot)
     if (data['bot-field'] && data['bot-field'].length > 0) {
       console.warn("Spam-Versuch blockiert.");
-      return { 
-        statusCode: 400, 
-        body: JSON.stringify({ error: "Spam erkannt." }) 
+      return {
+        statusCode: 400,
+        body: JSON.stringify({ error: "Spam erkannt." })
       };
     }
 
@@ -46,21 +46,49 @@ const handler: Handler = async (event) => {
     };
 
     // 4. E-Mail Versand via Resend
-    // WICHTIG: Ersetzen Sie 'info@zahnhandel.de' durch Ihre tatsächliche Empfänger-Adresse
     const { data: resendData, error: resendError } = await resend.emails.send({
-      from: 'Zahnhandel Website <onboarding@resend.dev>',
-      to: 'info@zahnhandel.de',
+      from: 'Zahnhandel Frankenberg <info@zahnhandel.de>',
+      to: 'angelo.inbox@proton.me',
       reply_to: sanitizedData.email,
       subject: `[Zahnhandel Website] ${sanitizedData.subject}`,
       html: `
-        <h2>Neue Anfrage von der Website</h2>
-        <p><strong>Name:</strong> ${sanitizedData.name}</p>
-        <p><strong>E-Mail:</strong> ${sanitizedData.email}</p>
-        <p><strong>Anliegen:</strong> ${sanitizedData.reason}</p>
-        <p><strong>Betreff:</strong> ${sanitizedData.subject}</p>
-        <hr />
-        <p><strong>Nachricht:</strong></p>
-        <p style="white-space: pre-wrap;">${sanitizedData.message}</p>
+        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; color: #1e293b;">
+          <div style="background-color: #0d9488; padding: 24px; color: white;">
+            <h1 style="margin: 0; font-size: 20px; font-weight: 600;">Neue Website-Anfrage</h1>
+          </div>
+          <div style="padding: 24px; line-height: 1.6;">
+            <p style="margin-top: 0; color: #64748b; font-size: 14px;">Inhalt der Kontakt-Anfrage :</p>
+            
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr>
+                <td style="padding: 8px 0; font-weight: 600; width: 120px; vertical-align: top;">Name:</td>
+                <td style="padding: 8px 0;">${sanitizedData.name}</td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; font-weight: 600; vertical-align: top;">E-Mail:</td>
+                <td style="padding: 8px 0;"><a href="mailto:${sanitizedData.email}" style="color: #0d9488; text-decoration: none;">${sanitizedData.email}</a></td>
+              </tr>
+              <tr>
+                <td style="padding: 8px 0; font-weight: 600; vertical-align: top;">Anliegen:</td>
+                <td style="padding: 8px 0;">${sanitizedData.reason}</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #f1f5f9;">
+                <td style="padding: 8px 0 16px 0; font-weight: 600; vertical-align: top;">Betreff:</td>
+                <td style="padding: 8px 0 16px 0;">${sanitizedData.subject}</td>
+              </tr>
+            </table>
+
+            <div style="margin-top: 24px;">
+              <p style="font-weight: 600; margin-bottom: 8px;">Nachricht:</p>
+              <div style="background-color: #f8fafc; padding: 16px; border-radius: 8px; border-left: 4px solid #0d9488; font-style: italic;">
+                ${sanitizedData.message}
+              </div>
+            </div>
+          </div>
+          <div style="background-color: #f1f5f9; padding: 16px; text-align: center; font-size: 12px; color: #94a3b8;">
+            Diese E-Mail wurde automatisch über das Kontaktformular auf zahnhandel.de generiert.
+          </div>
+        </div>
       `
     });
 
@@ -74,9 +102,9 @@ const handler: Handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         message: "Nachricht erfolgreich gesendet.",
-        id: resendData?.id 
+        id: resendData?.id
       }),
     };
 
@@ -84,9 +112,9 @@ const handler: Handler = async (event) => {
     if (error instanceof z.ZodError) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ 
-          error: "Validierungsfehler", 
-          details: error.errors.map(e => e.message) 
+        body: JSON.stringify({
+          error: "Validierungsfehler",
+          details: error.errors.map(e => e.message)
         }),
       };
     }
