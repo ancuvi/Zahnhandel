@@ -48,7 +48,7 @@ const handler: Handler = async (event) => {
     // 4. E-Mail Versand via Resend
     const { data: resendData, error: resendError } = await resend.emails.send({
       from: 'Zahnhandel Frankenberg <info@zahnhandel.de>',
-      to: 'angelo.inbox@proton.me',
+      to: 'info@zahnhandel.de',
       reply_to: sanitizedData.email,
       subject: `[Zahnhandel Website] ${sanitizedData.subject}`,
       html: `
