@@ -10,7 +10,8 @@ Entwickelt mit Vite, React, TypeScript und Tailwind CSS.
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Routing:** [React Router Dom](https://reactrouter.com/)
 - **Icons:** [Lucide React](https://lucide.dev/)
-- **Bot-Schutz:** Honeypot & Netlify Anti-Spam
+- **E-Mail-Service:** [Resend](https://resend.com/)
+- **Bot-Schutz:** Honeypot & Netlify Functions
 
 ## 🚀 Setup & Entwicklung
 
@@ -67,10 +68,11 @@ public/
     - **Jobs (`Jobs.tsx`):** Automatische Generierung von `JobPosting` Daten für Google Jobs.
 - **Technisches SEO:** `sitemap.xml` und `robots.txt` im `public/` Ordner vorhanden.
 
-### 3. Kontaktformular (Netlify Forms integration)
-- Das Formular (`ContactForm.tsx`) nutzt die native **Netlify Forms** Schnittstelle.
-- **AJAX-Submission:** Daten werden via `fetch` (URL-encoded) übermittelt, um ein modernes Feedback ohne Seiten-Reload zu ermöglichen.
-- **Sicherheit:** Integrierter `netlify-honeypot` ("bot-field") zum Schutz vor automatisiertem Spam.
+### 3. Kontaktformular (Resend Integration)
+- Das Formular (`ContactForm.tsx`) nutzt eine **Netlify Function** (`submit-contact.ts`) als Backend.
+- **E-Mail-Versand:** Erfolgt über die **Resend API**.
+- **Konfiguration:** Erfordert die Umgebungsvariable `RESEND_API_KEY` im Netlify-Dashboard.
+- **Sicherheit:** Serverseitige Validierung via Zod und XSS-Sanitization aller Eingaben.
 
 ## 📝 Anpassungen für Entwickler
 

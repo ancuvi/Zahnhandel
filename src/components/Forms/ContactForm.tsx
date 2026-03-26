@@ -61,25 +61,22 @@ const ContactForm = () => {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          "form-name": "contact",
-          ...form,
-          // Bot-Feld explizit mitsenden (auch wenn leer)
-          "bot-field": (form as any)["bot-field"] || ""
-        } as any).toString()
+      const response = await fetch('/.netlify/functions/submit-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
       })
+
+      const result = await response.json()
 
       if (response.ok) {
         setSubmitStatus('success')
-        setStatusMessage('Vielen Dank! Ihre Nachricht wurde erfolgreich übermittelt.')
+        setStatusMessage(result.message || 'Ihre Nachricht wurde erfolgreich gesendet.')
         // Formular zurücksetzen
         setForm({ name: '', email: '', subject: '', reason: '', message: '' })
       } else {
         setSubmitStatus('error')
-        setStatusMessage('Fehler beim Senden. Bitte versuchen Sie es später erneut.')
+        setStatusMessage(result.error || 'Fehler beim Senden. Bitte versuchen Sie es später erneut.')
       }
     } catch (err) {
       setSubmitStatus('error')
@@ -96,13 +93,9 @@ const ContactForm = () => {
   return (
     <form
       className="space-y-6"
-      name="contact"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
       noValidate
     >
-      <input type="hidden" name="form-name" value="contact" />
       
       {/* Bot-Schutz Honeypot */}
       <p className="hidden" aria-hidden="true">
