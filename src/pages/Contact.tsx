@@ -15,7 +15,7 @@ const Contact = () => {
       <div className="relative bg-stone-900 text-white py-16 md:py-24 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-40" 
              style={{ 
-               backgroundImage: "url('/images/neue-Bilder/zahnmodell-phantomkopf-kiefer-zahnhandel.png')", 
+               backgroundImage: "url('/images/neue-Bilder/zahnmodell-phantomkopf-kiefer-zahnhandel.webp')", 
                backgroundSize: 'cover', 
                backgroundPosition: 'center' 
              }} 

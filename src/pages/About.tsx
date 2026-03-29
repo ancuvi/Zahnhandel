@@ -18,7 +18,7 @@ const About = () => {
         {/* Background Image/Overlay */}
         <div className="absolute inset-0 z-0 opacity-40" 
              style={{ 
-               backgroundImage: "url('/images/neue-Bilder/artikulator-zahnersatz-gipsmodell-zahnhandel.jpg')", 
+               backgroundImage: "url('/images/neue-Bilder/artikulator-zahnersatz-gipsmodell-zahnhandel.webp')", 
                backgroundSize: 'cover', 
                backgroundPosition: 'center top' 
              }} 
@@ -105,7 +105,7 @@ const About = () => {
             <div className="relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-all duration-500">
                    <img 
-                     src="/images/neue-Bilder/geschäftsführung-teamleiter-portrait.png" 
+                     src="/images/neue-Bilder/geschäftsführung-teamleiter-portrait.webp" 
                      alt="Geschäftsführung der Zahntechnik Frankenberg: ZTM Sven Börner und ZTM Markus Schrambke" 
                      className="w-full h-auto transform scale-[1.12]" 
                      loading="lazy"
@@ -151,7 +151,7 @@ const About = () => {
            
            <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-5xl mx-auto border border-stone-100">
                <img 
-                 src="/images/neue-Bilder/teamfoto-mitarbeiter-blau.png" 
+                 src="/images/neue-Bilder/teamfoto-mitarbeiter-blau.webp" 
                  alt="Das gesamte Team der Zahntechnik Frankenberg GmbH in Arbeitskleidung" 
                  className="w-full h-auto" 
                  loading="lazy"

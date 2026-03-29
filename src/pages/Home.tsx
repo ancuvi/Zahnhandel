@@ -50,7 +50,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 z-0 hidden lg:block"
           style={{
-            backgroundImage: "url('/images/neue-Bilder/teamfoto-mitarbeiter-blau.png')",
+            backgroundImage: "url('/images/neue-Bilder/teamfoto-mitarbeiter-blau.webp')",
             backgroundPosition: 'center top',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
@@ -62,7 +62,7 @@ const Home = () => {
         <div 
           className="absolute inset-0 z-0 lg:hidden"
           style={{
-            backgroundImage: "url('/images/neue-Bilder/teamfoto-mitarbeiter-blau.png')",
+            backgroundImage: "url('/images/neue-Bilder/teamfoto-mitarbeiter-blau.webp')",
             backgroundPosition: 'center top',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
@@ -124,7 +124,7 @@ const Home = () => {
             <div className="order-2 lg:order-1 relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-1 transition-transform hover:rotate-0 duration-500">
                     <img 
-                      src="/images/neue-Bilder/unser-team-praxis-aussen.png" 
+                      src="/images/neue-Bilder/unser-team-praxis-aussen.webp" 
                       alt="Team der Zahntechnik Frankenberg vor dem Laborgebäude – Außenansicht" 
                       className="w-full h-auto object-cover transform scale-[1.15]" 
                       loading="lazy"
@@ -258,7 +258,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
                 <img 
-                  src="/images/neue-Bilder/dentallabor-geraete-cad-cam-fraesmaschine-zahnhandel.jpg" 
+                  src="/images/neue-Bilder/dentallabor-geraete-cad-cam-fraesmaschine-zahnhandel.webp" 
                   alt="Moderne CAD/CAM Fräsmaschine für hochpräzisen Zahnersatz" 
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" 
                   loading="lazy"
@@ -269,7 +269,7 @@ const Home = () => {
             </div>
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
                 <img 
-                  src="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice.jpg" 
+                  src="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice.webp" 
                   alt="Ansprechpartner im Empfangsbereich der Zahntechnik Frankenberg" 
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" 
                   loading="lazy"
@@ -280,7 +280,7 @@ const Home = () => {
             </div>
             <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
                 <img 
-                  src="/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel.jpg" 
+                  src="/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel.webp" 
                   alt="Blick in unser modernes Dentallabor mit ergonomischen Arbeitsplätzen" 
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" 
                   loading="lazy"
@@ -302,7 +302,7 @@ const Home = () => {
          <div 
             className="absolute inset-0 z-0"
             style={{
-                backgroundImage: "url('/images/neue-Bilder/oberkiefer-totalversorgung-zirkulaere-bruecke.png')",
+                backgroundImage: "url('/images/neue-Bilder/oberkiefer-totalversorgung-zirkulaere-bruecke.webp')",
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundAttachment: 'fixed',

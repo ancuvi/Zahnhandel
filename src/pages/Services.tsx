@@ -9,70 +9,70 @@ const Services = () => {
     {
       title: 'Ästhetik & Keramik',
       description: 'Natürlichkeit ist unser Maßstab. Mit individueller Frontzahnkeramik und Schichttechnik schaffen wir lebendige Ergebnisse.',
-      image: '/images/neue-Bilder/vollkeramikbruecke-metallfrei-zahnersatz.png',
+      image: '/images/neue-Bilder/vollkeramikbruecke-metallfrei-zahnersatz.webp',
       icon: <Diamond className="w-6 h-6" />,
       details: ['Individuelle Frontzahnkeramik', 'Veneers, Inlays, Onlays', 'Keramik gepresst & geschichtet']
     },
     {
       title: 'Kronen & Brücken',
       description: 'Präzise Passform und Langlebigkeit. Ob Zirkon, Vollkeramik oder Metallkeramik – wir finden die optimale Lösung.',
-      image: '/images/neue-Bilder/zahnbruecke-teilverblendet-metallkeramik.png',
+      image: '/images/neue-Bilder/zahnbruecke-teilverblendet-metallkeramik.webp',
       icon: <Layers className="w-6 h-6" />,
       details: ['Zirkonkeramik & CAD/CAM', 'Perlmutkrone', 'Edelmetall & Titan']
     },
     {
       title: 'Digitaler Scanservice',
       description: 'Mit unserem DIGITALEN SCANSERVICE wird die Zahnabformung einfacher, schneller und angenehmer. Ein moderner Intraoralscanner erstellt in Minuten ein präzises 3D-Modell.',
-      image: '/images/neue-Bilder/artikulator-zahnersatz-gipsmodell-zahnhandel.jpg',
+      image: '/images/neue-Bilder/artikulator-zahnersatz-gipsmodell-zahnhandel.webp',
       icon: <Smartphone className="w-6 h-6" />,
       details: ['Maximaler Komfort ohne Würgereiz', 'Berührungslose Abformung', 'Flexibler Vor-Ort-Service']
     },
     {
       title: '3D Druck & Innovation',
       description: 'Unsere moderne 3D-Drucktechnologie ermöglicht präzise Modelle und dentale Arbeiten direkt aus digitalen Scandaten.',
-      image: '/images/neue-Bilder/rapidshape-3d-druck-nachbearbeitung-zahnhandel.jpg',
+      image: '/images/neue-Bilder/rapidshape-3d-druck-nachbearbeitung-zahnhandel.webp',
       icon: <Microscope className="w-6 h-6" />,
       details: ['Schnelle Fertigungszeiten', 'Präzises Gipsmodell-Druck', 'Innovativer digitaler Workflow']
     },
     {
       title: 'Kombitechnik',
       description: 'Funktionalität trifft Komfort. Hochwertige Teleskoparbeiten und Geschiebe für sicheren Halt und Ästhetik.',
-      image: '/images/neue-Bilder/teleskopbruecke-zahnersatz-modell-technik.png',
+      image: '/images/neue-Bilder/teleskopbruecke-zahnersatz-modell-technik.webp',
       icon: <Activity className="w-6 h-6" />,
       details: ['Teleskoptechnik', 'Geschiebe & Riegel', 'Modellguss']
     },
     {
       title: 'Implantattechnik',
       description: 'Festsitzender Zahnersatz auf Implantaten. Wir versorgen alle gängigen Implantatsysteme mit höchster Präzision.',
-      image: '/images/neue-Bilder/zahnimplantat-abutment-zirkon-krone.png',
+      image: '/images/neue-Bilder/zahnimplantat-abutment-zirkon-krone.webp',
       icon: <ShieldCheck className="w-6 h-6" />, 
       details: ['Suprakonstruktionen', 'Individuelle Abutments', 'Stegkonstruktionen']
     },
     {
       title: 'Totalprothetik',
       description: 'Lebensqualität zurückgewinnen. Prothesen nach der TiF-Methode für optimalen Sitz und natürliche Optik.',
-      image: '/images/neue-Bilder/totalprothese-oberkiefer-unterkiefer-set.png',
+      image: '/images/neue-Bilder/totalprothese-oberkiefer-unterkiefer-set.webp',
       icon: <Diamond className="w-6 h-6" />,
       details: ['TiF-Methode', 'Totalprothesen', 'Reparaturen']
     },
     {
       title: 'Spezialtechniken',
       description: 'Innovation für besondere Anforderungen. Modernste Verfahren für perfekte Passung und Biokompatibilität.',
-      image: '/images/neue-Bilder/schnarchschiene-unterkieferprotrusionsschiene-schlafapnoe.png',
+      image: '/images/neue-Bilder/schnarchschiene-unterkieferprotrusionsschiene-schlafapnoe.webp',
       icon: <Layers className="w-6 h-6" />,
       details: ['Lasertechnik', 'Schienen & Diagnostik', 'Schnarchschutz']
     }
   ]
 
   const galleryImages = [
-    { src: '/images/neue-Bilder/dentallabor-ausstattung-brennofen-zahnhandel.jpg', title: 'Keramikbrennofen' },
-    { src: '/images/neue-Bilder/picodent-fraesmaschine-cad-cam-zahnhandel.jpg', title: 'CAD/CAM Fräsmaschine' },
-    { src: '/images/neue-Bilder/fraeserstaender-rotierende-instrumente-technikertisch-zahnhandel.jpg', title: 'Präzisionswerkzeuge' },
-    { src: '/images/neue-Bilder/laborzeile-gipsraum-arbeitsvorbereitung-zahnhandel.jpg', title: 'Gipsraum-Vorbereitung' },
-    { src: '/images/neue-Bilder/poliereinheit-kavo-dentallabor-zahnhandel.jpg', title: 'Kavo Poliereinheit' },
-    { src: '/images/neue-Bilder/schmelztiegel-metallguss-legierung-zahnhandel.jpg', title: 'Metallguss-Technik' },
-    { src: '/images/neue-Bilder/lichthaertung-zahnersatz-verblendung-zahntechnik.jpg', title: 'Lichthärtung' },
-    { src: '/images/neue-Bilder/keramikofen-dekema-austromat-zahnhandel.jpg', title: 'Dekema Keramikofen' }
+    { src: '/images/neue-Bilder/dentallabor-ausstattung-brennofen-zahnhandel.webp', title: 'Keramikbrennofen' },
+    { src: '/images/neue-Bilder/picodent-fraesmaschine-cad-cam-zahnhandel.webp', title: 'CAD/CAM Fräsmaschine' },
+    { src: '/images/neue-Bilder/fraeserstaender-rotierende-instrumente-technikertisch-zahnhandel.webp', title: 'Präzisionswerkzeuge' },
+    { src: '/images/neue-Bilder/laborzeile-gipsraum-arbeitsvorbereitung-zahnhandel.webp', title: 'Gipsraum-Vorbereitung' },
+    { src: '/images/neue-Bilder/poliereinheit-kavo-dentallabor-zahnhandel.webp', title: 'Kavo Poliereinheit' },
+    { src: '/images/neue-Bilder/schmelztiegel-metallguss-legierung-zahnhandel.webp', title: 'Metallguss-Technik' },
+    { src: '/images/neue-Bilder/lichthaertung-zahnersatz-verblendung-zahntechnik.webp', title: 'Lichthärtung' },
+    { src: '/images/neue-Bilder/keramikofen-dekema-austromat-zahnhandel.webp', title: 'Dekema Keramikofen' }
   ]
 
   return (
@@ -87,7 +87,7 @@ const Services = () => {
         {/* Background Image/Overlay */}
          <div className="absolute inset-0 z-0 opacity-30" 
              style={{ 
-               backgroundImage: "url('/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel.jpg')", 
+               backgroundImage: "url('/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel.webp')", 
                backgroundSize: 'cover', 
                backgroundPosition: 'center' 
              }} 
@@ -144,7 +144,7 @@ const Services = () => {
           <div className="order-1 lg:order-2 relative">
              <div className="relative rounded-3xl overflow-hidden shadow-2xl transform lg:rotate-2 transition-transform hover:rotate-0 duration-700">
                 <img 
-                  src="/images/neue-Bilder/artikulator-zahntechnik-kiefergelenk-simulation.png" 
+                  src="/images/neue-Bilder/artikulator-zahntechnik-kiefergelenk-simulation.webp" 
                   alt="Digitaler Intraoralscan am Computer-Monitor – Präzision im digitalen Workflow" 
                   className="w-full h-auto object-cover"
                   loading="lazy"
@@ -164,7 +164,7 @@ const Services = () => {
           <div className="relative">
              <div className="relative rounded-3xl overflow-hidden shadow-2xl transform lg:-rotate-2 transition-transform hover:rotate-0 duration-700">
                 <img 
-                  src="/images/neue-Bilder/rapidshape-3d-druck-nachbearbeitung-zahnhandel.jpg" 
+                  src="/images/neue-Bilder/rapidshape-3d-druck-nachbearbeitung-zahnhandel.webp" 
                   alt="Nachbearbeitung von 3D-gedruckten dentalen Objekten mit höchster Genauigkeit" 
                   className="w-full h-auto object-cover"
                   loading="lazy"
@@ -267,7 +267,7 @@ const Services = () => {
               <div className="relative">
                   <div className="rounded-2xl overflow-hidden shadow-2xl rotate-1">
                        <img 
-                         src="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice.jpg" 
+                         src="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice.webp" 
                          alt="Beratungsbereich und Empfang der Zahntechnik Frankenberg" 
                          className="w-full h-auto" 
                          loading="lazy"
