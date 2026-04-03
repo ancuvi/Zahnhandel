@@ -127,7 +127,7 @@ const MainLayout = () => {
                     <p className="text-white">Montag – Donnerstag</p>
                     <p className="text-stone-400">07:00 – 19:00 Uhr</p>
                     <p className="text-white mt-2">Freitag</p>
-                    <p className="text-stone-400">07:00 – 17:00 Uhr</p>
+                    <p className="text-stone-400">07:00 – 16:00 Uhr</p>
                     <p className="text-primary-600 text-xs mt-1">(und nach Vereinbarung)</p>
                   </div>
                 </li>
