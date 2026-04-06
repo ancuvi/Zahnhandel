@@ -18,7 +18,7 @@ const Services = () => {
       description: 'Präzise Passform und Langlebigkeit. Ob Zirkon, Vollkeramik oder Metallkeramik – wir finden die optimale Lösung.',
       image: '/images/neue-Bilder/zahnbruecke-teilverblendet-metallkeramik.webp',
       icon: <Layers className="w-6 h-6" />,
-      details: ['Zirkonkeramik & CAD/CAM', 'Perlmutkrone (Stahlersatzkrone)', 'Edelmetall & Titan']
+      details: ['Zirkonkeramik & CAD/CAM', 'Perlmuttkrone (Stahlersatzkrone)', 'Edelmetall & Titan']
     },
     {
       title: 'Digitaler Scanservice',
@@ -28,7 +28,7 @@ const Services = () => {
       details: ['Maximaler Komfort ohne Würgereiz', 'Berührungslose Abformung', 'Flexibler Vor-Ort-Service']
     },
     {
-      title: '3D Druck & Innovation',
+      title: 'Präziser 3D Druck',
       description: 'Unsere moderne 3D-Drucktechnologie ermöglicht präzise Modelle und dentale Arbeiten direkt aus digitalen Scandaten.',
       image: '/images/neue-Bilder/rapidshape-3d-druck-nachbearbeitung-zahnhandel.webp',
       icon: <Microscope className="w-6 h-6" />,

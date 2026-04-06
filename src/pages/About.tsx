@@ -151,7 +151,7 @@ const About = () => {
 
                <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-5xl mx-auto border border-stone-100">
                   <img
-                     src="/images/neue-Bilder/teamfoto-mitarbeiter-blau.webp"
+                     src="/images/neue-Bilder/unser-team-praxis-aussen.webp"
                      alt="Das gesamte Team der Zahntechnik Frankenberg GmbH in Arbeitskleidung"
                      className="w-full h-auto"
                      loading="lazy"
