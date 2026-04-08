@@ -255,7 +255,7 @@ const Home = () => {
       </Section>
 
       {/* Showcase / Gallery Section */}
-      <Section title="Unsere Arbeiten" eyebrow="Galerie" background="stone">
+      <Section title="Unsere Räumlichkeiten" eyebrow="Galerie" background="stone">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
             <img
