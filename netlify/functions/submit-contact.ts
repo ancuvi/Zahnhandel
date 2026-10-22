@@ -114,7 +114,7 @@ const handler: Handler = async (event) => {
         statusCode: 400,
         body: JSON.stringify({
           error: "Validierungsfehler",
-          details: error.errors.map(e => e.message)
+          details: error.issues.map((e) => e.message)
         }),
       };
     }
