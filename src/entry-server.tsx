@@ -5,8 +5,7 @@ import { StrictMode } from 'react'
 import { renderToString } from 'react-dom/server'
 import { createStaticHandler, createStaticRouter, StaticRouterProvider } from 'react-router-dom'
 import { routenKonfiguration, seiten } from './router/routen'
-import { SeoSammler, type SeoDaten } from './components/SEO/Seo'
-import { SITE } from './components/SEO/Seo'
+import { SeoSammler, SITE, type SeoDaten } from './components/SEO/seoDaten'
 
 export const pfade = seiten.map((s) => s.path)
 

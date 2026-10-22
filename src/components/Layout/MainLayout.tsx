@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import MobileNav from '../Navigation/MobileNav'
 import Navbar from '../Navigation/Navbar'
-import { kanonischerPfad } from '../SEO/Seo'
+import { kanonischerPfad } from '../SEO/seoDaten'
 
 export type NavLink = { path: string; label: string }
 
