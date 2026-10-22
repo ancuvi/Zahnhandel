@@ -160,7 +160,7 @@ const MainLayout = () => {
           </div>
           
           <div className="mt-16 border-t border-stone-800 pt-8 text-center text-xs text-primary-600">
-            <p>&copy; 2026 Markus Schrambke. All Rights Reserved.</p>
+            <p>&copy; {new Date().getFullYear()} B&amp;S Zahntechnik Frankenberg GmbH. Alle Rechte vorbehalten.</p>
           </div>
         </div>
       </footer>
