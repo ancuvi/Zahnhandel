@@ -7,42 +7,11 @@ import Seo from '../components/SEO/Seo'
 import Bild from '../components/UI/Bild'
 
 const Home = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "DentalLaboratory",
-    "name": "ZAHNTECHNIK Frankenberg GmbH",
-    "description": "Ihr Dentallabor in Frankenberg. Ästhetische Frontzahnkeramik, Prothetik und individuelle Lösungen.",
-    "url": window.location.origin,
-    "telephone": "+493720675542",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Gewerbering 17",
-      "addressLocality": "Frankenberg",
-      "postalCode": "09669",
-      "addressCountry": "DE"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-        "opens": "07:00",
-        "closes": "19:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Friday",
-        "opens": "07:00",
-        "closes": "16:00"
-      }
-    ]
-  }
-
   return (
     <div>
       <Seo
         title="ZAHNTECHNIK Frankenberg GmbH | Börner & Schrambke"
         description="Ihr Dentallabor in Frankenberg. Ästhetische Frontzahnkeramik, Prothetik und individuelle Lösungen. Telefon: 037206 / 75542."
-        jsonLd={jsonLd}
       />
 
       {/* Hero Section */}
