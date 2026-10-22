@@ -119,7 +119,7 @@ const Services = () => {
       <Section background="white" className="overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1 space-y-6 animate-fade-in">
-            <div className="inline-flex items-center gap-2 text-secondary-600 font-bold tracking-wider uppercase text-sm">
+            <div className="inline-flex items-center gap-2 text-secondary-700 font-bold tracking-wider uppercase text-sm">
               <Smartphone size={20} />
               <span>Innovation</span>
             </div>
@@ -136,7 +136,7 @@ const Services = () => {
                 Die digitalen Daten werden sofort an unser Labor übermittelt und ermöglichen passgenauen Zahnersatz mit hoher Präzision.
               </p>
               <div className="bg-secondary-50 p-6 rounded-2xl border-l-4 border-secondary-400 shadow-sm mt-8">
-                <h4 className="font-bold text-primary-900 mb-2">Vor-Ort-Service für Praxen</h4>
+                <h3 className="font-bold text-primary-900 mb-2 text-base">Vor-Ort-Service für Praxen</h3>
                 <p className="text-primary-800">
                   Für Zahnarztpraxen ohne eigenen Scanner bieten wir einen flexiblen <strong>Vor-Ort-Scanservice</strong>:
                   Ein geschulter Scan-Spezialist kommt direkt in Ihre Praxis und führt die digitale Abformung professionell durch.
@@ -178,7 +178,7 @@ const Services = () => {
             <div className="absolute -top-12 -left-12 w-64 h-64 bg-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
           </div>
           <div className="space-y-6 animate-fade-in">
-            <div className="inline-flex items-center gap-2 text-primary-600 font-bold tracking-wider uppercase text-sm">
+            <div className="inline-flex items-center gap-2 text-primary-700 font-bold tracking-wider uppercase text-sm">
               <Microscope size={20} />
               <span>Technologie</span>
             </div>
@@ -225,7 +225,7 @@ const Services = () => {
 
                 <div className="space-y-1.5 border-t border-stone-100 pt-3 mt-auto">
                   {offer.details.map((detail, i) => (
-                    <div key={i} className="flex items-center gap-2 text-[11px] font-medium text-primary-600">
+                    <div key={i} className="flex items-center gap-2 text-[11px] font-medium text-primary-700">
                       <CheckCircle2 size={12} className="text-primary-500 shrink-0" />
                       <span>{detail}</span>
                     </div>
@@ -250,14 +250,14 @@ const Services = () => {
               <div className="flex gap-4">
                 <div className="bg-primary-50 p-3 rounded-full h-fit text-primary-600"><CheckCircle2 /></div>
                 <div>
-                  <h4 className="font-bold text-primary-900 mb-1">Individuelle Beratung</h4>
+                  <h3 className="font-bold text-primary-900 mb-1 text-base">Individuelle Beratung</h3>
                   <p className="text-primary-700 text-sm">Persönliche Beratung und prothetische Planung für optimale Ergebnisse.</p>
                 </div>
               </div>
               <div className="flex gap-4">
                 <div className="bg-secondary-50 p-3 rounded-full h-fit text-secondary-600"><Clock /></div>
                 <div>
-                  <h4 className="font-bold text-primary-900 mb-1">Flexibler Reparaturservice</h4>
+                  <h3 className="font-bold text-primary-900 mb-1 text-base">Flexibler Reparaturservice</h3>
                   <p className="text-primary-700 text-sm italic">
                     Modellgussreparaturen (Klammerrep., oder geg. Basisteil mit bis zu 2 zu ersetzenden Zähnen) können innerhalb von 24h ab Anruf geliefert werden.
                   </p>
@@ -266,7 +266,7 @@ const Services = () => {
               <div className="flex gap-4">
                 <div className="bg-stone-100 p-3 rounded-full h-fit text-primary-700"><Users /></div>
                 <div>
-                  <h4 className="font-bold text-primary-900 mb-1">Meister-Support & Hilfe</h4>
+                  <h3 className="font-bold text-primary-900 mb-1 text-base">Meister-Support & Hilfe</h3>
                   <p className="text-primary-700 text-sm">Schnelle Hilfe bei Problemen und Unterstützung komplexer Fälle durch einen Zahntechnikermeister direkt in Ihrer Praxis.</p>
                 </div>
               </div>

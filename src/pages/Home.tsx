@@ -110,7 +110,7 @@ const Home = () => {
               Ich möchte Ihnen auf diesem Wege einen kleinen Einblick in unser Dentallabor in Frankenberg/Sachsen geben.
               Als Zahnärztin und Zahnarzt, aber auch als Patient finden Sie auf unserer Homepage umfangreiche Informationen zu unseren Produkten und Dienstleistungen.
             </p>
-            <Link to="/about" className="inline-flex items-center gap-2 text-secondary-600 font-semibold hover:text-secondary-700 transition-colors group">
+            <Link to="/about" className="inline-flex items-center gap-2 text-secondary-700 font-semibold hover:text-secondary-800 transition-colors group">
               Mehr über uns erfahren <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -199,7 +199,7 @@ const Home = () => {
                 <span>Individuelle Zahnfarbenbestimmung</span>
               </li>
             </ul>
-            <Link to="/services" className="inline-flex items-center gap-2 text-secondary-600 font-semibold hover:text-secondary-700 transition-colors group-hover:translate-x-1 duration-300">
+            <Link to="/services" className="inline-flex items-center gap-2 text-secondary-700 font-semibold hover:text-secondary-800 transition-colors group-hover:translate-x-1 duration-300">
               Mehr erfahren <ArrowRight size={16} />
             </Link>
           </Card>
@@ -224,7 +224,7 @@ const Home = () => {
                 <span>Meister-Support & schnelle Hilfe vor Ort</span>
               </li>
             </ul>
-            <Link to="/services" className="inline-flex items-center gap-2 text-secondary-600 font-semibold hover:text-secondary-700 transition-colors group-hover:translate-x-1 duration-300">
+            <Link to="/services" className="inline-flex items-center gap-2 text-secondary-700 font-semibold hover:text-secondary-800 transition-colors group-hover:translate-x-1 duration-300">
               Mehr erfahren <ArrowRight size={16} />
             </Link>
           </Card>

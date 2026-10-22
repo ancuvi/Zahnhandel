@@ -66,7 +66,7 @@ const About = () => {
                            <History size={18} className="text-primary-600" />
                         </div>
                         <div className="pl-12">
-                           <span className="text-sm font-bold text-primary-600 tracking-wider uppercase">Anfang der 90er</span>
+                           <span className="text-sm font-bold text-primary-700 tracking-wider uppercase">Anfang der 90er</span>
                            <h3 className="text-xl font-bold text-primary-800 mt-1 mb-2">Die Gründung</h3>
                            <p className="text-primary-700 leading-relaxed">
                               Gründung als Dentallabor Udo Gerschler GmbH. Der Grundstein für jahrzehntelange Expertise wurde gelegt.
@@ -80,7 +80,7 @@ const About = () => {
                            <Users size={18} className="text-primary-600" />
                         </div>
                         <div className="pl-12">
-                           <span className="text-sm font-bold text-primary-600 tracking-wider uppercase">Der Übergang</span>
+                           <span className="text-sm font-bold text-primary-700 tracking-wider uppercase">Der Übergang</span>
                            <h3 className="text-xl font-bold text-primary-800 mt-1 mb-2">Generationswechsel</h3>
                            <p className="text-primary-700 leading-relaxed">
                               Nach fast 20 Jahren übergab Herr ZTM U. Gerschler das Unternehmen an die nächste Generation.
@@ -94,7 +94,7 @@ const About = () => {
                            <Award size={18} className="text-primary-600" />
                         </div>
                         <div className="pl-12">
-                           <span className="text-sm font-bold text-primary-600 tracking-wider uppercase">2. August 2011</span>
+                           <span className="text-sm font-bold text-primary-700 tracking-wider uppercase">2. August 2011</span>
                            <h3 className="text-xl font-bold text-primary-800 mt-1 mb-2">Neustart</h3>
                            <p className="text-primary-700 leading-relaxed">
                               Die Zahntechnik Frankenberg GmbH wurde ins Leben gerufen, um das Labor innovativ und erfolgreich weiterzuführen.

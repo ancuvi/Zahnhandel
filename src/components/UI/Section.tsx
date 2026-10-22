@@ -39,7 +39,7 @@ const Section = ({
         {(eyebrow || title || intro) && (
           <div className={`mb-16 space-y-4 max-w-3xl ${centered ? 'mx-auto' : ''}`}>
             {eyebrow && (
-              <p className="animate-fade-in text-sm font-bold uppercase tracking-widest text-primary-600 mb-2">
+              <p className="animate-fade-in text-sm font-bold uppercase tracking-widest text-primary-700 mb-2">
                 {eyebrow}
               </p>
             )}

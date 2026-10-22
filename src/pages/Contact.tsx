@@ -55,7 +55,7 @@ const Contact = () => {
                 <MapPin size={24} />
               </div>
               <div>
-                <h3 className="font-bold text-lg text-primary-900 mb-2">Anschrift</h3>
+                <h2 className="font-bold text-lg text-primary-900 mb-2">Anschrift</h2>
                 <address className="not-italic text-primary-700 leading-relaxed">
                   B&S Zahntechnik Frankenberg GmbH<br />
                   Gewerbering 17<br />
@@ -70,7 +70,7 @@ const Contact = () => {
                 <Phone size={24} />
               </div>
               <div className="w-full">
-                <h3 className="font-bold text-lg text-primary-900 mb-2">Telefon & Fax</h3>
+                <h2 className="font-bold text-lg text-primary-900 mb-2">Telefon & Fax</h2>
                 <div className="space-y-2 text-primary-700">
                   <div className="flex justify-between border-b border-stone-100 pb-2">
                     <span>Telefon:</span>
@@ -90,7 +90,7 @@ const Contact = () => {
                 <Mail size={24} />
               </div>
               <div className="w-full">
-                <h3 className="font-bold text-lg text-primary-900 mb-2">E-Mail</h3>
+                <h2 className="font-bold text-lg text-primary-900 mb-2">E-Mail</h2>
                 <a href="mailto:info@zahnhandel.de" className="text-primary-700 font-medium hover:text-primary-600 break-all">
                   info@zahnhandel.de
                 </a>
@@ -103,7 +103,7 @@ const Contact = () => {
                 <Clock size={24} />
               </div>
               <div className="w-full flex flex-col justify-center">
-                <h3 className="font-bold text-lg text-white mb-4">Öffnungszeiten</h3>
+                <h2 className="font-bold text-lg text-white mb-4">Öffnungszeiten</h2>
                 <div className="space-y-2 text-stone-300 text-sm">
                   <div className="flex justify-between border-b border-white/10 pb-2">
                     <span>Mo - Do:</span>

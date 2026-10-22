@@ -60,7 +60,7 @@ const MainLayout = () => {
           <div className="flex items-center gap-4">
             <Link 
               to="/contact" 
-              className="hidden lg:inline-flex items-center justify-center rounded-full bg-secondary-500 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-secondary-600 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-500"
+              className="hidden lg:inline-flex items-center justify-center rounded-full bg-secondary-700 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-secondary-800 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary-700"
             >
               Termin anfragen
             </Link>
@@ -140,7 +140,7 @@ const MainLayout = () => {
                     <p className="text-stone-400">07:00 – 19:00 Uhr</p>
                     <p className="text-white mt-2">Freitag</p>
                     <p className="text-stone-400">07:00 – 16:00 Uhr</p>
-                    <p className="text-primary-600 text-xs mt-1">(und nach Vereinbarung)</p>
+                    <p className="text-stone-400 text-xs mt-1">(und nach Vereinbarung)</p>
                   </div>
                 </li>
               </ul>
@@ -159,7 +159,7 @@ const MainLayout = () => {
             </div>
           </div>
           
-          <div className="mt-16 border-t border-stone-800 pt-8 text-center text-xs text-primary-600">
+          <div className="mt-16 border-t border-stone-800 pt-8 text-center text-xs text-stone-400">
             <p>&copy; {new Date().getFullYear()} B&amp;S Zahntechnik Frankenberg GmbH. Alle Rechte vorbehalten.</p>
           </div>
         </div>

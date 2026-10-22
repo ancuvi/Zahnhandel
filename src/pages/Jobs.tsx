@@ -153,7 +153,7 @@ const Jobs = () => {
                           </div>
                           <div>
                               <h3 className="text-2xl font-bold font-serif text-primary-900">{job.title}</h3>
-                              <p className="text-lg text-primary-600 font-medium">{job.subtitle}</p>
+                              <p className="text-lg text-primary-700 font-medium">{job.subtitle}</p>
                           </div>
                           <p className="text-primary-700 leading-relaxed max-w-2xl">
                               {job.description}
@@ -198,7 +198,7 @@ const Jobs = () => {
                           </div>
                           <div className="text-left">
                               <div className="font-bold">Zahntechnik Frankenberg GmbH</div>
-                              <div className="text-sm font-normal text-primary-600">Gewerbering 17, 09669 Frankenberg</div>
+                              <div className="text-sm font-normal text-primary-700">Gewerbering 17, 09669 Frankenberg/Sa.</div>
                           </div>
                       </div>
                        <div className="flex items-center justify-center gap-3 text-primary-800 font-medium">

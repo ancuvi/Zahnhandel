@@ -11,9 +11,9 @@ type ButtonProps<T extends ElementType = 'button'> = {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    'bg-primary-600 text-white hover:bg-primary-700 focus-visible:outline-primary-600 active:bg-primary-800 shadow-md hover:shadow-lg',
+    'bg-primary-700 text-white hover:bg-primary-800 focus-visible:outline-primary-700 active:bg-primary-900 shadow-md hover:shadow-lg',
   secondary:
-    'bg-secondary-500 text-white hover:bg-secondary-600 focus-visible:outline-secondary-500 active:bg-secondary-700 shadow-md hover:shadow-lg',
+    'bg-secondary-700 text-white hover:bg-secondary-800 focus-visible:outline-secondary-700 active:bg-secondary-900 shadow-md hover:shadow-lg',
   ghost: 'bg-transparent text-primary-700 hover:text-primary-700 hover:bg-primary-50 focus-visible:outline-primary-600',
   outline: 'bg-transparent border-2 border-primary-600 text-primary-700 hover:bg-primary-50 focus-visible:outline-primary-600',
 }

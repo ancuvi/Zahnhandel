@@ -1,4 +1,5 @@
 import { useId, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Send, User, Mail, MessageSquare, Tag, FileText } from 'lucide-react'
 
 type FormState = {
@@ -246,13 +247,14 @@ const ContactForm = () => {
       </div>
 
       <div className="flex items-center justify-between gap-4 pt-2">
-         <p className="text-xs text-primary-600 max-w-xs">
-           Mit dem Absenden erklären Sie sich mit der Verarbeitung Ihrer Daten einverstanden.
+         <p className="text-xs text-primary-700 max-w-xs">
+           Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Angaben zur Bearbeitung Ihrer Anfrage zu. Details in unserer{' '}
+           <Link to="/datenschutz" className="underline underline-offset-2 hover:text-primary-900">Datenschutzerklärung</Link>.
          </p>
          <button
             type="submit"
             disabled={isSubmitting}
-            className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-secondary-500 to-secondary-600 px-8 py-3 text-sm font-bold text-white shadow-lg shadow-secondary-500/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-secondary-500/40 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2 disabled:opacity-70"
+            className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-secondary-700 to-secondary-800 px-8 py-3 text-sm font-bold text-white shadow-lg shadow-secondary-700/25 transition-all duration-300 hover:scale-[1.02] hover:shadow-secondary-700/40 focus:outline-none focus:ring-2 focus:ring-secondary-700 focus:ring-offset-2 disabled:opacity-70"
           >
             <span>{isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}</span>
             {!isSubmitting && <Send size={18} className="transition-transform group-hover:translate-x-1" />}

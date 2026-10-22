@@ -56,7 +56,7 @@ const MobileNav = ({ links, activePath, open, onToggle, onClose }: MobileNavProp
               <Link 
                 to="/contact" 
                 onClick={onClose}
-                className="inline-block rounded-full bg-primary-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-primary-700"
+                className="inline-block rounded-full bg-primary-700 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-primary-800"
               >
                 Termin vereinbaren
               </Link>
