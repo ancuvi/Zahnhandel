@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
-import { Activity, Star, Clock, MapPin, ArrowRight, CheckCircle2 } from 'lucide-react'
+import { Activity, Star, Clock, MapPin, ArrowRight, CheckCircle2, Play } from 'lucide-react'
 import Button from '../components/UI/Button'
 import Card from '../components/UI/Card'
 import Section from '../components/UI/Section'
 import Seo from '../components/SEO/Seo'
 import Bild from '../components/UI/Bild'
+import ZweiKlick from '../components/UI/ZweiKlick'
 
 const Home = () => {
   return (
@@ -128,16 +129,34 @@ const Home = () => {
           {/* Abstract Background Blur */}
           <div className="absolute -inset-4 bg-gradient-to-r from-primary-400/30 to-secondary-400/30 blur-3xl -z-10 rounded-full opacity-60"></div>
 
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 bg-stone-900 aspect-video group cursor-pointer">
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.youtube-nocookie.com/embed/-PxZ4MO2rhY?si=EryapJE3ybUt_2vs"
-              title="ZAHNTECHNIK Frankenberg GmbH - Imagefilm"
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
+          {/* Video erst nach Klick (Zwei-Klick-Lösung, keine YouTube-Verbindung vorher) */}
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/5 bg-stone-900 aspect-video">
+            <ZweiKlick
+              anbieter="YouTube (Google)"
+              buttonText="Video laden"
+              symbol={<Play size={28} aria-hidden="true" />}
+              hintergrund={
+                <>
+                  <Bild
+                    name="/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel"
+                    alt=""
+                    sizes="(min-width: 1024px) 1024px, 100vw"
+                    className="absolute inset-0 h-full w-full object-cover opacity-40"
+                    aria-hidden="true"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-stone-900/30" aria-hidden="true" />
+                </>
+              }
+            >
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube-nocookie.com/embed/-PxZ4MO2rhY?autoplay=1"
+                title="ZAHNTECHNIK Frankenberg GmbH - Imagefilm"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </ZweiKlick>
           </div>
 
           {/* Caption or Decoration */}

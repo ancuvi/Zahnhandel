@@ -1,8 +1,9 @@
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
+import { MapPin, Phone, Mail, Clock, Send, ExternalLink } from 'lucide-react'
 import ContactForm from '../components/Forms/ContactForm'
 import Section from '../components/UI/Section'
 import Seo from '../components/SEO/Seo'
 import Bild from '../components/UI/Bild'
+import ZweiKlick from '../components/UI/ZweiKlick'
 
 const Contact = () => {
   return (
@@ -132,20 +133,41 @@ const Contact = () => {
         </div>
 
         {/* Map Full Width */}
+        {/* Karte erst nach Klick (Zwei-Klick-Lösung, keine Google-Verbindung vorher) */}
         <div className="mt-8 md:mt-12 h-64 md:h-96 rounded-2xl overflow-hidden shadow-lg border border-stone-200">
-          <iframe
-            width="100%"
-            height="100%"
-            frameBorder="0"
-            scrolling="no"
-            marginHeight={0}
-            marginWidth={0}
-            src="https://maps.google.com/maps?q=Gewerbering+17,+09669+Frankenberg&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            style={{ border: 0 }}
-            title="Google Maps Standort B&S Zahntechnik Frankenberg GmbH"
-            className="grayscale hover:grayscale-0 transition-all duration-500"
-            loading="lazy"
-          ></iframe>
+          <ZweiKlick
+            anbieter="Google Maps"
+            buttonText="Karte laden"
+            symbol={<MapPin size={28} aria-hidden="true" />}
+            hintergrund={
+              <div
+                className="absolute inset-0 opacity-20"
+                style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '24px 24px' }}
+                aria-hidden="true"
+              />
+            }
+            zusatz={
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Gewerbering+17,+09669+Frankenberg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-stone-200 underline decoration-white/40 underline-offset-2 hover:text-white"
+              >
+                Route in Google Maps öffnen <ExternalLink size={14} aria-hidden="true" />
+              </a>
+            }
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.google.com/maps?q=Gewerbering+17,+09669+Frankenberg&output=embed"
+              style={{ border: 0 }}
+              title="Google Maps: B&S Zahntechnik Frankenberg GmbH, Gewerbering 17, 09669 Frankenberg/Sa."
+              className="grayscale hover:grayscale-0 transition-all duration-500"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            ></iframe>
+          </ZweiKlick>
         </div>
       </Section>
     </div>
