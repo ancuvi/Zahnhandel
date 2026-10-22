@@ -3,6 +3,7 @@ import Section from '../components/UI/Section'
 import Seo from '../components/SEO/Seo'
 import Card from '../components/UI/Card'
 import Button from '../components/UI/Button'
+import Bild from '../components/UI/Bild'
 import { Link } from 'react-router-dom'
 
 const About = () => {
@@ -16,12 +17,14 @@ const About = () => {
          {/* Hero Section */}
          <div className="relative bg-stone-900 text-white py-16 md:py-24 overflow-hidden">
             {/* Background Image/Overlay */}
-            <div className="absolute inset-0 z-0 opacity-40"
-               style={{
-                  backgroundImage: "url('/images/neue-Bilder/artikulator-zahnersatz-gipsmodell-zahnhandel.webp')",
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center top'
-               }}
+            <Bild
+               name="/images/neue-Bilder/artikulator-zahnersatz-gipsmodell-zahnhandel"
+               alt="Artikulator mit Gipsmodell im Dentallabor Frankenberg"
+               sizes="100vw"
+               loading="eager"
+               fetchPriority="high"
+               decoding="sync"
+               className="absolute inset-0 z-0 h-full w-full object-cover object-top opacity-40"
             />
             <div className="hero-gradient"></div>
 
@@ -104,11 +107,11 @@ const About = () => {
 
                <div className="relative">
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-all duration-500">
-                     <img
-                        src="/images/neue-Bilder/geschäftsführung-teamleiter-portrait.webp"
+                     <Bild
+                        name="/images/neue-Bilder/geschaeftsfuehrung-teamleiter-portrait"
                         alt="Geschäftsführung der Zahntechnik Frankenberg: ZTM Sven Börner und ZTM Markus Schrambke"
+                        sizes="(min-width: 1024px) 50vw, 100vw"
                         className="w-full h-auto transform scale-[1.12]"
-                        loading="lazy"
                      />
                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
                         <p className="text-white font-medium">Unsere Geschäftsführung</p>
@@ -150,11 +153,11 @@ const About = () => {
                </div>
 
                <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-5xl mx-auto border border-stone-100">
-                  <img
-                     src="/images/neue-Bilder/unser-team-praxis-aussen.webp"
+                  <Bild
+                     name="/images/neue-Bilder/unser-team-praxis-aussen"
                      alt="Das gesamte Team der Zahntechnik Frankenberg GmbH in Arbeitskleidung"
+                     sizes="(min-width: 1024px) 1024px, 100vw"
                      className="w-full h-auto"
-                     loading="lazy"
                   />
                   <div className="relative md:absolute md:bottom-0 md:left-0 md:right-0 bg-white md:bg-white/95 md:backdrop-blur-sm p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
                      <div className="text-center md:text-left">

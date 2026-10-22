@@ -3,76 +3,77 @@ import { CheckCircle2, Diamond, Layers, Activity, Smartphone, Microscope, Shield
 import Section from '../components/UI/Section'
 import Seo from '../components/SEO/Seo'
 import Button from '../components/UI/Button'
+import Bild from '../components/UI/Bild'
 
 const Services = () => {
   const offerings = [
     {
       title: 'Ästhetik & Keramik',
       description: 'Natürlichkeit ist unser Maßstab. Mit individueller Frontzahnkeramik und Schichttechnik schaffen wir lebendige Ergebnisse.',
-      image: '/images/neue-Bilder/vollkeramikbruecke-metallfrei-zahnersatz.webp',
+      image: '/images/neue-Bilder/vollkeramikbruecke-metallfrei-zahnersatz',
       icon: <Diamond className="w-6 h-6" />,
       details: ['Individuelle Frontzahnkeramik', 'Veneers, Inlays, Onlays', 'Keramik gepresst & geschichtet']
     },
     {
       title: 'Kronen & Brücken',
       description: 'Präzise Passform und Langlebigkeit. Ob Zirkon, Vollkeramik oder Metallkeramik – wir finden die optimale Lösung.',
-      image: '/images/neue-Bilder/zahnbruecke-teilverblendet-metallkeramik.webp',
+      image: '/images/neue-Bilder/zahnbruecke-teilverblendet-metallkeramik',
       icon: <Layers className="w-6 h-6" />,
       details: ['Zirkonkeramik & CAD/CAM', 'Perlmuttkrone (Stahlersatzkrone)', 'Edelmetall & Titan']
     },
     {
       title: 'Digitaler Scanservice',
       description: 'Mit unserem DIGITALEN SCANSERVICE wird die Zahnabformung einfacher, schneller und angenehmer. Ein moderner Intraoralscanner erstellt in Minuten ein präzises 3D-Modell.',
-      image: '/images/handybilder/digitaler-workflow-intraoralscanner-3d-planung.webp',
+      image: '/images/handybilder/digitaler-workflow-intraoralscanner-3d-planung',
       icon: <Smartphone className="w-6 h-6" />,
       details: ['Maximaler Komfort ohne Würgereiz', 'Berührungslose Abformung', 'Flexibler Vor-Ort-Service']
     },
     {
       title: 'Präziser 3D Druck',
       description: 'Unsere moderne 3D-Drucktechnologie ermöglicht präzise Modelle und dentale Arbeiten direkt aus digitalen Scandaten.',
-      image: '/images/neue-Bilder/rapidshape-3d-druck-nachbearbeitung-zahnhandel.webp',
+      image: '/images/neue-Bilder/rapidshape-3d-druck-nachbearbeitung-zahnhandel',
       icon: <Microscope className="w-6 h-6" />,
       details: ['Schnelle Fertigungszeiten', 'Präzises Gipsmodell-Druck', 'Innovativer digitaler Workflow']
     },
     {
       title: 'Kombitechnik',
       description: 'Funktionalität trifft Komfort. Hochwertige Teleskoparbeiten und Geschiebe für sicheren Halt und Ästhetik.',
-      image: '/images/neue-Bilder/teleskopbruecke-zahnersatz-modell-technik.webp',
+      image: '/images/neue-Bilder/teleskopbruecke-zahnersatz-modell-technik',
       icon: <Activity className="w-6 h-6" />,
       details: ['Teleskoptechnik', 'Geschiebe & Riegel', 'Modellguss']
     },
     {
       title: 'Implantattechnik',
       description: 'Festsitzender Zahnersatz auf Implantaten. Wir versorgen alle gängigen Implantatsysteme mit höchster Präzision.',
-      image: '/images/neue-Bilder/zahnimplantat-abutment-zirkon-krone.webp',
+      image: '/images/neue-Bilder/zahnimplantat-abutment-zirkon-krone',
       icon: <ShieldCheck className="w-6 h-6" />,
       details: ['Suprakonstruktionen', 'Individuelle Abutments', 'Stegkonstruktionen']
     },
     {
       title: 'Totalprothetik',
       description: 'Lebensqualität zurückgewinnen. Prothesen nach der TiF-Methode für optimalen Sitz und natürliche Optik.',
-      image: '/images/neue-Bilder/totalprothese-oberkiefer-unterkiefer-set.webp',
+      image: '/images/neue-Bilder/totalprothese-oberkiefer-unterkiefer-set',
       icon: <Diamond className="w-6 h-6" />,
       details: ['TiF-Methode', 'Totalprothesen', 'Reparaturen']
     },
     {
       title: 'Spezialtechniken',
       description: 'Innovation für besondere Anforderungen. Modernste Verfahren für perfekte Passung und Biokompatibilität.',
-      image: '/images/neue-Bilder/schnarchschiene-unterkieferprotrusionsschiene-schlafapnoe.webp',
+      image: '/images/neue-Bilder/schnarchschiene-unterkieferprotrusionsschiene-schlafapnoe',
       icon: <Layers className="w-6 h-6" />,
       details: ['Lasertechnik', 'Schienen & Diagnostik', 'Schnarchschienen & Protrusionsschienen']
     }
   ]
 
   const galleryImages = [
-    { src: '/images/handybilder/rapidshape-3d-drucker-zahntechnik.webp', title: '3D Druck' },
-    { src: '/images/neue-Bilder/laborzeile-gipsraum-arbeitsvorbereitung-zahnhandel.webp', title: 'Gipsraum-Vorbereitung' },
-    { src: '/images/neue-Bilder/picodent-fraesmaschine-cad-cam-zahnhandel.webp', title: 'CAD/CAM Fräsmaschine' },
-    { src: '/images/neue-Bilder/keramikofen-dekema-austromat-zahnhandel.webp', title: 'Dekema Keramikofen' },
-    { src: '/images/neue-Bilder/dentallabor-ausstattung-brennofen-zahnhandel.webp', title: 'Galvanostrecke / Vorwärmöfen' },
-    { src: '/images/neue-Bilder/fraeserstaender-rotierende-instrumente-technikertisch-zahnhandel.webp', title: 'Präzisionswerkzeuge' },
-    { src: '/images/neue-Bilder/poliereinheit-kavo-dentallabor-zahnhandel.webp', title: 'Kavo Poliereinheit' },
-    { src: '/images/neue-Bilder/lichthaertung-zahnersatz-verblendung-zahntechnik.webp', title: 'Lichthärtung' }
+    { src: '/images/handybilder/rapidshape-3d-drucker-zahntechnik', title: '3D Druck' },
+    { src: '/images/neue-Bilder/laborzeile-gipsraum-arbeitsvorbereitung-zahnhandel', title: 'Gipsraum-Vorbereitung' },
+    { src: '/images/neue-Bilder/picodent-fraesmaschine-cad-cam-zahnhandel', title: 'CAD/CAM Fräsmaschine' },
+    { src: '/images/neue-Bilder/keramikofen-dekema-austromat-zahnhandel', title: 'Dekema Keramikofen' },
+    { src: '/images/neue-Bilder/dentallabor-ausstattung-brennofen-zahnhandel', title: 'Galvanostrecke / Vorwärmöfen' },
+    { src: '/images/neue-Bilder/fraeserstaender-rotierende-instrumente-technikertisch-zahnhandel', title: 'Präzisionswerkzeuge' },
+    { src: '/images/neue-Bilder/poliereinheit-kavo-dentallabor-zahnhandel', title: 'Kavo Poliereinheit' },
+    { src: '/images/neue-Bilder/lichthaertung-zahnersatz-verblendung-zahntechnik', title: 'Lichthärtung' }
   ]
 
   return (
@@ -85,12 +86,14 @@ const Services = () => {
       {/* Hero */}
       <div className="relative bg-stone-900 text-white py-24 overflow-hidden">
         {/* Background Image/Overlay */}
-        <div className="absolute inset-0 z-0 opacity-30"
-          style={{
-            backgroundImage: "url('/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel.webp')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
+        <Bild
+          name="/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel"
+          alt="Arbeitsplätze im Dentallabor der ZAHNTECHNIK Frankenberg GmbH"
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
+          decoding="sync"
+          className="absolute inset-0 z-0 h-full w-full object-cover opacity-30"
         />
         <div className="hero-gradient"></div>
 
@@ -143,11 +146,11 @@ const Services = () => {
           </div>
           <div className="order-1 lg:order-2 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl transform lg:rotate-2 transition-transform hover:rotate-0 duration-700">
-              <img
-                src="/images/handybilder/digitaler-workflow-intraoralscanner-3d-planung.webp"
+              <Bild
+                name="/images/handybilder/digitaler-workflow-intraoralscanner-3d-planung"
                 alt="Digitaler Intraoralscan am Computer-Monitor – Präzision im digitalen Workflow"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="w-full h-auto object-cover"
-                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-900/20 to-transparent"></div>
             </div>
@@ -163,11 +166,11 @@ const Services = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl transform lg:-rotate-2 transition-transform hover:rotate-0 duration-700">
-              <img
-                src="/images/neue-Bilder/rapidshape-3d-druck-nachbearbeitung-zahnhandel.webp"
+              <Bild
+                name="/images/neue-Bilder/rapidshape-3d-druck-nachbearbeitung-zahnhandel"
                 alt="Nachbearbeitung von 3D-gedruckten dentalen Objekten mit höchster Genauigkeit"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="w-full h-auto object-cover"
-                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-tl from-primary-900/20 to-transparent"></div>
             </div>
@@ -205,7 +208,12 @@ const Services = () => {
           {offerings.map((offer, idx) => (
             <div key={idx} className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100 flex flex-col">
               <div className="relative h-44 overflow-hidden">
-                <img src={offer.image} alt={offer.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <Bild
+                  name={offer.image}
+                  alt={offer.title}
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
                 <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm p-1.5 rounded-lg text-secondary-600 shadow-sm">
                   {offer.icon}
@@ -266,11 +274,11 @@ const Services = () => {
           </div>
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl rotate-1">
-              <img
-                src="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice.webp"
+              <Bild
+                name="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice"
                 alt="Beratungsbereich und Empfang der Zahntechnik Frankenberg"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="w-full h-auto"
-                loading="lazy"
               />
             </div>
             {/* Banner */}
@@ -287,7 +295,12 @@ const Services = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {galleryImages.map((img, i) => (
             <div key={i} className="group relative aspect-square overflow-hidden rounded-xl shadow-sm">
-              <img src={img.src} alt={img.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+              <Bild
+                name={img.src}
+                alt={img.title}
+                sizes="(min-width: 768px) 25vw, 50vw"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                 <p className="text-white text-xs font-bold">{img.title}</p>
               </div>

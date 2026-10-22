@@ -4,6 +4,7 @@ import Button from '../components/UI/Button'
 import Card from '../components/UI/Card'
 import Section from '../components/UI/Section'
 import Seo from '../components/SEO/Seo'
+import Bild from '../components/UI/Bild'
 
 const Home = () => {
   const jsonLd = {
@@ -46,27 +47,15 @@ const Home = () => {
 
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-[80vh] lg:min-h-[90vh] flex items-center py-16 lg:py-20">
-        {/* Background Image with Parallax effect */}
-        <div
-          className="absolute inset-0 z-0 hidden lg:block"
-          style={{
-            backgroundImage: "url('/images/neue-Bilder/teamfoto-mitarbeiter-blau.webp')",
-            backgroundPosition: 'center top',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundAttachment: 'fixed',
-          }}
-        />
-
-        {/* Mobile Background */}
-        <div
-          className="absolute inset-0 z-0 lg:hidden"
-          style={{
-            backgroundImage: "url('/images/neue-Bilder/teamfoto-mitarbeiter-blau.webp')",
-            backgroundPosition: 'center top',
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-          }}
+        {/* Hintergrundbild als <img>, damit der Browser es sofort laden kann (LCP) */}
+        <Bild
+          name="/images/neue-Bilder/teamfoto-mitarbeiter-blau"
+          alt="Das Team der ZAHNTECHNIK Frankenberg GmbH vor dem Dentallabor in Frankenberg/Sachsen"
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
+          decoding="sync"
+          className="absolute inset-0 z-0 h-full w-full object-cover object-top"
         />
 
         {/* Gradient Overlay - Darker for more drama */}
@@ -123,11 +112,11 @@ const Home = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="order-2 lg:order-1 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl rotate-1 transition-transform hover:rotate-0 duration-500">
-              <img
-                src="/images/neue-Bilder/unser-team-praxis-aussen.webp"
+              <Bild
+                name="/images/neue-Bilder/unser-team-praxis-aussen"
                 alt="Team der Zahntechnik Frankenberg vor dem Laborgebäude – Außenansicht"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="w-full h-auto object-cover transform scale-[1.15]"
-                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-6 text-white text-shadow-lg">
@@ -258,33 +247,33 @@ const Home = () => {
       <Section title="Unsere Räumlichkeiten" eyebrow="Galerie" background="stone">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-            <img
-              src="/images/neue-Bilder/dentallabor-geraete-cad-cam-fraesmaschine-zahnhandel.webp"
+            <Bild
+              name="/images/neue-Bilder/dentallabor-geraete-cad-cam-fraesmaschine-zahnhandel"
               alt="Moderne CAD/CAM Fräsmaschine für hochpräzisen Zahnersatz"
+              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
               <p className="text-white font-bold text-lg">Gießtechnik & CAD/CAM Technologie</p>
             </div>
           </div>
           <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-            <img
-              src="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice.webp"
+            <Bild
+              name="/images/neue-Bilder/empfang-buero-zahnhandel-kundenservice"
               alt="Ansprechpartner im Empfangsbereich der Zahntechnik Frankenberg"
+              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
               <p className="text-white font-bold text-lg">Rezeption</p>
             </div>
           </div>
           <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-md cursor-pointer">
-            <img
-              src="/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel.webp"
+            <Bild
+              name="/images/neue-Bilder/dentallabor-arbeitsplaetze-innenansicht-zahnhandel"
               alt="Blick in unser modernes Dentallabor mit ergonomischen Arbeitsplätzen"
+              sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
               <p className="text-white font-bold text-lg">Arbeitsraum</p>

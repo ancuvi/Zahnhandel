@@ -41,9 +41,11 @@ const MainLayout = () => {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
           <Link to="/" className="group flex items-center gap-3">
-            <img 
-              src="/images/Logo_Zahntechnig - bearbeitet.png" 
-              alt="ZAHNTECHNIK Frankenberg GmbH" 
+            <img
+              src="/images/logo-zahntechnik-frankenberg.webp"
+              alt="ZAHNTECHNIK Frankenberg GmbH"
+              width={515}
+              height={155}
               className="h-12 md:h-16 w-auto object-contain"
             />
           </Link>
@@ -86,9 +88,12 @@ const MainLayout = () => {
           <div className="grid gap-12 lg:grid-cols-4 lg:gap-8">
             <div className="lg:col-span-1 space-y-4">
               <Link to="/" className="inline-block mb-4">
-                 <img 
-                  src="/images/Logo_Zahntechnig - bearbeitet.png" 
-                  alt="ZAHNTECHNIK Frankenberg GmbH" 
+                 <img
+                  src="/images/logo-zahntechnik-frankenberg.webp"
+                  alt="ZAHNTECHNIK Frankenberg GmbH"
+                  width={515}
+                  height={155}
+                  loading="lazy"
                   className="h-12 w-auto object-contain"
                 />
               </Link>

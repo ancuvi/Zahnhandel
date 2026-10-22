@@ -2,6 +2,7 @@ import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react'
 import ContactForm from '../components/Forms/ContactForm'
 import Section from '../components/UI/Section'
 import Seo from '../components/SEO/Seo'
+import Bild from '../components/UI/Bild'
 
 const Contact = () => {
   return (
@@ -13,12 +14,14 @@ const Contact = () => {
 
       {/* Hero Section */}
       <div className="relative bg-stone-900 text-white py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-40"
-          style={{
-            backgroundImage: "url('/images/neue-Bilder/zahnmodell-phantomkopf-kiefer-zahnhandel.webp')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
+        <Bild
+          name="/images/neue-Bilder/zahnmodell-phantomkopf-kiefer-zahnhandel"
+          alt="Zahnmodell am Phantomkopf im Dentallabor Frankenberg"
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
+          decoding="sync"
+          className="absolute inset-0 z-0 h-full w-full object-cover opacity-40"
         />
         <div className="hero-gradient"></div>
 

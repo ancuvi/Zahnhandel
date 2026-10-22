@@ -4,6 +4,7 @@ import Seo from '../components/SEO/Seo'
 import Button from '../components/UI/Button'
 import { Link } from 'react-router-dom'
 import Card from '../components/UI/Card'
+import Bild from '../components/UI/Bild'
 
 const Jobs = () => {
   const benefits = [
@@ -82,12 +83,14 @@ const Jobs = () => {
       {/* Hero Section */}
       <div className="relative bg-stone-900 text-white py-16 md:py-24 lg:py-32 overflow-hidden">
         {/* Background Image/Overlay */}
-        <div className="absolute inset-0 z-0 opacity-20" 
-             style={{ 
-               backgroundImage: "url('/images/neue-Bilder/zahnhandel-buero-verwaltung-innenansicht.webp')", 
-               backgroundSize: 'cover', 
-               backgroundPosition: 'center' 
-             }} 
+        <Bild
+          name="/images/neue-Bilder/zahnhandel-buero-verwaltung-innenansicht"
+          alt="Büro und Verwaltung der ZAHNTECHNIK Frankenberg GmbH"
+          sizes="100vw"
+          loading="eager"
+          fetchPriority="high"
+          decoding="sync"
+          className="absolute inset-0 z-0 h-full w-full object-cover opacity-20"
         />
         <div className="hero-gradient"></div>
         
