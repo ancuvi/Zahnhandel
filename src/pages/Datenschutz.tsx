@@ -1,8 +1,13 @@
 import Section from '../components/UI/Section'
+import Seo from '../components/SEO/Seo'
 
 const Datenschutz = () => {
   return (
     <div className="pt-20">
+      <Seo
+        title="Datenschutzerklärung | ZAHNTECHNIK Frankenberg GmbH"
+        description="Datenschutzerklärung der B&S Zahntechnik Frankenberg GmbH: Hosting, Kontaktformular, eingebettete Inhalte und Ihre Rechte."
+      />
       <Section 
         title="Datenschutzerklärung" 
         headingLevel={1}

@@ -1,8 +1,13 @@
 import Section from '../components/UI/Section'
+import Seo from '../components/SEO/Seo'
 
 const Impressum = () => {
   return (
     <div className="pt-20">
+      <Seo
+        title="Impressum | ZAHNTECHNIK Frankenberg GmbH"
+        description="Impressum der B&S Zahntechnik Frankenberg GmbH, Gewerbering 17, 09669 Frankenberg/Sa. – Geschäftsführung, Handelsregister, Kammer."
+      />
       <Section 
         title="Impressum" 
         headingLevel={1}

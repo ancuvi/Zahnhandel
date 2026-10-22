@@ -10,6 +10,7 @@ const ThankYou = () => {
       <Seo
         title="Vielen Dank | ZAHNTECHNIK Frankenberg GmbH"
         description="Vielen Dank für Ihre Nachricht. Wir werden uns zeitnah bei Ihnen melden."
+        noindex
       />
       <Section
         title="Vielen Dank für Ihre Nachricht"
