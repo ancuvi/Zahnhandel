@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <div>
       <Seo
-        title="ZAHNTECHNIK Frankenberg GmbH | Börner & Schrambke"
-        description="Ihr Dentallabor in Frankenberg. Ästhetische Frontzahnkeramik, Prothetik und individuelle Lösungen. Telefon: 037206 / 75542."
+        title="Dentallabor Frankenberg/Sachsen – ZAHNTECHNIK Frankenberg GmbH"
+        description="Meisterlabor für Zahnersatz in Frankenberg/Sa. bei Chemnitz: Keramik, Implantat- und Totalprothetik, Scanservice, 24h-Reparatur. Tel. 037206 75542"
       />
 
       {/* Hero Section */}
@@ -38,16 +38,16 @@ const Home = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
               </span>
-              Meisterlabor in Frankenberg
+              Meisterlabor in Frankenberg/Sachsen
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-serif text-white leading-tight drop-shadow-sm">
-              Willkommen bei <br />
+              Ihr Dentallabor in Frankenberg/Sachsen <br />
               <span className="text-secondary-400">ZAHNTECHNIK Frankenberg</span>
             </h1>
 
             <p className="text-lg sm:text-xl text-stone-200 leading-relaxed font-medium max-w-2xl drop-shadow-sm">
-              Ihr kompetenter Partner für hochwertigen Zahnersatz. Wir verbinden handwerkliche Präzision mit modernster Technologie für Ihr strahlendstes Lächeln.
+              Ihr kompetenter Partner für hochwertigen Zahnersatz aus Frankenberg bei Chemnitz. Wir verbinden handwerkliche Präzision mit modernster Technologie für Ihr strahlendstes Lächeln.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -107,7 +107,7 @@ const Home = () => {
               </p>
             </div>
             <p className="text-lg text-primary-700 leading-relaxed">
-              Ich möchte Ihnen auf diesem Wege einen kleinen Einblick in unser Dentallabor geben.
+              Ich möchte Ihnen auf diesem Wege einen kleinen Einblick in unser Dentallabor in Frankenberg/Sachsen geben.
               Als Zahnärztin und Zahnarzt, aber auch als Patient finden Sie auf unserer Homepage umfangreiche Informationen zu unseren Produkten und Dienstleistungen.
             </p>
             <Link to="/about" className="inline-flex items-center gap-2 text-secondary-600 font-semibold hover:text-secondary-700 transition-colors group">

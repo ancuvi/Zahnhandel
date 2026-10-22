@@ -9,8 +9,8 @@ const Contact = () => {
   return (
     <div>
       <Seo
-        title="Kontakt & Anfahrt | ZAHNTECHNIK Frankenberg GmbH"
-        description="Wir freuen uns auf Ihre Nachricht. Telefon: 037206 / 75542. Ihr Dentallabor in Frankenberg."
+        title="Kontakt & Anfahrt | Dentallabor Frankenberg/Sachsen"
+        description="Dentallabor B&S Zahntechnik Frankenberg GmbH, Gewerbering 17, 09669 Frankenberg/Sa.: Telefon 037206 75542, Kontaktformular, Öffnungszeiten und Karte."
       />
 
       {/* Hero Section */}
@@ -59,7 +59,7 @@ const Contact = () => {
                 <address className="not-italic text-primary-700 leading-relaxed">
                   B&S Zahntechnik Frankenberg GmbH<br />
                   Gewerbering 17<br />
-                  09669 Frankenberg
+                  09669 Frankenberg/Sa.
                 </address>
               </div>
             </div>

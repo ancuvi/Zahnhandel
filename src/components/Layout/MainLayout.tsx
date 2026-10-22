@@ -105,7 +105,7 @@ const MainLayout = () => {
                 />
               </Link>
               <p className="text-sm leading-relaxed text-stone-400">
-                SOVIEL ZAHN MUSS SEIN! Ihr kompetenter Partner für hochwertigen Zahnersatz und individuelle Lösungen in Frankenberg.
+                SOVIEL ZAHN MUSS SEIN! Ihr kompetenter Partner für hochwertigen Zahnersatz und individuelle Lösungen in Frankenberg (Sachsen), Raum Chemnitz / Mittelsachsen.
               </p>
             </div>
             
@@ -114,10 +114,10 @@ const MainLayout = () => {
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start gap-3">
                   <MapPin size={18} className="mt-0.5 text-secondary-400" />
-                  <span>
+                  <address className="not-italic">
                     Gewerbering 17<br />
-                    09669 Frankenberg
-                  </span>
+                    09669 Frankenberg/Sa.
+                  </address>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone size={18} className="text-secondary-400" />

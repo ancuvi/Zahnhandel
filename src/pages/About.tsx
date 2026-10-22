@@ -10,8 +10,8 @@ const About = () => {
    return (
       <div>
          <Seo
-            title="Über Uns | ZAHNTECHNIK Frankenberg GmbH"
-            description="Erfahren Sie mehr über die Geschichte der Zahntechnik Frankenberg GmbH, unser Team und die Geschäftsführung."
+            title="Über uns | Dentallabor ZAHNTECHNIK Frankenberg/Sachsen"
+            description="Seit über 30 Jahren Zahntechnik in Frankenberg/Sachsen: Geschichte, Team und Geschäftsführung des Meisterlabors B&S Zahntechnik Frankenberg GmbH."
          />
 
          {/* Hero Section */}

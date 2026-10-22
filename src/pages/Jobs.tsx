@@ -84,8 +84,8 @@ const Jobs = () => {
   return (
     <div>
       <Seo
-        title="Karriere & Jobs | ZAHNTECHNIK Frankenberg GmbH"
-        description="Starten Sie Ihre Karriere bei uns. Aktuelle Stellenangebote für Zahntechniker und Auszubildende in Frankenberg."
+        title="Zahntechniker (m/w/d) Jobs & Ausbildung | Frankenberg/Sachsen"
+        description="Stellenangebote für Zahntechniker und Ausbildungsplatz im Dentallabor ZAHNTECHNIK Frankenberg GmbH, Frankenberg/Sachsen bei Chemnitz. Jetzt bewerben."
         jsonLd={jobSchema}
       />
 

@@ -79,8 +79,8 @@ const Services = () => {
   return (
     <div>
       <Seo
-        title="Leistungen | ZAHNTECHNIK Frankenberg GmbH"
-        description="Unser Angebot: Frontzahnkeramik, Zirkon, Kombitechnik, Implantattechnik und mehr. Entdecken Sie unser Leistungsspektrum."
+        title="Zahnersatz & Leistungen | Dentallabor Frankenberg/Sachsen"
+        description="Keramik, Kronen & Brücken, Implantat- und Totalprothetik, Kombitechnik, 3D-Druck, digitaler Scanservice: Leistungen des Dentallabors in Frankenberg/Sa."
       />
 
       {/* Hero */}
