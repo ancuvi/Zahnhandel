@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation, useOutlet } from 'react-router-dom'
+import { Link, Navigate, useLocation, useOutlet } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import MobileNav from '../Navigation/MobileNav'
 import Navbar from '../Navigation/Navbar'
+import { kanonischerPfad } from '../SEO/Seo'
 
 export type NavLink = { path: string; label: string }
 
@@ -16,8 +17,10 @@ const navLinks: NavLink[] = [
 ]
 
 const MainLayout = () => {
-  const { pathname } = useLocation()
+  const { pathname, search, hash } = useLocation()
   const element = useOutlet()
+  // /about/ oder /ABOUT → /about (Canonical zeigt ebenfalls dorthin)
+  const normalisiert = kanonischerPfad(pathname)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -29,6 +32,10 @@ const MainLayout = () => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  if (normalisiert !== pathname) {
+    return <Navigate to={`${normalisiert}${search}${hash}`} replace />
+  }
 
   return (
     <div className="flex min-h-screen flex-col bg-stone-50 text-primary-800 font-sans">

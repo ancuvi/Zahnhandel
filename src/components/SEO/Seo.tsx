@@ -31,9 +31,9 @@ export type SeoDaten = {
  */
 export const SeoSammler = createContext<{ setzen: (daten: SeoDaten) => void } | null>(null)
 
-/** Kanonischer Pfad: ohne Schrägstrich am Ende, Startseite bleibt "/" */
+/** Kanonischer Pfad: kleingeschrieben, ohne Schrägstrich am Ende, Startseite bleibt "/" */
 export const kanonischerPfad = (pathname: string) => {
-  const ohneSlash = pathname.replace(/\/+$/, '')
+  const ohneSlash = pathname.toLowerCase().replace(/\/+$/, '')
   return ohneSlash === '' ? '/' : ohneSlash
 }
 
