@@ -143,6 +143,8 @@ async function main() {
     const m = await sharp(logoWebp).metadata()
     manifest['/images/logo-zahntechnik-frankenberg'] = { breite: m.width, hoehe: m.height, breiten: [] }
   }
+  // Kleine Logo-Variante für die Kopfzeile (angezeigt mit 160–213 px Breite)
+  await sharp(logoWebp).resize({ width: 320 }).webp({ quality: 90, alphaQuality: 100 }).toFile(logoWebp.replace('.webp', '-320.webp'))
 
   // Open-Graph-Bild 1200×630 als JPEG (WebP wird nicht von allen Messengern angezeigt)
   await mkdir(path.join(BILDER_ORDNER, 'og'), { recursive: true })

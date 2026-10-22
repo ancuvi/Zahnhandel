@@ -50,6 +50,8 @@ const MainLayout = () => {
           <Link to="/" className="group flex items-center gap-3">
             <img
               src="/images/logo-zahntechnik-frankenberg.webp"
+              srcSet="/images/logo-zahntechnik-frankenberg-320.webp 320w, /images/logo-zahntechnik-frankenberg.webp 515w"
+              sizes="(min-width: 768px) 213px, 160px"
               alt="ZAHNTECHNIK Frankenberg GmbH"
               width={515}
               height={155}
@@ -97,6 +99,8 @@ const MainLayout = () => {
               <Link to="/" className="inline-block mb-4">
                  <img
                   src="/images/logo-zahntechnik-frankenberg.webp"
+                  srcSet="/images/logo-zahntechnik-frankenberg-320.webp 320w, /images/logo-zahntechnik-frankenberg.webp 515w"
+                  sizes="160px"
                   alt="ZAHNTECHNIK Frankenberg GmbH"
                   width={515}
                   height={155}
@@ -160,7 +164,7 @@ const MainLayout = () => {
           </div>
           
           <div className="mt-16 border-t border-stone-800 pt-8 text-center text-xs text-stone-400">
-            <p>&copy; {new Date().getFullYear()} B&amp;S Zahntechnik Frankenberg GmbH. Alle Rechte vorbehalten.</p>
+            <p className="text-stone-400">&copy; {new Date().getFullYear()} B&amp;S Zahntechnik Frankenberg GmbH. Alle Rechte vorbehalten.</p>
           </div>
         </div>
       </footer>
