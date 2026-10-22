@@ -83,12 +83,16 @@ const Seo = (props: SeoProps) => {
     ensureMeta('robots', robots)
 
     let link = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')
-    if (!link) {
-      link = document.createElement('link')
-      link.rel = 'canonical'
-      document.head.appendChild(link)
+    if (robots.includes('noindex')) {
+      link?.remove()
+    } else {
+      if (!link) {
+        link = document.createElement('link')
+        link.rel = 'canonical'
+        document.head.appendChild(link)
+      }
+      link.href = canonical
     }
-    link.href = canonical
 
     // Open Graph
     ensureMeta('og:title', title, true)

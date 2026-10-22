@@ -76,7 +76,7 @@ const MainLayout = () => {
       </header>
 
       <main className="flex-1">
-        <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+        <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
           <motion.div
             key={pathname}
             initial={{ opacity: 0, y: 20 }}
