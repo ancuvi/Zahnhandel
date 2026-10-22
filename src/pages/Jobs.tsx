@@ -46,28 +46,39 @@ const Jobs = () => {
     },
   ]
 
-  const jobSchema = jobs.map(job => ({
-    "@context": "https://schema.org",
-    "@type": "JobPosting",
-    "headline": `${job.title} - ${job.subtitle}`,
-    "description": job.description,
-    "employmentType": job.title.includes('Auszubildende') ? 'APPRENTICE' : 'FULL_TIME',
-    "datePosted": "2024-01-01",
-    "hiringOrganization": {
-      "@type": "Organization",
-      "name": "B&S Zahntechnik Frankenberg GmbH",
-      "sameAs": "https://www.zahnhandel.de"
+  // JobPosting-Markup nach Google-Vorgaben (Pflichtfelder: title, description,
+  // datePosted, hiringOrganization, jobLocation). datePosted = Datum der
+  // letzten Veröffentlichung, validThrough sechs Monate später – bei
+  // Änderungen an den Stellen beide Daten anpassen.
+  const stellenVeroeffentlicht = '2026-10-22'
+  const stellenGueltigBis = '2027-04-22T23:59:59+02:00'
+  const jobSchema = jobs.map((job, i) => ({
+    '@context': 'https://schema.org',
+    '@type': 'JobPosting',
+    title: `${job.title} – ${job.subtitle}`,
+    description: `<p>${job.description}</p><p>${job.type} bei der B&S Zahntechnik Frankenberg GmbH, zahntechnisches Meisterlabor in Frankenberg/Sachsen bei Chemnitz. Bewerbung per E-Mail an info@zahnhandel.de oder über das Kontaktformular.</p>`,
+    identifier: { '@type': 'PropertyValue', name: 'B&S Zahntechnik Frankenberg GmbH', value: `stelle-${i + 1}` },
+    datePosted: stellenVeroeffentlicht,
+    validThrough: stellenGueltigBis,
+    employmentType: job.type === 'Ausbildung' ? 'OTHER' : ['FULL_TIME', 'PART_TIME'],
+    directApply: true,
+    hiringOrganization: {
+      '@type': 'Organization',
+      name: 'B&S Zahntechnik Frankenberg GmbH',
+      sameAs: 'https://zahnhandel.de/',
+      logo: 'https://zahnhandel.de/images/logo-zahntechnik-frankenberg.webp',
     },
-    "jobLocation": {
-      "@type": "Place",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Gewerbering 17",
-        "addressLocality": "Frankenberg/Sa.",
-        "postalCode": "09669",
-        "addressCountry": "DE"
-      }
-    }
+    jobLocation: {
+      '@type': 'Place',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Gewerbering 17',
+        addressLocality: 'Frankenberg/Sa.',
+        addressRegion: 'Sachsen',
+        postalCode: '09669',
+        addressCountry: 'DE',
+      },
+    },
   }))
 
   return (
@@ -75,10 +86,8 @@ const Jobs = () => {
       <Seo
         title="Karriere & Jobs | ZAHNTECHNIK Frankenberg GmbH"
         description="Starten Sie Ihre Karriere bei uns. Aktuelle Stellenangebote für Zahntechniker und Auszubildende in Frankenberg."
+        jsonLd={jobSchema}
       />
-      <script type="application/ld+json">
-        {JSON.stringify(jobSchema)}
-      </script>
 
       {/* Hero Section */}
       <div className="relative bg-stone-900 text-white py-16 md:py-24 lg:py-32 overflow-hidden">
